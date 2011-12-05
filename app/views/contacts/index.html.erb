@@ -1,0 +1,29 @@
+<div id="page">
+  <div id="content">
+    <div class="contact_center_align">
+      <h3>
+        Project coordinators 
+      </h3>
+      </div>
+   <div class="contact_table"> 
+    <table cellpadding="25">
+        <tr>
+          <% @contacts.each do |contact| %>
+            <td>
+              <h3>
+                <strong><%= contact.name %></strong>
+              </h3>
+              <b><%= contact.email %></b>
+              <br />
+              <%= contact.phone_number %>
+            </td>
+          <% end %>
+        </tr>
+    </table>  
+    <br />
+    <br />
+    <br />
+    <br />
+    </div>
+  </div>
+</div>

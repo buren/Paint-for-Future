@@ -1,0 +1,25 @@
+<div id="page">
+  <div id="content">
+    <% @videos.each do |video| %>
+      <div id="post">
+        <h3 class="title">
+          <%= link_to video.title, video %>
+        </h3>
+        <p class="meta">
+          <span class="date"><%= video.created_at.to_s[0..9] %></span>
+        </p>
+        <div style="clear: both;"></div>
+        <div class="entry">
+          <%= video.vimeo.html_safe if video.vimeo? %>
+          <p>
+            <%= video.description if video.description? %>
+          </p>
+        </div>
+     </div>
+    <% end %>
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</div>

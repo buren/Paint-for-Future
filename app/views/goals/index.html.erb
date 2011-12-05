@@ -1,0 +1,61 @@
+<div id="page">
+  <div id="content">
+    <h2> The Orphanage </h2>
+    <br />
+    <br />
+       <%= image_tag "orphanage/orphanage_top.jpg" %>
+       <br />
+       <br />
+       <br />
+    <% @goals.each do |goal| %>
+     <div id="post">
+       <h3><%= goal.title if goal.title? %></h3>
+       <br />
+       <div class="entry">
+        <p class="large_font">
+          <%= goal.content.html_safe if goal.content? %>
+        </p>
+       </div>
+      </div>
+      <br />
+      <br />
+      <div class="center_align_text">
+        <h3>Some of The Needy Today's artists</h3>
+      </div>
+
+    
+    <table cellpadding="20">
+      <tr>
+        <td> <%= image_tag "orphanage/11.jpg" %></td>
+        <td> <%= image_tag "orphanage/12.png" %></td>
+        <td> <%= image_tag "orphanage/13.jpg" %>  </td>
+      </tr>
+      <tr>
+        <td> <%= image_tag "orphanage/21.jpg" %> </td>
+        <td> <%= image_tag "orphanage/22.jpg" %> </td>
+        <td> <%= image_tag "orphanage/23.jpg" %> </td>
+      </tr>
+      <tr>
+        <td> <%= image_tag "orphanage/31.jpg" %> </td>
+        <td> <%= image_tag "orphanage/32.jpg" %> </td>
+        <td> <%= image_tag "orphanage/33.jpg" %> </td>
+      </tr>
+      <tr>
+        <td> <%= image_tag "orphanage/41.jpg" %> </td>
+        <td> <%= image_tag "orphanage/42.jpg" %>  </td>
+        <td> <%= image_tag "orphanage/43.jpg" %> </td>
+      </tr>
+    </table>
+   
+     <br />
+     <br />
+
+     <%= goal.maps.html_safe if goal.maps?%>
+     <br />
+     <br />
+     <br />
+     <br />
+
+    <% end %>
+  </div>
+</div>

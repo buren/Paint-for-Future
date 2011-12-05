@@ -1,0 +1,31 @@
+<div id="page">
+  <div id="content">
+    <% @posts.each do |post| %>
+     <div id="post">
+       <h3 class="title"><%= link_to post.title, post %></h3>
+       <br />
+       <%= image_tag post.image_url(:thumb).to_s if post.image?%>
+       <p><%= post.vimeo_content.html_safe if post.vimeo_content?%></p>
+       <div class="entry">
+         <p class="large_font">
+          <%= post.content.html_safe if post.content? %>
+         </p>  
+       </div>
+     </div>
+     <p class="meta">
+        <span class="date"><%= post.created_at.to_s[0..9] %></span>
+        <br />
+        <span class="posted">Posted by <b><%= post.name %></b></span>
+      </p>
+      <br />
+      <br />
+  <% end %>
+  <h3>
+    <%= paginate @posts %>
+      <br />
+      <br />
+      <br />
+      <br />
+  </h3>
+  </div>
+</div>

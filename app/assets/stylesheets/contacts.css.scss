@@ -1,0 +1,16 @@
+// Place all the styles related to the Contacts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contact_center_align {
+  margin-left: 200px;
+}
+
+.contact_table {
+  margin-left: 0px;
+  td {
+    white-space: nowrap;
+    overflow: visible;
+  }
+}
+
