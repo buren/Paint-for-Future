@@ -8,7 +8,6 @@ ActiveAdmin.register Post do
       f.input :published_at
       f.input :content, :hint => "You can use HTML, use <br /> tag for new line, <h3> for header and <b> for bold."
       f.input :remote_image_url, :hint => "Provide URL to jpg, giff, png image"
-      f.input :vimeo_content, :as => :text, :hint => "You can add any video-embeded code here"
     end
     f.buttons
   end
