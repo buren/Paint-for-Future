@@ -1,21 +1,24 @@
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Name:</b>
-  <%= @contact.name %>
-</p>
-
-<p>
-  <b>Email:</b>
-  <%= @contact.email %>
-</p>
-
-<p>
-  <b>Phone number:</b>
-  <%= @contact.phone_number %>
-</p>
-
-
-<%= link_to 'Edit', edit_contact_path(@contact) %> |
-<%= link_to 'Back', contacts_path %>
+<div id="page">
+  <div id="content">
+      <br />
+      <br />
+      <br />
+      <h3>
+        <strong><%= link_to @contact.name, @contact %></strong>
+      </h3>
+      <p><i><%= @contact.job_title %></i>
+      <br />
+      <b><%= @contact.email %></b>
+      <br />
+      <%= @contact.phone_number %>
+      </p>
+      <br />
+      <br />
+      <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+  </div>
+</div>

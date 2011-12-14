@@ -3,20 +3,18 @@
     <% @posts.each do |post| %>
      <div id="post">
        <h3 class="title"><%= link_to post.title, post %></h3>
+     <p class="meta">
+     <span class="date"><p><%= post.published_at if post.published_at? %></p></span>
+     <br />
+     </p>
        <br />
        <%= image_tag post.image_url(:thumb).to_s if post.image?%>
-       <p><%= post.vimeo_content.html_safe if post.vimeo_content?%></p>
        <div class="entry">
          <p class="large_font">
           <%= post.content.html_safe if post.content? %>
          </p>  
        </div>
      </div>
-     <p class="meta">
-        <span class="date"><%= post.created_at.to_s[0..9] %></span>
-        <br />
-        <span class="posted">Posted by <b><%= post.name %></b></span>
-      </p>
       <br />
       <br />
   <% end %>

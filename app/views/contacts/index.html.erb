@@ -5,22 +5,30 @@
         Project coordinators 
       </h3>
       </div>
+      <br />
+      <br />
+      <br />
    <div class="contact_table"> 
     <table cellpadding="25">
-        <tr>
           <% @contacts.each do |contact| %>
+        <tr>
             <td>
               <h3>
-                <strong><%= contact.name %></strong>
+                <strong><%= link_to contact.name, contact  %></strong>
               </h3>
+              <p><i><%= contact.job_title %></i>
+              <br />
               <b><%= contact.email %></b>
               <br />
               <%= contact.phone_number %>
+              </p>
             </td>
-          <% end %>
         </tr>
+          <% end %>
     </table>  
     <br />
+      <br />
+      <br />
     <br />
     <br />
     <br />

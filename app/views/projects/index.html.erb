@@ -1,40 +1,16 @@
 <div id="page">
   <div id="content">
-    <div class="project_entry">
-    <h2>
-      Project
-    </h2>
     <br />
-    <br />
-    <p class="larger_font"><b> Charity is more than mere donation Art more than paint on canvas Liberty not a gift, but a sensation
-    <br />
-    <br />
-    We aim to eradicate the notion of charity being a linear and blind transaction. We wish to craft a sort of cirle. A cycle large enough to host beuty, independence as well as funds.
-   <br /> 
-    <br />
-    However, we are not to outline this circle.
-   <br /> 
-    <br />
-    Let us tell you how we discovered the new generation of artists.
-   <br /> 
-    <br />
-    We are Fredrik Bäck, Lucas Lennig and Daniel Leksell. We want to introduce to you our new project. A project with heart.
-    </b></p>
-    <br />
-    <br />
-    </div>
-
     <% @projects.each do |project| %>
       <div id="container">
          <div class="project_entry">
-           <h3>
-            <strong>
-              <%= link_to 'Click here to know more', project %>
-            </strong>
-           </h3>
+           <h2>
+            <%= project.title %>
+           </h2>
          </div>
            <br />
            <p class="large_font">
+            <%= project.content.html_safe if project.content? %>
            </p>
          </div>
        <br />

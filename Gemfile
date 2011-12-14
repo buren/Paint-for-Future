@@ -18,8 +18,16 @@ group :assets do
   gem 'uglifier'
 end
 
-#gem 'sqlite3'
-gem 'pg'
+# gem 'sqlite3'
+# gem 'pg'
+
+group :production do
+  gem 'pg'
+end
+
+group :development, :test do
+    gem 'sqlite3'
+end
 
 # Asset template engines
 
