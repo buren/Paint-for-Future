@@ -2,25 +2,21 @@
   <div id="content">
     <div id="post">
     
-      <h3 class="title"><%= @video.title %></h3>
+      <h3 class="title"><%= link_to @video.title, @video %></h3>
 
         <div style="clear: both;"></div>
         <div class="entry">
-          <%= @video.vimeo.html_safe if @video.vimeo? %>
           <p>
-            <%= @video.description if @video.description? %>
+            <%= @video.description.html_safe if @video.description? %>
           </p>
         </div>
-        <p class="meta">
-          <span class="date"><%= @video.created_at.to_s[0..9] %></span>
-        </p>
     </div>
   <br />
   <br />
   <br />
   <br />
   <strong>
-    <%= link_to 'View all films', videos_path %> 
+    <%= link_to 'View all sponsors', videos_path %> 
   </strong>
   <br />
   <br />
