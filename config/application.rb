@@ -43,8 +43,9 @@ module Future
 
     # Enable the asset pipeline
     config.assets.enabled = true
-
-    config.action_mailer.default_url_option = { :host => "localhost:3000" }
+    
+    # Uncommented for heroku testing, manual_change
+    #  config.action_mailer.default_url_option = { :host => "localhost:3000" }
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
