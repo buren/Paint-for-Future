@@ -2,7 +2,9 @@
   <div id="content">
     <% @posts.each do |post| %>
      <div id="post">
-       <h3 class="title"><%= link_to post.title, post %></h3>
+       <h3>
+          <%= link_to post.title, post %>
+       </h3>
      <p class="meta">
      <span class="date"><p><%= post.published_at if post.published_at? %></p></span>
      <br />

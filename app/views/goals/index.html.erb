@@ -3,10 +3,6 @@
     <h2> The Orphanage </h2>
     <br />
     <br />
-       <%= image_tag "orphanage/orphanage_top.jpg" %>
-       <br />
-       <br />
-       <br />
     <% @goals.each do |goal| %>
      <div id="post">
        <h3><%= goal.title if goal.title? %></h3>
