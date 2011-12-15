@@ -7,7 +7,6 @@
        </h3>
      <p class="meta">
      <span class="date"><p><%= post.published_at if post.published_at? %></p></span>
-     <br />
      </p>
        <br />
        <%= image_tag post.image_url(:thumb).to_s if post.image?%>
