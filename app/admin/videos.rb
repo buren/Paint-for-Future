@@ -5,7 +5,6 @@ ActiveAdmin.register Video do
     f.inputs "Sponsors" do
       f.input :title
       f.input :description
-      f.input :vimeo, :as => :text
     end
     f.buttons
   end

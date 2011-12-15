@@ -5,9 +5,13 @@
        <h3>
           <%= link_to post.title, post %>
        </h3>
+     <% if post.title? %>
      <p class="meta">
      <span class="date"><p><%= post.published_at.html_safe if post.published_at? %></p></span>
      </p>
+     <% else %>
+        <h3><%= link_to post.published_at.html_safe if post.published_at? %></h3>
+     <% end %>
        <br />
        <%= image_tag post.image_url(:thumb).to_s if post.image?%>
        <div class="entry">
