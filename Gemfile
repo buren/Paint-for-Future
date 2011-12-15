@@ -10,6 +10,7 @@ gem 'rack', '1.3.3'
 gem 'kaminari'
 gem 'redcarpet'
 gem "meta_search"
+gem 'fog'
 
 gem "carrierwave", :git => 'http://github.com/jnicklas/carrierwave.git'
 gem "rmagick"

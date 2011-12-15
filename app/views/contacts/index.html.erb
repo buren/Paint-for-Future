@@ -13,7 +13,7 @@
           <% @contacts.each do |contact| %>
         <tr>
             <td>
-              <img src="" height="250" width="150"/>
+              <%= image_tag contact.image_url(:thumb).to_s, :size => "150x250" if contact.image? %>
               </td>
             <td>
               <h3>
