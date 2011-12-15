@@ -9,6 +9,7 @@ gem 'formtastic', '1.2.4' # an activeadmin dependency
 gem 'rack', '1.3.3'
 gem 'kaminari'
 gem 'redcarpet'
+gem "meta_search"
 
 gem "carrierwave", :git => 'http://github.com/jnicklas/carrierwave.git'
 gem "rmagick"

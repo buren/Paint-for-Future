@@ -3,11 +3,12 @@ ActiveAdmin.register Post do
 
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Post", :multipart => true do
-      f.input :name, :hint => "Your name"
+      f.input :name, :as => :select, :collection => ["Fredrik Beck", "Lucas Lennig", "Daniel Leksell"], :hint => "Your name"
       f.input :title
       f.input :published_at
-      f.input :content, :hint => "You can use HTML, use <br /> tag for new line, <h3> for header and <b> for bold."
-      f.input :remote_image_url, :hint => "Provide URL to jpg, giff, png image"
+      f.input :content, :hint => "You can use HTML, use <br /> tag for new line, <h3> for header and <b> for bold"
+      f.input :remote_image_url, :as => :url, :hint => "Provide URL to jpg, giff or png image"
+      f.input :image, :as => :file, :hint => "Select any jpg, giff or png image"
     end
     f.buttons
   end
