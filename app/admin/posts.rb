@@ -20,8 +20,12 @@ ActiveAdmin.register Post do
     column "Title" do |post|
       link_to post.title, admin_post_path(post)
     end
-    column "Release Date", :created_at
-    column :content
+    column "Date" do |post|
+      link_to post.published_at, admin_post_path(post)
+    end
+    column "Content" do |post|
+      link_to post.content, admin_post_path(post)
+    end
     default_actions
   end
 end
