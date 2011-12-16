@@ -83,7 +83,7 @@ p.larger_font{
 
 #header {
 	width: 900px;
-	height: 115px;
+	height: 100px;
 	margin: 0 auto;
 	padding: 0px 30px;
 	 font-family: Arial, Helvetica, sans-serif; 
@@ -170,7 +170,7 @@ p.larger_font{
 	display: block;
 	height: 20px;
 	margin-right: 1px;
-	padding: 50px 30px 15px 15px;
+	padding: 50px 30px 5px 15px;
 	text-decoration: none;
 	text-align: center;
 /*	text-transform: uppercase; */
@@ -179,13 +179,13 @@ p.larger_font{
 	font-size: 16px;
 	font-weight: bold;
 /*  word-spacing: -1px;*/
-	color: $grey;
+	color: #24292E;
 	border: none;
 }
 
 #menu a:hover, #menu .current_page_item a {
 	text-decoration: none;
-	color: black;
+	color: $grey;
 }
 
 #menu .current_page_item a {
