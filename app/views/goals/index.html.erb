@@ -4,7 +4,9 @@
     <br />
     <% @goals.each do |goal| %>
      <div id="post">
-       <h3><%= goal.title if goal.title? %></h3>
+         <div class="project_entry">
+           <h3><%= goal.title if goal.title? %></h3>
+         </div>
        <br />
        <div class="entry">
         <p class="large_font">
