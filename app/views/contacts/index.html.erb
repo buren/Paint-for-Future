@@ -9,12 +9,9 @@
       <br />
       <br />
    <div class="contact_table"> 
-    <table cellpadding="25">
           <% @contacts.each do |contact| %>
+    <table cellpadding="25">
         <tr>
-            <td>
-              <%= image_tag contact.image_url(:thumb).to_s, :size => "150x250" if contact.image? %>
-              </td>
             <td>
               <h3>
                 <strong><%= link_to contact.name, contact  %></strong>
@@ -27,11 +24,22 @@
               </p>
             </td>
         </tr>
-          <% end %>
     </table>  
+          <% end %>
     <br />
       <br />
       <br />
+      <div class="contact_center_align">
+        <h3>Contact in Sierra Leone</h3> 
+        <br />
+        <strong>Duada Koroma</strong>
+        <p><i>Manager of The Needy Today</i>
+        <br />
+        <b>theneedytoday@yahoo.com</b>
+        <br />
+          +(232) 334 745 73 
+        </p>
+      </div>
     <br />
     <br />
     <br />
