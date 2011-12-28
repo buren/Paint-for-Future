@@ -1,5 +1,5 @@
 ActiveAdmin.register Goal do
-  menu :label => "The Orphanage"
+  menu :label => "The Center"
 
   index do
     column "Title" do |goal|
