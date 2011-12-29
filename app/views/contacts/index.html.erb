@@ -19,7 +19,7 @@
               <br />
               <b><%= contact.email %></b>
               <br />
-              <%= contact.phone_number %>
+              <%= contact.phone_number if contact.phone_number? %>
               </p>
             </td>
         </tr>

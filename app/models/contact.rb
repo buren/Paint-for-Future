@@ -3,5 +3,4 @@ class Contact < ActiveRecord::Base
   mount_uploader :image, PostImageUploader
   validates :name, :presence => true
   validates :email, :presence => true
-  validates :phone_number, :presence => true
 end
