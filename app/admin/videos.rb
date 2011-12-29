@@ -1,8 +1,8 @@
 ActiveAdmin.register Video do
-  menu :label => "Sponsors"
+  menu :label => "Partners"
 
   form do |f|
-    f.inputs "Sponsors" do
+    f.inputs "Partners" do
       f.input :title
       f.input :description
     end

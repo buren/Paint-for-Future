@@ -1,9 +1,9 @@
 <div id="page">
   <div id="content">
     <div id="post">
-    
+   <% if @video.title? %> 
       <h3 class="title"><%= link_to @video.title, @video %></h3>
-
+   <% end %>
         <div style="clear: both;"></div>
         <div class="entry">
           <p>

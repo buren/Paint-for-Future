@@ -2,12 +2,13 @@
   <div id="content">
     <% @videos.each do |video| %>
       <div id="post">
+      <% if video.title? %>
         <h3 class="title">
           <%= link_to video.title, video %>
         </h3>
-        <div style="clear: both;"></div>
+      <% end %>
         <div class="entry">
-          <p>
+          <p class="large_font">
             <%= video.description.html_safe if video.description? %>
           </p>
         </div>
