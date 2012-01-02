@@ -1,22 +1,49 @@
 <div id="page">
   <div id="content">
     <br />
+    <h3>
+      Project
+    </h3>
+    <p class="center_align_text">
+Charity is more than mere donation<br/>
+Art more than paint on canvas<br/>
+Liberty not a gift, but a sensation<br/>
+<br/>
+
+Our world is bursting of desperate souls and empty stomachs. <br/>
+Donations of money and food are abundant. <br/>
+Hunger can take many shapes, and a 
+starving imagination is enough to weaken any man.
+
+Naturally, creativity cannot be donated, it must arise from within.<br/>
+ All one can do is provide an opportunity.<br/> 
+This we can do.    <br/>
+<br/>
+
+Let us tell you how we discovered
+the new generation of artists.<br/>
+
+Have a look at our project.</p>
+
+<div class="home_logo">
+<img alt="Future_logo_mini" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
+</div>
+
+
+<table>
     <% @projects.each do |project| %>
       <div id="container">
          <div class="project_entry">
            <h3>
-            <%= link_to project.title, project %>
+                <tr>
+                  <%= link_to project.title, project %>
+                </tr> 
            </h3>
          </div>
            <br />
-           <p class="large_font">
-            <%= project.content.html_safe if project.content? %>
-           </p>
          </div>
-       <br />
-       <br />
     <% end %>
-    <a href="/projects/4">Why</a>
+    </table>
     <br />
 <br />
   </div>
