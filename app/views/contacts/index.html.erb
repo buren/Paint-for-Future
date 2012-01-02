@@ -20,6 +20,8 @@
               <b><%= contact.email %></b>
               <br />
               <%= contact.phone_number if contact.phone_number? %>
+              <br />
+              <%= contact.description[0..25] + [.]*3 %>
               </p>
             </td>
         </tr>
@@ -28,7 +30,7 @@
     <br />
       <br />
       <br />
-        <h3>Contact in Sierra Leone</h3> 
+        <h3>Sierra Leone Contact</h3> 
         <br />
         <strong>Duada Koroma</strong>
         <p><i>Manager of The Needy Today</i>
