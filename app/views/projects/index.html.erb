@@ -6,6 +6,7 @@
         Project
       </h3>
     </div>
+    <br />
     <p class="center_align_text">
 Charity is more than mere donation<br/>
 Art more than paint on canvas<br/>
@@ -32,20 +33,20 @@ Have a look at our project.</p>
 </div>
 
 
-<table>
+<ul>
     <% @projects.each do |project| %>
       <div id="container">
          <div class="project_entry">
+          <li>
            <h3>
-                <tr>
                   <%= link_to project.title, project %>
-                </tr> 
            </h3>
+           </li>
          </div>
            <br />
          </div>
     <% end %>
-    </table>
+     </ul>
     <br />
 <br />
   </div>
