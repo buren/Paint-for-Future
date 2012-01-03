@@ -98,52 +98,6 @@ p.larger_font{
   padding: 0px 50px;
 }
 
-/* Logo */
-
-#logo {
-	float: left;
-	width: 300px;
-	margin: 0;
-	padding: 0;
-	color: #FFFFFF;
-}
-
-
-#logo p {
-}
-
-#logo h1 {
-	padding:10px 0px 0px 0px;
-	letter-spacing: -2px;
-	text-transform: lowercase;
-	font-size: 3.8em;
-}
-
-#logo h1 a {
-	color: $grey;
-}
-
-#logo p {
-	margin: 0;
-	padding: 0px 0 0 0px;
-	letter-spacing: -1px;
-	font: normal 18px Georgia, "Times New Roman", Times, serif;
-	font-style: italic;
-	color: $grey;
-}
-
-#logo p a {
-	color: $grey;
-}
-
-#logo a {
-	border: none;
-	background: none;
-	text-decoration: none;
-	color: #000000;
-}
-
-
 /* Menu */
 
 #menu {
