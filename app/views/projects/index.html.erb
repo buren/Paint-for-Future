@@ -32,26 +32,23 @@ Have a look at our project.</p>
 <img alt="Future_logo_mini" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
 </div>
 
-<div id="header" class="container">
-    <div id="menu">
-
-<ul>
+<table>
+  <tr>
     <% @projects.each do |project| %>
       <div id="container">
          <div class="project_entry">
-          <li>
+          <td>
            <h3>
                   <%= link_to project.title, project %>
            </h3>
-           </li>
+           </td>
          </div>
            <br />
          </div>
     <% end %>
-     </ul>
+       </tr>
+     </table>
     <br />
 <br />
   </div>
   </div>
-</div>
-</div>
