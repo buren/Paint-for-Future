@@ -6,3 +6,4 @@ tmp/
 config/initializers/carrierwave.rb
 *.log
 tmp
+*.sqlite3
