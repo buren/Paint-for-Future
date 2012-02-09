@@ -4,17 +4,13 @@
     <ul class="posts"> 
       <li>
         <% if post.title? %>
-          <header>
             <h1>
               <%= link_to post.title, post %>
             </h1>   
-          </header>
         <% else %>
-          <header>
             <h1>
               <%= link_to post.published_at.html_safe if post.published_at? %>
             </h1>
-          </header>
         <% end %>
 
         <body>
@@ -33,7 +29,7 @@
   <% end %>
     <ul class="pagination">
       <li>
-        <%= paginate @posts %>
+      <h1><%= paginate @posts %></h1>
       </li>
     </ul>
 </div> 
