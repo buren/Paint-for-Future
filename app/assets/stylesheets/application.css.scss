@@ -1,253 +1,254 @@
 @import "reset.css.scss";
-@import "css3lib.css.scss";
-@import "utilmixins.css.scss";
-@import "colors.css.scss";
+@import "ccs3lib";
 
-$page_width: 800px;
-$post_width: 700px;
+$page_width : 800px;
+$post_width : 700px;
 
-$light_blue: #8EAAB0;
-$link_hover_color: $light_blue;
-$border_color: $light_blue;
+/************** Colors **************/
+
+$light_blue : #8EAAB0;
+$link_hover_color : $light_blue;
+$border-color : $light_blue;
 
 /************** Resetes **************/
 
 *{
-  font-family: Trebuchet MS;
-  color:black;
+	font-family: Trebuchet MS;
+	color:black;
 }
 body{
-  background:url(../img/Unknown.gif);
+	background:url(../img/Unknown.gif);
 }
 ul{
-  margin:0;
-  li{
-    list-style:none;
-  }
+	margin:0;
+	li{
+		list-style:none;
+	}
 }
 
+/************** Actual styling **************/
+
 #wrapper{
-  width:$page_width;
-  margin:0 auto;
+	width:$page_width;
+	margin:0 auto;
 }
 
 h1.main-heading{
-  font-size:24px;
-  color:$light_blue;
-  padding-top:10px;
-  padding-left:20px;
-  margin-bottom:10px;
+	font-size:24px;
+	color:$light_blue;
+	padding-top:10px;
+	padding-left:20px;
+	margin-bottom:10px;
 }
 
 header{
-  padding:20px 0;
-  margin:30px 0 20px 0;
-  border-bottom:1px solid black;
-  .box-shadow(0px, 1px, 0px, white);
-  a{
-    color:black;
-    padding:20px;
-    font-size: 16px;
-    font-weight: bold;
-    text-decoration:none;
-    .text-shadow(0px, 1px, 0px, white);
-  }
-  a:hover{
-    color:$link_hover_color;
-  }
-  ul#menu{
-    width:680px;
-    margin:0 auto;
-    li{
-      display:inline;
-      list-style:none;
-    }
-  }
+	padding:20px 0;
+	margin:30px 0 20px 0;
+	border-bottom:1px solid black;
+	@include box-shadow(0px, 1px, 0px, white);
+	a{
+		color:black;
+		padding:20px;
+		font-size: 16px;
+		font-weight: bold;
+		text-decoration:none;
+		@include text-shadow(0px, 1px, 0px, white);
+	}
+	a:hover{
+		color:$link_hover_color;
+	}
+	ul#menu{
+		width:680px;
+		margin:0 auto;
+		li{
+			display:inline;
+			list-style:none;
+		}
+	}
 }
 
 ul.posts{
-  width:$post_width;
-  li{
-    padding:20px;
-    header{
-      margin:0 0 20px 0;
-      border-bottom:1px solid $light_blue;
-      h1{
-        color:$light_blue;
-        font-size:24px;
-        .text-shadow(0px, 1px, 0px, white);
-      }
-    }
-    .text{
-      display:inline-block;
-      vertical-align:top;
-      width:380px;
-      padding-right:40px;
-      line-height:24px;
-      p{
-        .text-shadow(0px, 1px, 0px, white);
-      }
-      
-    }
-    img{
-      display:inline;
-      width:200px;
-      height:250px;
-      border:1px solid $light_blue;
-      padding:5px;
-      .rounded-corners(5px);
-      .box-shadow($light_blue, 0px, 1px, 3px);
-      background:white;
-    }
-  }
+	width:$post_width;
+	li{
+		padding:20px;
+		header{
+			margin:0 0 20px 0;
+			border-bottom:1px solid $light_blue;
+			h1{
+				color:$light_blue;
+				font-size:24px;
+				@include text-shadow(0px, 1px, 0px, white);
+			}
+		}
+		.text{
+			display:inline-block;
+			vertical-align:top;
+			width:380px;
+			padding-right:40px;
+			line-height:24px;
+			p{
+				@include text-shadow(0px, 1px, 0px, white);
+			}
+			
+		}
+		img{
+			display:inline;
+			width:200px;
+			height:250px;
+			border:1px solid $light_blue;
+			padding:5px;
+			@include border-radius(5px);
+			@include box-shadow($light_blue, 0px, 1px, 3px);
+			background:white;
+		}
+	}
 }
 
 ul.cards{
-  li{
-    background:white;
-    padding:20px;
-    margin:20px;
-    display:inline-block;
-    width:300px;
-    border:1px solid $light_blue;
-    .rounded-corners(3px);
-    .box-shadow(0px, 1px, 3px, $light_blue);
-    img{
-      display:inline;
-      width:80px;
-      height:100px;
-    }
-    hr{
-      border-top:1px solid $light_blue;
-      .box-shadow(0px, 1px, 0px, white);
-    }
-    .info{
-      padding-left:10px;
-      display:inline-block;
-      vertical-align:top;
-      max-width:190px;
-      overflow:hidden;
-      p{
-        .text-shadow(0px, 1px, 0px, white);
-      }
-    }
-    h1{
-      color:$light_blue;
-      font-size:18px;
-      .text-shadow(0px, 1px, 0px, white);
-    }
-  }
+	li{
+		background:white;
+		padding:20px;
+		margin:20px;
+		display:inline-block;
+		width:300px;
+		border:1px solid $light_blue;
+		@include border-radius(3px);
+		@include box-shadow(0px, 1px, 3px, $light_blue);
+		img{
+			display:inline;
+			width:80px;
+			height:100px;
+		}
+		hr{
+			border-top:1px solid $light_blue;
+			@include box-shadow(0px, 1px, 0px, white);
+		}
+		.info{
+			padding-left:10px;
+			display:inline-block;
+			vertical-align:top;
+			max-width:190px;
+			overflow:hidden;
+			p{
+				@include text-shadow(0px, 1px, 0px, white);
+			}
+		}
+		h1{
+			color:$light_blue;
+			font-size:18px;
+			@include text-shadow(0px, 1px, 0px, white);
+		}
+	}
 }
 
 ul.pagination{
-  width:660px;
-  border-top:1px solid $light_blue;
-  //margin:20px;
-  margin-left:20px;
-  padding:20px 0;
-  
+	width:660px;
+	border-top:1px solid $light_blue;
+	margin-left:20px;
+	padding:20px 0;
+	
 
-  li{
-    display:inline;
-    a{
-      text-decoration:none;
-    }
-  }
+	li{
+		display:inline;
+		a{
+			text-decoration:none;
+		}
+	}
 }
 
 #more-info{
-  width:700px;
-  padding:20px;
-  h1{
-    font-size:24px;
-    color:$light_blue;
-    margin-bottom:20px;
-  }
-  p{
-    font-size:16px;
-    line-height:20px;
-  }
+	width:700px;
+	padding:20px;
+	h1{
+		font-size:24px;
+		color:$light_blue;
+		margin-bottom:20px;
+	}
+	p{
+		font-size:16px;
+		line-height:20px;
+	}
 }
 
 #sierra-contact{
-  padding:20px;
-  h1{
-    font-size:24px;
-    color:$light_blue;
-    margin-bottom:20px;
-  }
-  h2{
-    padding-bottom:10px;
-    font-size:18px;   
-  }
-  p{
-    font-size:12px;
-    line-height:16px;
-  }
+	padding:20px;
+	h1{
+		font-size:24px;
+		color:$light_blue;
+		margin-bottom:20px;
+	}
+	h2{
+		padding-bottom:10px;
+		font-size:18px;		
+	}
+	p{
+		font-size:12px;
+		line-height:16px;
+	}
 }
 
 img#name{
-  padding-left:40px;
-  display:inline-block!important;
-  display:block;
-  margin-right:40px;
-  width:500px;  
+	padding-left:40px;
+	display:inline-block!important;
+	display:block;
+	margin-right:40px;
+	width:500px;	
 }
 
 img#logo{
-  display:inline-block!important;
-  display:block;
-  width:150px;
+	display:inline-block!important;
+	display:block;
+	width:150px;
 }
 
 h2#slogan{
-  text-align:center;
-  font-weight:bold;
-  font-size:14px;
-  padding-bottom:30px;
+	text-align:center;
+	font-weight:bold;
+	font-size:14px;
+	padding-bottom:30px;
 }
 
 footer.main-footer{
-  border-top:1px solid black;
-  padding-top:2 0px;
-  p{
-    text-align:center;
-  }
+	border-top:1px solid black;
+	padding-top:2	0px;
+	p{
+		text-align:center;
+	}
 }
 
 /*Nivo slider*/
 .slider-container{
-  position:relative;
-  padding:5px;
-  top:20px;
-  left:40px;
-  width:700px;
-  margin-bottom:50px;
-  border:1px solid $border_color;
-  .box-shadow($border_color, 0px, 1px, 3px);
-  .rounded-corners(3px);
-  background-color:white;
+	position:relative;
+	padding:5px;
+	top:20px;
+	left:40px;
+	width:700px;
+	margin-bottom:50px;
+	border:1px solid $border-color;
+	@include box-shadow($border-color, 0px, 1px, 3px);
+	@include border-radius(3px);
+	background-color:white;
 }
 
 .nivoSlider {
-  position:relative;
+	position:relative;
 }
 .nivoSlider img {
-  width:700px;
-  overflow:hidden;
-  position:absolute;
-  top:0px;
-  left:0px;
+	width:700px;
+	overflow:hidden;
+	position:absolute;
+	top:0px;
+	left:0px;
 }
 /* The slices and boxes in the Slider */
 .nivo-slice {
-  display:block;
-  position:absolute;
-  z-index:5;
-  height:100%;
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
 }
 .nivo-box {
-  display:block;
-  position:absolute;
-  z-index:5;
+	display:block;
+	position:absolute;
+	z-index:5;
 }
