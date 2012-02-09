@@ -1,0 +1,16 @@
+/*Util mixins*/
+.helvetica-bold(@size: 14px) {
+  font-family: "Helvetica Neue", Helvetica;
+  font-weight: bold;
+  font-size:@size;
+}
+
+.header-bg-gradient(){
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #a7d087), color-stop(0.49, #bedda1), color-stop(0.51, #c7e1ad), color-stop(0.99, #cfe5b5));
+}
+.admin-header-bg-gradient(){
+  background-color:#dfdddd; /* For non css3 browsers */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fbfbfb', endColorstr='#dfdddd'); /* for IE */
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0, #dfdddd), color-stop(0.49, #f1efef), color-stop(0.51, #f9f8f8), color-stop(0.99, #fbfbfb));
+
+}

@@ -1,43 +1,39 @@
-<br />
-<br />
+<div id="wrapper">
+  <% @posts.each do |post| %>
+      
+    <ul class="posts"> 
+      <li>
+        <% if post.title? %>
+          <header>
+            <h1>
+              <%= link_to post.title, post %>
+            </h1>   
+          </header>
+        <% else %>
+          <header>
+            <h1>
+              <%= link_to post.published_at.html_safe if post.published_at? %>
+            </h1>
+          </header>
+        <% end %>
 
-<div id="page">
-  <div id="content">
-    <% @posts.each do |post| %>
-     <div id="post">
-       <h3>
-          <%= link_to post.title, post %>
-       </h3>
+        <body>
+          <div class="text">
+            <p>
+              <%= post.content.html_safe if post.content? %>
+            </p>
+          </div>
 
+          <% if post.image? %>
+             <%= image_tag post.image_url(:thumb).to_s %>
+          <% end %>
+        </body>
+      </li>
+    </ul>
 
-  <% if post.title? %>
-     <p class="meta">
-     <span class="date"><p><%= post.published_at.html_safe if post.published_at? %></p></span>
-     </p>
-  <% else %>
-        <h3><%= link_to post.published_at.html_safe if post.published_at? %></h3>
-  <% end %>
-       <br />
-       <%= image_tag post.image_url(:thumb).to_s if post.image?%>
-       <div class="entry">
-         <p class="large_font">
-          <%= post.content.html_safe if post.content? %>
-         </p>  
-       </div>
-     </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-  <% end %>
-  <h3>
-    <%= paginate @posts %>
-  </h3>
-      <br />
-      <br />
-      <br />
-      <br />
-  </div>
-</div>
+    <ul class="pagination">
+      <li>
+        <%= paginate @posts %>
+      </li>
+    </ul>
+</div> 

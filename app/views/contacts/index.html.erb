@@ -1,51 +1,35 @@
-<div id="page">
-  <div id="content">
-    <div class="contact_center_align">
-      <h3>
-        Project coordinators 
-      </h3>
-      <br />
-    </div>
-   <div class="contact_table"> 
-          <% @contacts.each do |contact| %>
-    <table cellpadding="25">
-        <tr>
-            <td>
-              <h3>
-                <strong><%= link_to contact.name, contact  %></strong>
-              </h3>
-              <p><i><%= contact.job_title %></i>
-              <br />
-              <b><%= contact.email %></b>
-              <br />
-              <%= contact.phone_number if contact.phone_number? %>
-              </p>
-            </td>
-        </tr>
-    </table>  
-          <% end %>
-      </div>
-    <br />
-      <br />
-      <br />
-        <h3>Sierra Leone Contact</h3> 
-        <br />
-        <strong>Dauda Koroma</strong>
-        <p><i>Manager of The Needy Today</i>
-        <br />
-        <b>theneedytoday@yahoo.com</b>
-        <br />
-          +(232) 334 745 73 
-        </p>
-      <br />
+<div id="wrapper">
+  <h1 class="main-heading">Project coordinators</h1>
+ 
+  <ul class="cards">
+    <% @contacts.each do |contact| %>
+      <li>
+        <%= image_tag @contact.image_url(:thumb).to_s, :size => "80x100" if @contact.image? %>
 
-      <h3>For more information or interest in becoming a sponsor.</h3>
-      <br />
-      <p><i> Or if your interested in becoming a partner or working with us please send us an email, we can never be to many. </i>
-      <br />
-      <b>Send an email to info@paintforfuture.org</b>
-      </p>
-    <br />
-    <br />
+        <div class="info">
+          <h1><%= link_to contact.name, contact %></h1>
+          
+          <hr>
+         
+          <p><%= contact.job_title %></p>
+          <p><%= contact.email %></p>
+          <p><%= contact.phone_number if contact.phone_number? %></p> 
+      </li>
+    <% end %>
+  </ul>  
+
+  <div id="more-info">
+    <h1>For more information or interest in becoming a sponsor.</h1>
+    <p>Or if your interested in becoming a partner or working with us please send us an email, we can never be to many.</p>
+    <br>
+    <p>Send an email to: <i>info@paintforfuture.org</i></p>
+  </div>
+
+  <div id="sierra-contact">
+    <h1>Sierra Leone Contact</h1>
+    <h2>Dauda Koroma</h2>
+    <p><i>Manager of The Needy Today</i></p>
+    <p>theneedytoday@yahoo.com</p>
+    <p>+(232) 334 745 73</p>
   </div>
 </div>
