@@ -3,6 +3,7 @@
 
 $page_width : 800px;
 $post_width : 700px;
+$goal_width : 700px;
 
 /************** Colors **************/
 
@@ -107,7 +108,21 @@ ul.posts{
 
 ul.goals {
   li {
-    
+		h1{
+			color:$light_blue;
+			font-size:24px;
+			@include text-shadow(0px, 1px, 0px, white);
+		}
+
+		.text{
+			display:inline-block;
+			vertical-align:top;
+			width:$goal_width;
+			padding-right:40px;
+			line-height:24px;
+			p{
+				@include text-shadow(0px, 1px, 0px, white);
+      } 
   }
 }
 
