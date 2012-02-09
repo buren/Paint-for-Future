@@ -3,12 +3,12 @@
 @import "utilmixins.css.scss";
 @import "colors.css.scss";
 
-@post_width: 700px;
-@page_width: 800px;
+$page_width: 800px;
+$post_width: 700px;
 
-@light_blue: #8EAAB0;
-@link_hover_color: @light_blue;
-@border-color: @light_blue;
+$light_blue: #8EAAB0;
+$link_hover_color: $light_blue;
+$border_color: $light_blue;
 
 /************** Resetes **************/
 
@@ -27,13 +27,13 @@ ul{
 }
 
 #wrapper{
-  width:@page_width;
+  width:$page_width;
   margin:0 auto;
 }
 
 h1.main-heading{
   font-size:24px;
-  color:@light_blue;
+  color:$light_blue;
   padding-top:10px;
   padding-left:20px;
   margin-bottom:10px;
@@ -53,7 +53,7 @@ header{
     .text-shadow(0px, 1px, 0px, white);
   }
   a:hover{
-    color:@link_hover_color;
+    color:$link_hover_color;
   }
   ul#menu{
     width:680px;
@@ -66,14 +66,14 @@ header{
 }
 
 ul.posts{
-  width:@post_width;
+  width:$post_width;
   li{
     padding:20px;
     header{
       margin:0 0 20px 0;
-      border-bottom:1px solid @light_blue;
+      border-bottom:1px solid $light_blue;
       h1{
-        color:@light_blue;
+        color:$light_blue;
         font-size:24px;
         .text-shadow(0px, 1px, 0px, white);
       }
@@ -93,10 +93,10 @@ ul.posts{
       display:inline;
       width:200px;
       height:250px;
-      border:1px solid @light_blue;
+      border:1px solid $light_blue;
       padding:5px;
       .rounded-corners(5px);
-      .box-shadow(@light_blue, 0px, 1px, 3px);
+      .box-shadow($light_blue, 0px, 1px, 3px);
       background:white;
     }
   }
@@ -109,16 +109,16 @@ ul.cards{
     margin:20px;
     display:inline-block;
     width:300px;
-    border:1px solid @light_blue;
+    border:1px solid $light_blue;
     .rounded-corners(3px);
-    .box-shadow(0px, 1px, 3px, @light_blue);
+    .box-shadow(0px, 1px, 3px, $light_blue);
     img{
       display:inline;
       width:80px;
       height:100px;
     }
     hr{
-      border-top:1px solid @light_blue;
+      border-top:1px solid $light_blue;
       .box-shadow(0px, 1px, 0px, white);
     }
     .info{
@@ -132,7 +132,7 @@ ul.cards{
       }
     }
     h1{
-      color:@light_blue;
+      color:$light_blue;
       font-size:18px;
       .text-shadow(0px, 1px, 0px, white);
     }
@@ -141,7 +141,7 @@ ul.cards{
 
 ul.pagination{
   width:660px;
-  border-top:1px solid @light_blue;
+  border-top:1px solid $light_blue;
   //margin:20px;
   margin-left:20px;
   padding:20px 0;
@@ -160,7 +160,7 @@ ul.pagination{
   padding:20px;
   h1{
     font-size:24px;
-    color:@light_blue;
+    color:$light_blue;
     margin-bottom:20px;
   }
   p{
@@ -173,7 +173,7 @@ ul.pagination{
   padding:20px;
   h1{
     font-size:24px;
-    color:@light_blue;
+    color:$light_blue;
     margin-bottom:20px;
   }
   h2{
@@ -223,8 +223,8 @@ footer.main-footer{
   left:40px;
   width:700px;
   margin-bottom:50px;
-  border:1px solid @border-color;
-  .box-shadow(@border-color, 0px, 1px, 3px);
+  border:1px solid $border_color;
+  .box-shadow($border_color, 0px, 1px, 3px);
   .rounded-corners(3px);
   background-color:white;
 }
