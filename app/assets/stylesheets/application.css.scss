@@ -18,7 +18,7 @@ $border-color : $light_blue;
 	color:black;
 }
 body{
-	background:url(<%= asset_path 'background_image.gif' %>);
+	background-image: url(<%= asset_path 'background_image.gif' %>);
 }
 ul{
 	margin:0;
