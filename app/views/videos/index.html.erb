@@ -1,27 +1,11 @@
-<div id="page">
-  <div id="content">
-    <div class="contact_center_align">
+<div id="wrapper">
       <h3>
         Sponsors and Partners
       </h3>
-    </div>
     <% @videos.each do |video| %>
-      <div id="post">
       <% if video.title? %>
-        <h3 class="title">
           <%= link_to video.title, video %>
-        </h3>
       <% end %>
-        <div class="entry">
-          <p class="large_font">
             <%= video.description.html_safe if video.description? %>
-          </p>
-        </div>
-     </div>
     <% end %>
-    <br />
-    <br />
-    <br />
-    <br />
-  </div>
 </div>

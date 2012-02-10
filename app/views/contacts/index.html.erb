@@ -4,7 +4,10 @@
   <ul class="cards">
     <% @contacts.each do |contact| %>
       <li>
+      
+      <% if false %>
         <%= image_tag contact.image_url(:thumb).to_s, :size => "80x100" if contact.image? %>
+      <% end %>
 
         <div class="info">
           <h1><%= link_to contact.name, contact %></h1>

@@ -1,11 +1,7 @@
-<div id="page">
-  <div id="content">
-    <br />
-    <div class="project_entry">
-      <h3>
+<div id="wrapper">
+    <h3>
         Project
       </h3>
-    </div>
     <br />
     <p class="center_align_text">
 Charity is more than mere donation<br/>
@@ -29,26 +25,18 @@ the new generation of artists.<br/>
 Have a look at our project.</p>
 
 
-<table align="center" cellpadding="20">
+<table cellpadding="20">
   <tr>
     <% @projects.each do |project| %>
-      <div id="container">
-         <div class="project_entry">
           <td>
            <h3>
                   <%= link_to project.title, project %>
            </h3>
            </td>
-         </div>
-           <br />
-         </div>
     <% end %>
        </tr>
      </table>
-    <br />
 <div class="home_logo">
-<img alt="Future_logo_mini" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
+<%= image_tag ("logo-small.png"), :id => 'large-logo' %>  
+
 </div>
-<br />
-  </div>
-  </div>
