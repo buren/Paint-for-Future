@@ -192,10 +192,11 @@ ul.project{
       color:$light_blue;
       font-size:24px;
       @include text-shadow(0px, 1px, 0px, white);
+      a{
+        text-decoration:none;
+        display:block;
+       }
     }  
-  }
-  a{
-    text-decoration:none;
   }
 }
 
