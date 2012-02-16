@@ -15,8 +15,8 @@
 }
 
 @mixin text-shadow($color, $offset-x, $offset-y, $size) {
-	-webkit-box-shadow:$color $offset-x $offset-y $size;
-	-moz-box-shadow:$color $offset-x $offset-y $size;
-	-ms-box-shadow:$color $offset-x $offset-y $size;
-	box-shadow:$color $offset-x $offset-y $size;
+	-webkit-text-shadow:$color $offset-x $offset-y $size;
+	-moz-text-shadow:$color $offset-x $offset-y $size;
+	-ms-text-shadow:$color $offset-x $offset-y $size;
+	text-shadow:$color $offset-x $offset-y $size;
 }
