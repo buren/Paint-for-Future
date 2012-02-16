@@ -1,43 +1,30 @@
 <div id="wrapper">
-    <h3>
-        Project
-      </h3>
-    <br />
-    <p class="center_align_text">
-Charity is more than mere donation<br/>
-Art more than paint on canvas<br/>
-Liberty not a gift, but a sensation<br/>
-<br/>
-
-Our world is bursting of desperate souls and empty stomachs. <br/>
-Donations of money and food are abundant. <br/>
-Hunger can take many shapes, and a 
-starving imagination is enough to weaken any man.
-
-Naturally, creativity cannot be donated, it must arise from within.<br/>
- All one can do is provide an opportunity.<br/> 
-This we can do.    <br/>
-<br/>
-
-Let us tell you how we discovered
-the new generation of artists.<br/>
-
-Have a look at our project.</p>
+  <div id="project-statement">
+    <h1>Project</h1>
+    <p>Charity is more than mere donation.</p>
+    <p>Art is more than paint on canvas.</p>
+    <p>Liberty is not a gift, but a sensation.</p>
+    <br />  
+    <p>Our world is bursting of desperate souls and empty stomachs.</p>
+    <p>Donations of money and food are abundant.</p>
+    <p>Hunger can take many shapes, and a starving imagination is enough to weaken any man.</p>
+    <p>Naturally, creativity cannot be donated, it must arise from within.</p>
+    <p>All one can do is provide an opportunity.</p>
+    <p>This we can do.</p>
+    <br/>
+    <p>Let us tell you how we discovered the new generation of artists.</p>
+    <p>Have a look at our project.</p>
 
 
-<table cellpadding="20">
-  <tr>
-    <% @projects.each do |project| %>
-          <td>
-           <h3>
-                  <%= link_to project.title, project %>
-           </h3>
-           </td>
-    <% end %>
-       </tr>
-     </table>
-<div class="home_logo">
-<img alt="Future_logo_mini" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
-
-
+    <ul class="project">
+      <li>
+        <% @projects.each do |project| %>
+          <h1>
+            <%= link_to project.title, project %>
+          </h1>
+        <% end %>
+      </li>
+    </ul>
+    <img alt="Future_logo_mini" class="centered-future-logo" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
+  </div>
 </div>

@@ -183,6 +183,41 @@ ul.pagination{
 	}
 }
 
+ul.project{
+  padding:40px 0 40px 0;
+  text-align:center;
+  li{
+    display:inline;
+    color:$light_blue;
+    font-size:24px;
+    @include text-shado(0px, 1px, 0px, white);
+  }
+  a{
+    text-decoration:none;
+  }
+}
+
+#project-statement{
+ width:700px;
+ padding:20px;
+ h1{
+   font-size:24px;
+   color:$light_blue;
+   margin-bottom:20px;
+ }
+ p{
+   text-align:center;
+   font-size:16px;
+   line-height:20px;
+ }
+}
+
+
+.centered-future-logo{
+  text-align:center;
+  display:block;
+}
+
 #more-info{
 	width:700px;
 	padding:20px;
