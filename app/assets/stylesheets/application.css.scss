@@ -189,11 +189,12 @@ ul.project{
   li{
     display:inline;
     a{
-      text-decoration:none;
-      display:inline;
-      color:$light_blue;
-      font-size:24px;
-      @include text-shadow(0px, 1px, 0px, white);
+    	margin: 0px 40px 0px 0px;;	
+      	text-decoration:none;
+      	display:inline;
+      	color:$light_blue;
+      	font-size:24px;
+      	@include text-shadow(0px, 1px, 0px, white);
      }
   }
 }
