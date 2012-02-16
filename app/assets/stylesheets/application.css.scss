@@ -188,9 +188,11 @@ ul.project{
   text-align:center;
   li{
     display:inline;
-    color:$light_blue;
-    font-size:24px;
-    @include text-shadow(0px, 1px, 0px, white);
+    h1{
+      color:$light_blue;
+      font-size:24px;
+      @include text-shadow(0px, 1px, 0px, white);
+    }  
   }
   a{
     text-decoration:none;
@@ -200,13 +202,13 @@ ul.project{
 #project-statement{
  width:700px;
  padding:20px;
+ text-align:center;
  h1{
    font-size:24px;
    color:$light_blue;
    margin-bottom:20px;
  }
  p{
-   text-align:center;
    font-size:16px;
    line-height:20px;
  }
