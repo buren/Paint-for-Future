@@ -1,21 +1,10 @@
-<div id="page">
-  <div id="content">
-      <div id="container">
-         <div class="project_entry">
-           <h3>
-              <%= @project.title %>
-           </h3>
-         </div>
-           <br />
-           <p class="large_font">
-            <%= @project.content.html_safe %>
-           </p>
-         </div>
-         <strong> 
-          <%= link_to 'Back', projects_path %> 
-         </strong>
-     <br />
-     <br />
-     <br />
-  </div>
-</div>
+<div id="wrapper">
+  <h3>
+    <%= @project.title %>
+  </h3>
+  <p>
+    <%= @project.content.html_safe %>
+  </p>
+  <strong> 
+     <%= link_to 'Back', projects_path %> 
+  </strong>
