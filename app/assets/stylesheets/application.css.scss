@@ -189,7 +189,7 @@ ul.project{
   li{
     display:inline;
     a{
-    	margin: 0px 40px 0px 0px;;	
+    	padding: 0 10px;
       	text-decoration:none;
       	display:inline;
       	color:$light_blue;
@@ -197,6 +197,9 @@ ul.project{
       	@include text-shadow(0px, 1px, 0px, white);
      }
   }
+  img{
+ 	margin: 0 auto; 
+ }
 }
 
 #project-statement{
@@ -212,13 +215,9 @@ ul.project{
    font-size:16px;
    line-height:20px;
  }
+ 
 }
 
-
-.centered-future-logo{
-  text-align:center;
-  display:block;
-}
 
 #more-info{
 	width:700px;
