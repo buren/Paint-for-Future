@@ -1,36 +1,26 @@
+<div id="wrapper">
 
-<div id="page">
-  <div id="content">
-     <div id="post">
-       <h3 class="title"><%= @post.title %></h3>
+  <h1><%= @post.title %></h1>
 
   <% if @post.title? %>
+    <p>
+      <%= @post.published_at.html_safe if @post.published_at? %>
+    </p>
 
-     <p class="meta">
-     <span class="date"><p><%= @post.published_at.html_safe if @post.published_at? %></p></span>
-     <br />
-     </p>
-  
   <% else %>
-    <h3><%= link_to @post.published_at.html_safe if @post.published_at? %></h3>
+      <h1>
+        <%= link_to @post.published_at.html_safe if @post.published_at? %>
+      </h1>
 
   <% end %>
 
-       <br />
-       <%= image_tag @post.image_url(:thumb).to_s if @post.image?%>
-       <div class="entry">
-         <p class="large_font">
-          <%= @post.content.html_safe if @post.content? %>
-         </p>  
-       </div>
-     </div>
-     <br />
-     <br />
-     <br />
-     <strong>
-      <%= link_to 'View all news', posts_path %>
-     </strong>
-     <br />
-     <br />
-  </div>
+      
+  <%= image_tag @post.image_url(:thumb).to_s if @post.image?%>
+     
+  <%= @post.content.html_safe if @post.content? %>
+        
+  <strong>
+    <%= link_to 'View all news', posts_path %>
+  </strong>
 </div>
+  

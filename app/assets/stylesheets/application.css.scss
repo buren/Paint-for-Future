@@ -196,10 +196,11 @@ ul.project{
       	font-size:24px;
       	@include text-shadow(0px, 1px, 0px, white);
      }
-  }
-  img{
- 	margin: 0 auto; 
- }
+  }  
+}
+
+img#project{
+	margin: 0 auto;f
 }
 
 #project-statement{
