@@ -20,6 +20,7 @@ $border-color : $light_blue;
 body{
 	background: url(background_image.gif);
 }
+
 ul{
 	margin:0;
 	li{
@@ -204,7 +205,7 @@ img#project{
 }
 
 #project-statement{
- width:700px;
+ width:$page_width;
  padding:20px;
  text-align:center;
  h1{
@@ -214,10 +215,11 @@ img#project{
  }
  p{
    font-size:16px;
-   line-height:20px;
+   line-height:24px;
+	@include text-shadow(0px, 1px, 0px, white);
  }
- 
 }
+
 
 
 #more-info{
