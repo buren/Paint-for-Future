@@ -3,8 +3,9 @@
   <ul class="project-show">
 	  <li>
 		  <h1><%= @project.title %></h1>
-		  <p><%= @project.content.html_safe %></p>
-
+		  <div class="text">
+			  <p><%= @project.content.html_safe %></p>
+		  </div>
 		  <strong> 
 		     <%= link_to 'Back', projects_path %> 
 		  </strong>
