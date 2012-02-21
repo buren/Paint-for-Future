@@ -116,16 +116,20 @@ ul.goals {
 		}
 
 		.text{
-			display:inline-block;
-			vertical-align:top;
 			width:$goal_width;
-			padding-right:40px;
 			line-height:24px;
+			font-size:16px;
+			padding-bottom: 40px;
 			p{
 				@include text-shadow(0px, 1px, 0px, white);
-      } 
-    }
-  }
+      		} 
+    	}
+    	img{
+			display:inline;
+			padding: 20px 20px 20px 20px;
+		}
+
+  	}
 }
 
 ul.cards{
@@ -198,11 +202,11 @@ ul.project{
       	@include text-shadow(0px, 1px, 0px, white);
      }
   }  
+  img{
+	margin: 0 auto;
+	}
 }
 
-img#project{
-	margin: 0 auto;
-}
 
 #project-statement{
  width:$page_width;
@@ -219,8 +223,6 @@ img#project{
 	@include text-shadow(0px, 1px, 0px, white);
  }
 }
-
-
 
 #more-info{
 	width:700px;

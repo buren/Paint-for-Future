@@ -16,14 +16,13 @@
     <p>Let us tell you how we discovered the new generation of artists.</p>
     <p>Have a look at our project.</p>
   
-
     <ul class="project">
-        <% @projects.each do |project| %>
-          <li>
-             <%= link_to project.title, project %>
-          </li>
-        <% end %>
+      <% @projects.each do |project| %>
+        <li>
+           <%= link_to project.title, project %>
+        </li>
+      <% end %>
+      <img alt="Future_logo_mini" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
     </ul>
-    <img alt="Future_logo_mini" id="project" src="/assets/future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg">
   </div>
 </div>
