@@ -6,6 +6,7 @@ $post_width : 780px;
 $goal_width : 700px;
 $project-show-width : 700px;
 $video_width : 600px;
+$contact_width : 600px;
 
 /************** Colors **************/
 
@@ -88,12 +89,11 @@ ul.posts{
 			display:inline-block;
 			vertical-align:top;
 			width:380px;
-			padding-right:40px;
+			padding:0 40px 20px 0px;
 			line-height:24px;
 			p{
 				@include text-shadow(0px, 1px, 0px, white);
 			}
-			
 		}
 		img{
 			display:inline;
@@ -134,24 +134,46 @@ ul.goals {
 			font-size:24px;
 			@include text-shadow(0px, 1px, 0px, white);
 		}
-
 		.text{
 			width:$goal_width;
 			line-height:24px;
 			font-size:16px;
-			padding:40px 0 20px 0;
+			padding:20px 0 20px 0;
 			p{
 				@include text-shadow(0px, 1px, 0px, white);
       		} 
     	}
     	img{
-			display:inline;
 			padding: 20px 20px 20px 20px;
 			margin: 0 auto;
 		}
   	}
 }
 
+ul.contact-show{
+	li{
+		h1{
+			padding-top:20px;
+			color:$light_blue;
+			font-size:24px;
+			@include text-shadow (0px, 1px, 0px, white);
+		}
+		.contact-info{
+			width:$contact_width;
+			line-height:24px;
+			font-size:16px;
+			padding:40px 0 20px 0;
+		}
+		img{
+			display:inline;
+			border:1px solid $light_blue;
+			padding:5px;
+			@include border-radius(5px);
+			@include box-shadow($light_blue, 0px, 1px, 3px);
+			background:white;
+		}
+	}
+}
 
 ul.cards{
 	li{

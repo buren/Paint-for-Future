@@ -1,27 +1,14 @@
-<div id="page">
-  <div id="content">
-      <br />
-      <br />
-      <br />
-      <%= image_tag @contact.image_url(:thumb).to_s, :size => "150x250" if @contact.image? %>
-      <h3>
-        <strong><%= link_to @contact.name, @contact %></strong>
-      </h3>
-      <p><i><%= @contact.job_title %></i>
-      <br />
-      <b><%= @contact.email %></b>
-      <br />
-      <%= @contact.phone_number %>
-      <br />
-      <%= @contact.description %>
-      </p>
-      <br />
-      <br />
-      <br />
-    <br />
-    <br />
-    <br />
-    <br />
-    <br />
-  </div>
+<div class="contact-show">
+  <ul>
+    <li>
+      <%= image_tag @contact.image_url(:thumb).to_s, :size => "300x300" if @contact.image? %>
+      <h1><%= link_to @contact.name, @contact %></h1>
+      <div class="contact-info">
+        <p><i><%= @contact.job_title %></i>
+        <p><%= @contact.email %></p>
+        <p><%= @contact.phone_number %></p>
+        <p><%= @contact.description %></p>
+      </div>
+    </li>
+  </ul>
 </div>
