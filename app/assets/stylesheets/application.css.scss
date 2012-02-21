@@ -102,11 +102,30 @@ ul.posts{
 			@include border-radius(5px);
 			@include box-shadow($light_blue, 0px, 1px, 3px);
 			background:white;
-      overflow:hidden;
+      		overflow:hidden;
 		}
 	}
 }
 
+ul.videos{
+	width:$post_width;
+	li{
+		h1{
+			color:$light_blue;
+			font-size:24px;
+			@include text-shadow(0px, 1px, 0px, white);
+		}
+
+		.text{
+			vertical-align:top;
+			line-height:24px;
+			font-size:16px;
+			p{
+				@include text-shadow(0px, 1px, 0px, white);
+			}
+		}
+	}	
+}
 ul.goals {
   li {
 		h1{
@@ -127,10 +146,11 @@ ul.goals {
     	img{
 			display:inline;
 			padding: 20px 20px 20px 20px;
+			margin: 0 auto;
 		}
-
   	}
 }
+
 
 ul.cards{
 	li{

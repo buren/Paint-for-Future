@@ -1,11 +1,13 @@
-<div id="wrapper">
-      <h3>
-        Sponsors and Partners
-      </h3>
-    <% @videos.each do |video| %>
-      <% if video.title? %>
-          <%= link_to video.title, video %>
-      <% end %>
-            <%= video.description.html_safe if video.description? %>
-    <% end %>
+<div id="wrapper">  	
+	<ul class="videos">
+		<h1>Sponsors and Partners</h1>
+		<% @videos.each do |video| %>
+	  		
+	  		<li><h1><%= link_to video.title, video if video.title? %></h1></li>
+			<div class="text">	
+		    	<li><p><%= video.description.html_safe if video.description? %></p></li>
+			</div>
+
+		<% end %>
+	</ul>
 </div>
