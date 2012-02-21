@@ -2,12 +2,8 @@
 	<ul class="videos">
 		<li><h1>Sponsors and Partners</h1></li>
 		<% @videos.each do |video| %>
-	  		
 	  		<li><h1><%= link_to video.title, video if video.title? %></h1></li>
-			<div class="text">	
-		    	<li><%= video.description.html_safe if video.description? %></li>
-			</div>
-
+	    	<li><%= video.description.html_safe if video.description? %></li>
 		<% end %>
 	</ul>
 </div>
