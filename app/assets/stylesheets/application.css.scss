@@ -4,6 +4,7 @@
 $page_width : 800px;
 $post_width : 700px;
 $goal_width : 700px;
+$video_width : 350px;
 
 /************** Colors **************/
 
@@ -108,7 +109,8 @@ ul.posts{
 }
 
 ul.videos{
-	width:$post_width;
+	width:$video_width;
+	margin-bottom: 40px;
 	li{
 		h1{
 			padding-top:20px;

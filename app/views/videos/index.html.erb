@@ -4,6 +4,8 @@
 		<% @videos.each do |video| %>
 	  		<li><h1><%= link_to video.title, video if video.title? %></h1></li>
 	    	<li><%= video.description.html_safe if video.description? %></li>
+	    	<br>
+	    	<br>
 		<% end %>
 	</ul>
 </div>
