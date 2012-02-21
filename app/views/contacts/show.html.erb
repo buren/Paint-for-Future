@@ -1,14 +1,20 @@
 <div class="wrapper">
-  <ul class="contact-show">
+  <ul class="posts">
     <li>
+      <header>
+        <h1><%= link_to @contact.name, @contact %></h1>
+      </header>
+      <body>
+        <div class="text">
+          <p><i><%= @contact.job_title %></i>
+          <p><%= @contact.email %></p>
+          <p><%= @contact.phone_number %></p>
+         <br>
+          <p><%= @contact.description %></p> 
+       </div>
+
       <%= image_tag @contact.image_url(:thumb).to_s, :size => "300x300" if @contact.image? %>
-      <h1><%= link_to @contact.name, @contact %></h1>
-      <div class="contact-info">
-        <p><i><%= @contact.job_title %></i>
-        <p><%= @contact.email %></p>
-        <p><%= @contact.phone_number %></p>
-        <p><%= @contact.description %></p>
-      </div>
+    </body>
     </li>
   </ul>
 </div>
