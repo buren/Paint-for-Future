@@ -15,7 +15,7 @@
           <hr>
          
           <p><%= contact.job_title %></p>
-          <p><%= contact.email %></p>
+          <p><%= contact.email.html_safe if contact.email? %></p>
           <p><%= contact.phone_number if contact.phone_number? %></p> 
       </li>
     <% end %>
@@ -25,7 +25,7 @@
     <h1>For more information or interest in becoming a sponsor.</h1>
     <p>Or if your interested in becoming a partner or working with us please send us an email, we can never be to many.</p>
     <br>
-    <p>Send an email to: <i>info@paintforfuture.org</i></p>
+    <p>Send an email to: <i><a href="info@paintforfuture.org?Subject=Paint%20for%20Future"></i></p>
   </div>
 
   <div id="sierra-contact">
