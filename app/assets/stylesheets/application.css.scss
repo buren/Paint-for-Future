@@ -236,13 +236,6 @@ ul.pagination{
 ul.project{
   margin:40px 0 40px 0;
   text-align:center;
-  h3{
-			color:$light_blue;
-      font-size:16px;
-      line-height:24px;
-      @include text-shadow(0px, 1px, 0px, white);
-      margin-bottom:40px;
-  }
   li{
     display:inline;
     a{
@@ -255,6 +248,15 @@ ul.project{
       	@include text-shadow(0px, 1px, 0px, white);
      }
   }  
+}
+
+
+h3#project-back-link{
+			color:$light_blue;
+      font-size:16px;
+      line-height:24px;
+      @include text-shadow(0px, 1px, 0px, white);
+      margin-bottom:40px;
 }
 
 ul.project-show{
