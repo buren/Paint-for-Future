@@ -255,6 +255,7 @@ h3#project-back-link{
 			color:$light_blue;
       font-size:16px;
       line-height:24px;
+      text-decoration:none;
       @include text-shadow(0px, 1px, 0px, white);
       margin-bottom:40px;
 }
