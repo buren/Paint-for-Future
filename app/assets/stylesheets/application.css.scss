@@ -88,7 +88,7 @@ ul.posts{
 		.text{
 			display:inline-block;
 			vertical-align:top;
-			width:600px;
+			width:380px;
 			padding:0 40px 20px 0px;
 			line-height:24px;
 			font-size:15px;
@@ -98,7 +98,6 @@ ul.posts{
 		}
 		img{
 			display:inline;
-			float:right;
 			border:1px solid $light_blue;
 			padding:5px;
 			@include border-radius(5px);
