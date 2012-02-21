@@ -1,11 +1,13 @@
 <div id="wrapper">
   
   <ul class="project-show">
-	  <h1><%= @project.title %></h1>
-	  <p><%= @project.content.html_safe %></p>
-	  
-	  <strong> 
-	     <%= link_to 'Back', projects_path %> 
-	  </strong>
+	  <li>
+		  <h1><%= @project.title %></h1>
+		  <p><%= @project.content.html_safe %></p>
+
+		  <strong> 
+		     <%= link_to 'Back', projects_path %> 
+		  </strong>
+	  </li>
 	</ul>
-</div>_
+</div>
