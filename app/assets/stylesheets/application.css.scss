@@ -4,7 +4,7 @@
 $page_width : 800px;
 $post_width : 700px;
 $goal_width : 700px;
-$video_width : 350px;
+$video_width : 600px;
 
 /************** Colors **************/
 
@@ -96,8 +96,6 @@ ul.posts{
 		}
 		img{
 			display:inline;
-			width:200px;
-			height:250px;
 			border:1px solid $light_blue;
 			padding:5px;
 			@include border-radius(5px);
