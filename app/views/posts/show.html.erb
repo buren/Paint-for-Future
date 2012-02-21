@@ -19,7 +19,10 @@
            <%= image_tag @post.image_url(:thumb).to_s if @post.image %>
         <% end %>
       </body>
-        
+       <iframe src="http://www.facebook.com/plugins/like.php?href=www.paintforfuture.org"
+               scrolling="no" frameborder="0"
+                       style="border:none; width:450px; height:80px"></iframe>
+
       <strong>
         <%= link_to 'View all news', posts_path %>
       </strong>
