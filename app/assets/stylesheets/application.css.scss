@@ -4,6 +4,7 @@
 $page_width : 800px;
 $post_width : 780px;
 $goal_width : 700px;
+$project-show-width : 700px;
 $video_width : 600px;
 
 /************** Colors **************/
@@ -117,13 +118,11 @@ ul.videos{
 			@include text-shadow(0px, 1px, 0px, white);
 		}
 
-		.text{
-			p{
-				vertical-align:top;
-				line-height:24px;
-				font-size:16px;
-				@include text-shadow(0px, 1px, 0px, white);
-			}
+		p{
+			vertical-align:top;
+			line-height:24px;
+			font-size:16px;
+			@include text-shadow(0px, 1px, 0px, white);
 		}
 	}	
 }
@@ -228,6 +227,28 @@ ul.project{
 	margin: 0 auto;
 	}
 }
+
+ul.project-show{
+	margin: 40px 0px 40px 0px;
+	li{
+		h1{
+			color:$light_blue;
+			font-size: 24px;
+			@include text-shadow(0px, 1px, 0px, white);
+		}	
+		
+		.text{
+			width:$project-show-width;
+			line-height:24px;
+			font-size:16px;
+			padding:40px 0 20px 0;
+			p{
+				@include text-shadow(0px, 1px, 0px, white);
+      		} 
+    	}
+	}
+}
+
 
 
 #project-statement{
