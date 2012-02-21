@@ -239,7 +239,8 @@ ul.project{
   li{
     display:inline;
     a{
-    	padding: 0 10px;
+    	  padding: 0 10px;
+        margin-bottom:40px;
       	text-decoration:none;
       	display:inline;
       	color:$light_blue;
@@ -247,9 +248,6 @@ ul.project{
       	@include text-shadow(0px, 1px, 0px, white);
      }
   }  
-  img{
-	margin: 0 auto;
-	}
 }
 
 ul.project-show{
@@ -333,6 +331,7 @@ img#logo{
 	display:inline-block!important;
 	display:block;
   float:left;
+  margin-left:20px;
 	width:150px;
 }
 
