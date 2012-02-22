@@ -65,8 +65,15 @@ ActiveRecord::Schema.define(:version => 20111215135251) do
     t.text     "maps"
   end
 
-# Could not dump table "posts" because of following StandardError
-#   Unknown type 'content' for column 'vimeo_content'
+  create_table "posts", :force => true do |t|
+    t.string   "name"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image"
+    t.string   "published_at"
+  end
 
   create_table "projects", :force => true do |t|
     t.string   "title"
