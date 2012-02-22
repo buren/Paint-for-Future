@@ -5,7 +5,7 @@ ActiveAdmin.register Post do
     f.inputs "Post", :multipart => true do
       f.input :name, :as => :select, :collection => ["Fredrik Beck", "Lucas Lennig", "Daniel Leksell"], :hint => "Your name"
       f.input :title
-      f.input :published_at
+      f.input :published_at, :hint => "You can add videos as long as the width doesn't exceed 380px"
       f.input :content, :hint => "You can use HTML, use <br /> tag for new line, <h3> for header and <b> for bold"
       f.input :remote_image_url, :as => :url, :hint => "Provide URL to jpg, giff or png image"
       f.input :image, :as => :file, :hint => "Select any jpg, giff or png image"
