@@ -145,7 +145,7 @@ ul.goals {
     	}
     	img{
 			padding: 20px 20px 20px 20px;
-			display:inline;
+			display:inline;	
 			margin: 0 auto;
 		}
   	}
@@ -357,6 +357,7 @@ footer.main-footer{
 	top:20px;
 	left:40px;
 	width:700px;
+	min-height:350px;
 	margin-bottom:50px;
 	border:1px solid $border-color;
 	@include box-shadow($border-color, 0px, 1px, 3px);
