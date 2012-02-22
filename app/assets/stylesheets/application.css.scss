@@ -1,5 +1,5 @@
 @import "reset.css.scss";
-@import "css3lib.css.scss";
+@import "mixins.css.scss";
 
 $page_width : 800px;
 $post_width : 780px;
@@ -98,12 +98,7 @@ ul.posts{
 		}
 		img{
 			display:inline;
-			border:1px solid $light_blue;
-			padding:5px;
-			@include border-radius(5px);
-			@include box-shadow($light_blue, 0px, 1px, 3px);
-			background:white;
-      		overflow:hidden;
+			@include image-styling();
 		}
 	}
 }
@@ -142,10 +137,15 @@ div.goals {
 			@include text-shadow(0px, 1px, 0px, white);
   		} 
 	}
-	img{
-		padding: 20px 20px 20px 20px;
-		display:inline;	
+
+	#img-container{
 		margin: 0 auto;
+	}
+
+	img{
+		margin: 20px;
+		display:inline;	
+		@include image-styling();
 	}
 }
 
@@ -165,11 +165,7 @@ ul.contact-show{
 		}
 		img{
 			display:inline;
-			border:1px solid $light_blue;
-			padding:5px;
-			@include border-radius(5px);
-			@include box-shadow($light_blue, 0px, 1px, 3px);
-			background:white;
+			@include image-styling();
 		}
 	}
 }
@@ -337,8 +333,8 @@ img#name{
 img#logo{
 	display:inline-block!important;
 	display:block;
-  float:left;
-  margin-left:30px;
+  	float:left;
+  	margin-left:30px;
 	width:150px;
 }
 
