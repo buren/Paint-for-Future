@@ -19,13 +19,28 @@
            <%= image_tag @post.image_url(:thumb).to_s if @post.image %>
         <% end %>
       </body>
-       <iframe src="http://www.facebook.com/plugins/like.php?href=www.paintforfuture.org"
-               scrolling="no" frameborder="0"
-                       style="border:none; width:450px; height:80px"></iframe>
-    
-    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.paintforfuture.org" data-hashtags="paintforfuture">Tweet</a>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
       
+
+      <div id="social-buttons">
+        <div id="fb-root"></div>
+          <script>(function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=282725478406647";
+            fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
+          </script>
+          
+          <div class="fb-like" data-href="http://www.paintforfuture.org" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false" data-font="trebuchet ms"></div>
+          <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.paintforfuture.org" data-hashtags="paintforfuture">Tweet</a>
+          <script>
+            !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+          </script>
+      </div>
+      
+
+
       <strong>
         <%= link_to 'View all news', posts_path %>
       </strong>

@@ -6,11 +6,12 @@
       </header>
       <body>
         <div class="text">
+          <p><%= @contact.description %></p> 
+          <br>
           <p><i><%= @contact.job_title %></i>
           <p><%= @contact.email %></p>
           <p><%= @contact.phone_number %></p>
-         <br>
-          <p><%= @contact.description %></p> 
+          
        </div>
       <%= image_tag @contact.image_url(:thumb).to_s, :size => "300x300" if @contact.image? %>
     </body>
