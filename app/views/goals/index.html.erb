@@ -1,20 +1,18 @@
 <div id="wrapper">
-  <ul class="goals">
+  <div class="goals">
     <% @goals.each do |goal| %>
 
-      <li>
-        <h1><%= goal.title if goal.title? %></h1>
-          <div class="text">
-            <p><%= goal.content.html_safe if goal.content? %></p>
-          </div>
-      </li>
+      <h1><%= goal.title if goal.title? %></h1>
+      <div class="text">
+        <p><%= goal.content.html_safe if goal.content? %></p>
+      </div>
 
-      <li><h1>Some of The Needy Today's artists</h1></li>
+      <h1>Some of The Needy Today's artists</h1>
       
-      <li> <%= image_tag "orphanage/11.jpg", :size => "182x253" %></li>
-      <li> <%= image_tag "orphanage/12.png", :size => "182x253" %></li>
-      <li> <%= image_tag "orphanage/13.jpg", :size => "182x253" %></li>
+      <%= image_tag "orphanage/11.jpg", :size => "182x253" %>
+      <%= image_tag "orphanage/12.png", :size => "182x253" %>
+      <%= image_tag "orphanage/13.jpg", :size => "182x253" %>
 
     <% end %>
-  </ul>
+  </div>
 </div>
