@@ -2,7 +2,7 @@ class ContactsController < ApplicationController
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.order("created_at desc")
+    @contacts = Contact.order("created_at asc")
 
     respond_to do |format|
       format.html # index.html.erb

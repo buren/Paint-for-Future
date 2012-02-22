@@ -6,9 +6,21 @@
 		  <div class="text">
 			  <p><%= @project.content.html_safe %></p>
 		  </div>
-		  <strong> 
-		     <%= link_to 'Back', projects_path %> 
-		  </strong>
 	  </li>
 	</ul>
+  
+    <ul class="project">
+        <li>
+          <a href="4">Why</a>
+        </li>
+        <li>
+          <a href="5">How</a>
+        </li>
+        <li>
+          <a href="6">What</a>
+        </li>
+        <br>
+    </ul>
+		  
+      <h3 id="project-back-link"><%= link_to 'Back', projects_path %></h3>
 </div>
