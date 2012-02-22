@@ -13,6 +13,7 @@ $contact_width : 600px;
 $light_blue : #8EAAB0;
 $link_hover_color : $light_blue;
 $border-color : $light_blue;
+$header_color: black;
 
 /************** Resetes **************/
 
@@ -125,7 +126,7 @@ ul.videos{
 div.goals {
 	h1{
 		padding-top: 20px;
-		color:$light_blue;
+		color:$header_color;
 		font-size:24px;
 		@include text-shadow(0px, 1px, 0px, white);
 	}
@@ -180,6 +181,9 @@ ul.cards{
 		border:1px solid $light_blue;
 		@include border-radius(3px);
 		@include box-shadow(0px, 1px, 3px, $light_blue);
+		a{
+			text-decoration:none;
+		}
 		img{
 			display:inline;
 			width:80px;
@@ -281,7 +285,7 @@ ul.project-show{
  text-align:center;
  h1{
    font-size:24px;
-   color:$light_blue;
+   color:$header_color;
    margin-bottom:20px;
  }
  p{
@@ -338,8 +342,20 @@ img#logo{
 	width:150px;
 }
 
+div#main-title{
+	padding-left:40px;
+	margin-right:40px;
+	width:500px;
 
-h2#slogan{
+	h1{
+		font-size: 67px;
+	}
+	h3{
+		font-size:32px;	
+	}
+}
+
+h3#slogan{
 	text-align:center;
 	font-weight:bold;
 	font-size:14px;
@@ -355,8 +371,8 @@ footer.main-footer{
 	}
 }
 
-#social-buttons{
-	margin: 0 auto;
+#home-share-buttons{
+	text-align:center;	
 }
 
 /*Nivo slider*/
