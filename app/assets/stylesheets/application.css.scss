@@ -42,7 +42,6 @@ ul{
 
 h1.main-heading{
 	font-size:24px;
-	color:$light_blue;
 	padding-top:10px;
 	padding-left:20px;
 	margin-bottom:10px;
@@ -192,11 +191,13 @@ ul.cards{
 		margin:20px;
 		display:inline-block;
 		width:300px;
-		border:1px solid $light_blue;
+		border:1px solid $light_blue;	
 		@include border-radius(3px);
 		@include box-shadow(0px, 1px, 3px, $light_blue);
 		a{
 			text-decoration:none;
+			color: $light_blue;
+
 		}
 		img{
 			display:inline;
@@ -218,7 +219,6 @@ ul.cards{
 			}
 		}
 		h1{
-			color:$light_blue;
 			font-size:18px;
 			@include text-shadow(0px, 1px, 0px, white);
 		}
@@ -314,7 +314,7 @@ ul.project-show{
 	padding:20px;
 	h1{
 		font-size:24px;
-		color:$light_blue;
+		color:$header_color;
 		margin-bottom:20px;
 	}
 	p{
@@ -327,7 +327,7 @@ ul.project-show{
 	padding:20px;
 	h1{
 		font-size:24px;
-		color:$light_blue;
+		color:$header_color;
 		margin-bottom:20px;
 	}
 	h2{
