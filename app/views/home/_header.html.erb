@@ -1,25 +1,32 @@
-<%= image_tag ("logo-small.png"), :id => 'logo' %>  
 <div id="wrapper">
   <header>
-   <ul id="menu">
-      <li>
-        <%= link_to 'Paint for Future', home_index_path %>
-      </li>
-      <li>
-        <%= link_to "Project", projects_path %>
-      </li>
-      <li>
-         <%= link_to "The Center", goals_path %>
-      </li>
-      <li>
-        <%= link_to "Partners", videos_path %>
-      </li>
-      <li>
-        <%= link_to "Log", posts_path %>
-      </li>
-      <li>
-         <%= link_to "Contact", contacts_path %>  
-      </li>
-    </ul>
+    
+    <%= image_tag ("logo-small.png") %> 
+  <div id="main-title">
+    <h1>Paint for Future</h1>
+    <h3>Aid through Art.</h3>
+   </div> 
+    <div id="menu-wrapper">
+     <ul id="menu">
+        <li>
+          <%= link_to 'Paint for Future', home_index_path %>
+        </li>
+        <li>
+          <%= link_to "Project", projects_path %>
+        </li>
+        <li>
+           <%= link_to "The Center", goals_path %>
+        </li>
+        <li>
+          <%= link_to "Partners", videos_path %>
+        </li>
+        <li>
+          <%= link_to "Log", posts_path %>
+        </li>
+        <li>
+           <%= link_to "Contact", contacts_path %>  
+        </li>
+      </ul>
+    </div>
   </header>
 </div>

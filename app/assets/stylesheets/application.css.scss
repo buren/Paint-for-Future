@@ -7,6 +7,7 @@ $goal_width : 700px;
 $project-show-width : 700px;
 $video_width : 600px;
 $contact_width : 600px;
+$menu_width : 680px;
 
 /************** Colors **************/
 
@@ -49,8 +50,6 @@ h1.main-heading{
 
 header{
 	padding:20px 0;
-	margin:30px 0 20px 0;
-	border-bottom:1px solid black;
 	@include box-shadow(0px, 1px, 0px, white);
 	a{
 		color:$light_blue;
@@ -63,15 +62,31 @@ header{
 	a:hover{
 		color:$link_hover_color;
 	}
-	ul#menu{
-		width:680px;
-		margin:0 auto;
-		li{
-			display:inline;
-			list-style:none;
+	
+	#menu-wrapper{
+		border-top:1px solid #aaa;
+		border-bottom:1px solid #aaa;
+		padding: 20px 0px;
+		margin-top: 20px;
+		width:$page_width;
+		ul#menu{
+			margin:0 auto;
+			width:$menu_width;
+			li{
+				display:inline;
+				list-style:none;
+			}
+		}
+		img{
+			display:inline-block;
+			vertical-align:top;
+		  	margin-left:30px;
+			width:150px;
 		}
 	}
 }
+
+
 
 ul.posts{
 	width:$post_width;
@@ -334,17 +349,13 @@ img#name{
 	width:500px;	
 }
 
-img#logo{
-	display:inline-block!important;
-	display:block;
-  	float:left;
-  	margin-left:30px;
-	width:150px;
-}
+
 
 div#main-title{
 	padding-left:40px;
 	margin-right:40px;
+	display:inline-block;
+	vertical-align:top;
 	h1{
 		font-size: 67px;
 	}
@@ -372,6 +383,7 @@ footer.main-footer{
 
 #home-share-buttons{
 	text-align:center;	
+	vertical-align:top;
 }
 
 /*Nivo slider*/
