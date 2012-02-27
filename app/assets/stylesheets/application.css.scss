@@ -11,9 +11,9 @@ $menu_width : 680px;
 
 /************** Colors **************/
 
-$light_blue : #8EAAB0;
-$link_hover_color : $light_blue;
-$border-color : $light_blue;
+$light_blue : #036;
+$link_hover_color : #607890;
+$border-color : #036;
 $header_color: black;
 
 /************** Resetes **************/
@@ -50,7 +50,6 @@ h1.main-heading{
 
 header{
 	padding:20px 0;
-	@include box-shadow(0px, 1px, 0px, white);
 	a{
 		color:$light_blue;
 		padding:20px;
@@ -69,6 +68,7 @@ header{
 		padding: 20px 0px;
 		margin-top: 20px;
 		width:$page_width;
+		@include box-shadow(0px, 1px, 0px, white);
 		ul#menu{
 			margin:0 auto;
 			width:$menu_width;
