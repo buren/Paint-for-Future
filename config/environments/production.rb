@@ -20,6 +20,9 @@ Future::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
+  # Precompiles Active Admin assets to be able to precompile assets
+  config.assets.precompile += ['active_admin.js', 'active_admin.css']
+
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
 
