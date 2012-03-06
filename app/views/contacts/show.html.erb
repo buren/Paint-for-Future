@@ -9,7 +9,7 @@
           <p><%= @contact.description %></p> 
           <br>
           <p><i><%= @contact.job_title %></i>
-          <p><%= @contact.email %></p>
+          <p><%= mail_to @contact.email %></p>
           <p><%= @contact.phone_number %></p>
           
        </div>
