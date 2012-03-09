@@ -26,6 +26,9 @@ ActiveAdmin.register Post do
     column "Content" do |post|
       link_to post.content.html_safe, admin_post_path(post)
     end
+    column "Image" do |post|
+      image_tag post.image_url(:thumb).to_s if post.image?
+    end
     default_actions
   end
 end
