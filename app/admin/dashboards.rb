@@ -1,6 +1,6 @@
 ActiveAdmin::Dashboards.build do
 
-  section "Recent News" do
+  section "Recent News", :priority => 1 do
     table_for Post.order("created_at desc").limit(5) do
       column "Name" do |post|
         link_to post.name, admin_post_path(post)
@@ -9,9 +9,28 @@ ActiveAdmin::Dashboards.build do
          link_to post.title, admin_post_path(post)
       end
       column "Content" do |post| 
-        truncate(post.content, :length => 60, :omission => '...')
+        truncate(post.content, :length => 60, :omission => '...').html_safe
       end
     end
     strong { link_to "All posts", admin_posts_path }
+  end
+
+
+section "Site visists", :priority => 2 do
+    div do
+      br
+      text_node %{<iframe marginwidth="0"  marginheight="0" width="600" height="350" src="http://www.embeddedanalytics.com/reports/displayreport?reportcode=1cbtqldrNU&chckcode=gan73E4bHsdhb76t3lDk2Q" type="text/html" frameborder="0" scrolling="no" title="EmbeddedAnalytics - Embed Realtime Google Analytics Charts into your Website!"></iframe>}.html_safe
+    end
+  end
+
+
+
+
+  section "Site performance", :priority => 3 do
+    div do
+      br
+      text_node %{<iframe src="https://heroku.newrelic.com/public/charts/gPa1O89PJgk" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+      text_node %{<iframe src="https://heroku.newrelic.com/public/charts/7cVSmgb0fXK" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+    end
   end
 end
