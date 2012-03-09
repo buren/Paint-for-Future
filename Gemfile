@@ -12,8 +12,9 @@ gem 'redcarpet'
 gem "meta_search"
 gem 'fog'
 
-gem "carrierwave", :git => 'http://github.com/jnicklas/carrierwave.git'
+gem "carrierwave"
 gem "rmagick"
+gem 'newrelic_rpm'
 
 group :assets do
   gem 'coffee-rails', "~> 3.1.0"
