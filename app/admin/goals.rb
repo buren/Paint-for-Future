@@ -6,7 +6,9 @@ ActiveAdmin.register Goal do
       link_to goal.title, admin_goal_path(goal)
     end
     column "Release Date", :created_at
-    column :content
+    column "Content" do |goal|
+    	goal.content.html_safe
+    end
     default_actions
   end
   

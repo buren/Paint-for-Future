@@ -24,7 +24,7 @@ ActiveAdmin.register Post do
       link_to post.published_at, admin_post_path(post)
     end
     column "Content" do |post|
-      link_to post.content, admin_post_path(post)
+      link_to post.content.html_safe, admin_post_path(post)
     end
     default_actions
   end

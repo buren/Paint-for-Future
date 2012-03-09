@@ -4,7 +4,7 @@ ActiveAdmin.register Project do
       		link_to project.title, admin_project_path(project)
     	end
    		column "Content" do |project|
-    		link_to project.content, admin_project_path(project)
+    		link_to project.content.html_safe, admin_project_path(project)
    		end
   	end
 end
