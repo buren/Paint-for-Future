@@ -2,9 +2,6 @@ ActiveAdmin::Dashboards.build do
 
   section "Recent News", :priority => 1 do
     table_for Post.order("created_at desc").limit(5) do
-      column "Name" do |post|
-        link_to post.name, admin_post_path(post)
-      end
       column "Title" do |post|
          link_to post.title, admin_post_path(post)
       end
