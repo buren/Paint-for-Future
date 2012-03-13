@@ -27,7 +27,7 @@ section "Site visists", :priority => 2 do
     div do
       br
       text_node %{<iframe src="https://heroku.newrelic.com/public/charts/gPa1O89PJgk" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
-      text_node %{<iframe src="https://heroku.newrelic.com/public/charts/7cVSmgb0fXK" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
+      text_node %{<iframe src="https://heroku.newrelic.com/public/charts/94JYHjHI9Hm" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
     end
   end
 end
