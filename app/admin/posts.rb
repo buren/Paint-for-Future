@@ -27,7 +27,7 @@ ActiveAdmin.register Post do
     end
     column "Image" do |post|
       if post.image?
-        image_tag post.image_url(:thumb).to_s, :id => "fancybox", :href => post.image_url().to_s
+        image_tag post.image_url(:thumb).to_s.html_safe, :id => "fancybox", :href => post.image_url().to_s
       end
     end
     default_actions
