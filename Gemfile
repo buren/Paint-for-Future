@@ -14,7 +14,6 @@ gem 'fog'
 
 gem "carrierwave"
 gem "rmagick"
-gem 'newrelic_rpm'
 
 group :assets do
   gem 'coffee-rails', "~> 3.1.0"
