@@ -26,9 +26,7 @@ ActiveAdmin.register Post do
       link_to post.content.html_safe, admin_post_path(post)
     end
     column "Image" do |post|
-      if post.image?
-        link_to (image_tag post.image_url(:thumb).to_s.html_safe), :id => "fancybox", :href => post.image_url().to_s
-      end
+      image_tag post.image_url(:thumb).to_s if post.image?
     end
     default_actions
   end
