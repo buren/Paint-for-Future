@@ -6,7 +6,7 @@ gem 'therubyracer'
 gem 'sass-rails', "~> 3.1.0"
 gem 'activeadmin'
 gem 'formtastic', '1.2.4' # an activeadmin dependency
-gem 'rack', '1.3.3'
+gem 'rack'
 gem 'kaminari'
 gem 'redcarpet'
 gem "meta_search"
@@ -20,7 +20,7 @@ group :assets do
   gem 'uglifier'
 end
 
-
+gem 'thin'
 
 
 group :production do
