@@ -60,6 +60,8 @@ GEM
     excon (0.7.12)
     execjs (1.2.9)
       multi_json (~> 1.0)
+    fancybox-rails (0.1.4)
+      railties (>= 3.1.0)
     fastercsv (1.5.4)
     fog (1.1.1)
       builder
@@ -179,6 +181,7 @@ DEPENDENCIES
   activeadmin
   carrierwave
   coffee-rails (~> 3.1.0)
+  fancybox-rails
   fog
   formtastic (= 1.2.4)
   jquery-rails

@@ -12,7 +12,7 @@
         <% else %>
           <header>
             <h1>
-              <%= link_to post.published_at.html_safe if post.published_at? %>
+              <%= link_to post.published_at.html_safe, post %>
             </h1>
           </header>
         <% end %>
@@ -23,7 +23,7 @@
           </div>
 
           <% if post.image? %>
-             <%= image_tag post.image_url(:thumb).to_s %>
+             <%= link_to (image_tag post.image_url(:thumb).to_s), post, :id => "fancybox", :href => post.image_url().to_s  %>
           <% end %>
         </body>
       </li>

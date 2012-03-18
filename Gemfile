@@ -21,8 +21,8 @@ group :assets do
   gem 'uglifier'
 end
 
-# gem 'sqlite3'
-# gem 'pg'
+
+
 
 group :production do
   gem 'pg'
@@ -36,6 +36,10 @@ end
 
 gem 'jquery-rails'
 gem 'therubyracer'
+
+# Gem for fancybox pictures
+gem 'fancybox-rails'
+
 
 group :test do
   # Pretty printed test output

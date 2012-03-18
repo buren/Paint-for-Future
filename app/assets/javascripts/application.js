@@ -7,3 +7,12 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$(document).ready(function() {
+
+	$("a#fancybox").fancybox({
+		openEffect	: 'elastic',
+    	closeEffect	: 'elastic',
+	 });
+
+});
