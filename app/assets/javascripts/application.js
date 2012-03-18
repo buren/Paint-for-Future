@@ -44,6 +44,11 @@ $(window).load(function() {
         lastSlide: function(){}, // Triggers when last slide is shown
         afterLoad: function(){} // Triggers when slider has loaded
     });
+
+	$("a.fancybox").fancybox({
+		openEffect	: 'elastic',
+    	closeEffect	: 'elastic'
+	 });
 	
 	
 });

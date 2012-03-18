@@ -3,9 +3,9 @@
   <div class="sideshow-container">
 			<div class="slider-container">
 				<div id="slideshow" class="nivoSlider">
-		            <%= image_tag "slides/slide1.jpg" %>
-		            <%= image_tag "slides/slide2.jpg" %>
-		            <%= image_tag "slides/slide3.jpg" %>
+		            <%= link_to (image_tag "slides/slide1.jpg"), image_path("slides/slide1.jpg"), :class => "fancybox", :href => "slides/slide1.jpg"%>
+		            <%= link_to (image_tag "slides/slide1.jpg"), image_path("slides/slide2.jpg"), :class => "fancybox", :href => "slides/slide2.jpg"%>
+		            <%= link_to (image_tag "slides/slide1.jpg"), image_path("slides/slide3.jpg"), :class => "fancybox", :href => "slides/slide3.jpg"%>
 				</div><!-- end of slideshow -->
 			</div>
 		</div><!-- end of slideshow -->
