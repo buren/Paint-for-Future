@@ -21,6 +21,7 @@ $light_blue : #435465;
 $link_hover_color : #607890;
 $border-color : #435465;
 $header_color: black;
+$main_title_color: black;
 
 /************** Resetes **************/3
 
@@ -361,6 +362,7 @@ div#main-title{
 	margin-right:40px;
 	display:inline-block;
 	vertical-align:top;
+	color: $main_title_color;
 	h1{
 		font-size: 67px;
 	}
