@@ -43,12 +43,5 @@ $(window).load(function() {
         slideshowEnd: function(){}, // Triggers after all slides have been shown
         lastSlide: function(){}, // Triggers when last slide is shown
         afterLoad: function(){} // Triggers when slider has loaded
-    });
-
-	$("a.fancybox").fancybox({
-		openEffect	: 'elastic',
-    	closeEffect	: 'elastic'
-	 });
-	
-	
+    });	
 });
