@@ -9,11 +9,29 @@
 //= require_tree .
 
 $(document).ready(function() {
-	$("a#fancybox").fancybox({
-		openEffect	: 'elastic',
-    	closeEffect	: 'elastic'
+        $("a#fancybox").fancybox({
+	       openEffect	: 'elastic',
+    	       closeEffect	: 'elastic'
 	 });
 
+        var slider = $('#content-slider').bxSlider({
+                controls: false
+        });
+
+        $('#go-why').click(function(){
+                slider.goToSlide(1);
+                return false;
+        });
+
+        $('#go-how').click(function(){
+                slider.goToSlide(2);
+                return false;
+        });
+
+        $('#go-what').click(function(){
+                slider.goToSlide(3);
+                return false;
+        });
 });
 
 $(window).load(function() {

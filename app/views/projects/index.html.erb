@@ -2,27 +2,76 @@
   <div id="project-statement">
     <h1>Project</h1>
 
-    <p>Charity is more than mere donation.</p>
-    <p>Art is more than paint on canvas.</p>
-    <p>Liberty is not a gift, but a sensation.</p>
-    <br />  
-    <p>Our world is bursting of desperate souls and empty stomachs.</p>
-    <p>Donations of money and food are abundant.</p>
-    <p>Hunger can take many shapes, and a starving imagination is enough to weaken any man.</p>
-    <p>Naturally, creativity cannot be donated, it must arise from within.</p>
-    <p>All one can do is provide an opportunity.</p>
-    <p>This we can do.</p>
-    <br/>
-    <p>Let us tell you how we discovered the new generation of artists.</p>
-    <p>Have a look at our project.</p>
-  
+    <div id="content-slider">
+      <div>
+        <p>Charity is more than mere donation.</p>
+        <p>Art is more than paint on canvas.</p>
+        <p>Liberty is not a gift, but a sensation.</p>
+        <br />  
+        <p>Our world is bursting of desperate souls and empty stomachs.</p>
+        <p>Donations of money and food are abundant.</p>
+        <p>Hunger can take many shapes, and a starving imagination is enough to weaken any man.</p>
+        <p>Naturally, creativity cannot be donated, it must arise from within.</p>
+        <p>All one can do is provide an opportunity.</p>
+        <p>This we can do.</p>
+        <br/>
+        <p>Let us tell you how we discovered the new generation of artists.</p>
+        <p>Have a look at our project.</p>
+      </div>
+
+
+        <% @why.each do |why| %>
+          <div>
+            <ul class="project-show">
+              <li>
+                <h1><%= why.title %></h1>
+                <div class="text">
+                  <p><%= why.content.html_safe %></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+        
+        <% @how.each do |how| %>
+          <div>
+            <ul class="project-show">
+              <li>
+                <h1><%= how.title %></h1>
+                <div class="text">
+                  <p><%= how.content.html_safe %></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+
+        <% @what.each do |what| %>
+          <div>
+            <ul class="project-show">
+              <li>
+                <h1><%= what.title %></h1>
+                <div class="text">
+                  <p><%= what.content.html_safe %></p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        <% end %>
+      
+    </div>
+    
     <ul class="project">
-      <% @projects.each do |project| %>
-        <li>
-           <%= link_to project.title, project %>
-        </li>
-      <% end %>
-      <br>
+      <li>
+        <a href id="go-why">Why</a>
+      </li>
+      <li>
+        <a href id="go-how">How</a>
+      </li>
+      <li>
+        <a href id="go-what">What</a>
+      </li>
     </ul>
+     <br>
   </div>
 </div>

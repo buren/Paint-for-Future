@@ -5,6 +5,10 @@ class ProjectsController < ApplicationController
   def index
     @projects = Project.order("created_at asc").page(params[:page])
 
+    @why = Project.where(:id => 4)
+    @how = Project.where(:id => 5)
+    @what = Project.where(:id => 6)
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @projects }
