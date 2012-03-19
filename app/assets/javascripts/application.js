@@ -15,20 +15,20 @@ $(document).ready(function() {
 	 });
 
         var slider = $('#content-slider').bxSlider({
-                controls: false
+                controls: false,
         });
 
-        $('#go-why').click(function(){
+        $('.go-why').click(function(){
                 slider.goToSlide(1);
                 return false;
         });
 
-        $('#go-how').click(function(){
+        $('.go-how').click(function(){
                 slider.goToSlide(2);
                 return false;
         });
 
-        $('#go-what').click(function(){
+        $('.go-what').click(function(){
                 slider.goToSlide(3);
                 return false;
         });

@@ -251,14 +251,14 @@ ul.pagination{
 	}
 }
 
-ul.project{
-  margin:40px 0 40px 0;
+ul.project-links{
   text-align:center;
+  margin: 20px 0px 20px 0px;
   li{
     display:inline;
     a{
-    	  padding: 0 10px;
-        margin-bottom:40px;
+    	padding: 0 10px;
+        margin-bottom:20px;
       	text-decoration:none;
       	display:inline;
       	color:$light_blue;
