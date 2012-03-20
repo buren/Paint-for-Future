@@ -1,0 +1,13 @@
+<div id="wrapper">
+	<% @galleries.each do |gallery| %>
+		<ul class="gallery">
+			<li>
+				<% if gallery.image? %>
+            		<%= link_to (image_tag gallery.image_url(:thumb).to_s), gallery, :id => "fancybox", :href => gallery.image_url().to_s, :rel =>"gallery-images", :title => (gallery.description if gallery.description?) %>
+            	<% elsif gallery.video? %>
+            		<%= gallery.video.html_safe %>
+            	<% end %>
+			</li>
+		</ul>
+	<% end %>
+</div>

@@ -1,4 +1,6 @@
 Future::Application.routes.draw do
+  resources :galleries
+
   resources :videos, :path =>  "/partners"
 
   ActiveAdmin.routes(self)

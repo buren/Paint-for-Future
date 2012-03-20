@@ -10,12 +10,17 @@
 
 $(document).ready(function() {
         $("a#fancybox").fancybox({
-	       openEffect	: 'elastic',
-    	       closeEffect	: 'elastic'
+	        openEffect	: 'elastic',
+    	        closeEffect	: 'elastic',
+                helpers: {
+                        title : {
+                                type : 'float'
+                        }
+                }
 	 });
 
         var slider = $('#content-slider').bxSlider({
-                controls: false,
+                controls: false
         });
 
         $('.go-why').click(function(){

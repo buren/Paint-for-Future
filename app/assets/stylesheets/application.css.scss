@@ -10,6 +10,7 @@
 $page_width : 800px;
 $post_width : 780px;
 $goal_width : 700px;
+$gallery_width : 780px;
 $project-show-width : 700px;
 $video_width : 600px;
 $contact_width : 600px;
@@ -92,8 +93,6 @@ header{
 	}
 }
 
-
-
 ul.posts{
 	width:$post_width;
 	li{
@@ -120,6 +119,17 @@ ul.posts{
 		}
 		img{
 			display:inline;
+			@include image-styling();
+		}
+	}
+}
+
+ul.gallery{
+	width:$gallery_width;
+	li{
+		padding:20px;
+		img{
+			display: inline;
 			@include image-styling();
 		}
 	}
