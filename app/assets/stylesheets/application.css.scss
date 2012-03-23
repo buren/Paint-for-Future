@@ -285,7 +285,7 @@ h3#back-link{
     line-height:24px;
     text-decoration:none;
     @include text-shadow(0px, 1px, 0px, white);
-    margin:20px 0 	20px 0;
+    margin: 60px 0 	20px 0;
 }
 
 ul.project-show{
@@ -463,4 +463,49 @@ footer.main-footer{
 	display:block;
 	position:absolute;
 	z-index:5;
+}
+
+
+#dropdown {
+	 margin: 0;
+	 padding: 0;
+	li {
+		display: block;
+		list-style: none;
+		margin: 0;
+		padding:0 0 0 10px;
+		position: relative;
+		height:30px;
+		width:50px;
+ 	a#follow-text{
+		text-decoration:none;
+		color: black;
+		border:1px 90% $light_blue;
+		@include box-shadow($border-color, 0px, 1px, 3px);
+		padding: 3px;
+		@include border-radius(5px);
+	}
+	a#share-buttons{}
+	}
+	li:hover {}
+	li a {
+		text-decoration: none;
+	}
+
+}
+#dropdown ul {
+	display: none;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	top: 20px;
+	left: -1px;
+	z-index: 500;
+}
+#dropdown ul {
+ 	position: absolute;
+
+}
+#dropdown li:hover ul {
+ 	display: block;
 }

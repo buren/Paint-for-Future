@@ -1,4 +1,5 @@
 <div id="wrapper">
+
   <% @posts.each do |post| %>
       
     <ul class="posts"> 
@@ -27,11 +28,40 @@
           <% end %>
         </body>
       </li>
+      <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=282725478406647";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      <script>
+        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+      </script>
+        
+      <ul id="dropdown">
+        <li><a href="#" id="follow-text">Share</a>
+          <ul>
+            <li>       
+              <div class="fb-like" data-href="http://www.paintforfuture.org" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false" data-font="trebuchet ms"></div>
+            </li>
+            <li>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.paintforfuture.org/posts/ + #{ @post.id }" data-hashtags="paintforfuture">Tweet</a>
+            </li>       
+           </ul>
+        </li>
+      </ul>
     </ul>
   <% end %>
-    <ul class="pagination">
-      <li>
-      <h1><%= paginate @posts %></h1>
-      </li>
-    </ul>
+  <ul class="pagination">
+    <li>
+    <h1><%= paginate @posts %></h1>
+    </li>
+  </ul>
+
+  <b>Follow us on:</b> 
+  <br>
+  <%= link_to image_tag("icons/facebook.png", :size => "34x34"), "http://www.facebook.com/Paintforfuture", :title => "follow on Facebook", :id => "share-buttons" %>
+  <%= link_to image_tag("icons/twitter.png", :size => "34x34"), "http://twitter.com/paintforfuture", :title => "follow on Twitter", :id => "share-buttons" %>
 </div> 

@@ -11,7 +11,7 @@ Future::Application.routes.draw do
 
   resources :projects
 
-  resources :goals
+  resources :goals, :path => "/center"
 
   resources :posts
 
