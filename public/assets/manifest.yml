@@ -4,7 +4,8 @@
 !binary "ZnV0dXJlX2xvZ28ucG5n": future_logo-1ec5d644dd770a4038eb02ff0a781d04.png
 !binary "ZnV0dXJlX2xvZ28udGlmZg==": future_logo-2717dbc52a681218e2004b012ce06e66.tiff
 !binary "ZnV0dXJlX2xvZ29fbWluaS5qcGc=": future_logo_mini-6f6aa7ef76c614e7cad254823b45dc75.jpg
-!binary "aW1nMDEuanBn": img01-e29681b26aebe9c55f8d8a8478bdd73a.jpg
+!binary "aWNvbnMvZmFjZWJvb2sucG5n": icons/facebook-bda547edf2c2537f555028e7c39acffd.png
+!binary "aWNvbnMvdHdpdHRlci5wbmc=": icons/twitter-2d593dc35a81308c91b0ba8173e3c095.png
 !binary "bG9nby1zbWFsbC5wbmc=": logo-small-c0ed7c320db944f8c4944470bc43f6ef.png
 !binary "b3JwaGFuYWdlLzExLmpwZw==": orphanage/11-3c68957a1a6fb2b2c6b0bd592c977b0f.jpg
 !binary "b3JwaGFuYWdlLzEyLnBuZw==": orphanage/12-e76bd98f84c8331614820af6163653f6.png
@@ -19,12 +20,9 @@
 !binary "b3JwaGFuYWdlLzQyLmpwZw==": orphanage/42-a1588321f9b7c9697878de1efeea969a.jpg
 !binary "b3JwaGFuYWdlLzQzLmpwZw==": orphanage/43-71e04a089704bddaa6036bbe8702f3df.jpg
 !binary "b3JwaGFuYWdlL29ycGhhbmFnZV90b3AuanBn": orphanage/orphanage_top-c7a1508730b7017352e2ad2da48d0926.jpg
-!binary "cmFpbHMucG5n": rails-dd352fc2630e5f9aa5685ef1d7fe5997.png
 !binary "c2xpZGVzL3NsaWRlMS5qcGc=": slides/slide1-c50da31b27b78b5c34719ab21a6dde74.jpg
 !binary "c2xpZGVzL3NsaWRlMi5qcGc=": slides/slide2-6e285df68bbf1c109d02355331a16407.jpg
 !binary "c2xpZGVzL3NsaWRlMy5qcGc=": slides/slide3-fbe7accab00039b1b749218ca18f05ca.jpg
-!binary "dW5kZXJsaW5lLnBuZw==": underline-2dd048eed4c629bfe97f98e5a009ebaf.png
-!binary "dW5kZXJsaW5lMS5wbmc=": underline1-d94316a85a52e971f31e852a704382a7.png
 !binary "YmxhbmsuZ2lm": blank-92cfdfd160f91f0aa7387f75cf4e7aaf.gif
 !binary "ZmFuY3lfY2xvc2UucG5n": fancy_close-aa0938bf349361974588804c40b9a9da.png
 !binary "ZmFuY3lfbG9hZGluZy5wbmc=": fancy_loading-7715064f2175a8d903dd2b633793a190.png
@@ -72,7 +70,7 @@
 !binary "YWN0aXZlX2FkbWluL25lc3RlZF9tZW51X2Fycm93X2RhcmsuZ2lm": active_admin/nested_menu_arrow_dark-057bc26fda04d4efa46b3ac9eccd2ef3.gif
 !binary "YWN0aXZlX2FkbWluL29yZGVyYWJsZS5wbmc=": active_admin/orderable-97e6649c3390d275b57bffa47ab674aa.png
 !binary "YXBwbGljYXRpb24uanM=": application-8c78cf2dfbf3062c66e7ff0086af69eb.js
-!binary "YXBwbGljYXRpb24uY3Nz": application-2bf5de22eafd452ca68c8d5703bab1a8.css
+!binary "YXBwbGljYXRpb24uY3Nz": application-82dabaa58d25159b98bd6722e96cca53.css
 !binary "YWN0aXZlX2FkbWluLmpz": active_admin-7bdf716ead18bcaa1aac9bfb07bd90a7.js
 !binary "YWN0aXZlX2FkbWluLmNzcw==": active_admin-5632130110737ccf862d7f397bcf3fc9.css
 !binary "ZmFuY3lib3guanM=": fancybox-ea6d17f435995b282797746c9d3f74bf.js
