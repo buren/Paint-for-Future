@@ -16,7 +16,7 @@
           <p><%= @post.content.html_safe if @post.content? %></p>
         </div>
         <% if @post.image? %>
-           <%= link_to (image_tag @post.image_url(:thumb).to_s), post, :id => "fancybox", :href => @post.image_url().to_s  %>
+           <%= link_to (image_tag @post.image_url(:thumb).to_s), @post, :id => "fancybox", :href => @post.image_url().to_s  %>
         <% end %>
       </body>
 
