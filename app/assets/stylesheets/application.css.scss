@@ -481,7 +481,7 @@ footer.main-footer{
 		width:50px;
  	a#follow-text{
 		text-decoration:none;
-		color: black;
+		color: $light_blue;
 		border:1px 90% $light_blue;
 		@include box-shadow($border-color, 0px, 1px, 3px);
 		padding: 3px;
