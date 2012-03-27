@@ -37,7 +37,8 @@ gem 'jquery-rails'
 gem 'therubyracer'
 
 # Gem for fancybox pictures
-gem 'fancybox-rails'
+gem 'fancybox-rails', :git => 'https://github.com/sverigemeny/fancybox-rails'
+
 
 
 group :test do

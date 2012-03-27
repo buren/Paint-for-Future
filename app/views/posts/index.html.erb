@@ -24,7 +24,7 @@
           </div>
 
           <% if post.image? %>
-             <%= link_to (image_tag post.image_url(:thumb).to_s), post, :id => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
+             <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
           <% end %>
         </body>
       </li>
@@ -45,6 +45,17 @@
       </ul>
     </ul>
   <% end %>
+  <div id="fb-root"></div>
+      <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=282725478406647";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));</script>
+      
+          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
   <ul class="pagination">
     <li>
     <h1><%= paginate @posts %></h1>
