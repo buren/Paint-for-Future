@@ -1,7 +1,8 @@
 $(document).ready(function() {
         
         var slider = $('#content-slider').bxSlider({
-                controls: false
+                infiniteLoop: false,
+                hideControlOnEnd: true,
         });
 
         $('.go-why').click(function(){
