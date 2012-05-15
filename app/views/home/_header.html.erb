@@ -23,7 +23,16 @@
           <%= link_to "Partners", videos_path %>
         </li>
         <li>
-          <%= link_to "Log", posts_path %>
+                 
+          <ul id="dropdown-header">
+            <li><%= link_to "Log", posts_path %>
+          <ul>
+            <li>
+              <%= link_to "Gallery", galleries_path, :id => "dropdown-link" %>       
+            </li>       
+           </ul>
+        </li>
+      </ul>   
         </li>
         <li>
            <%= link_to "Contact", contacts_path %>  

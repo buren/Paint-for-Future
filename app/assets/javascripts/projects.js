@@ -2,7 +2,7 @@ $(document).ready(function() {
         
         var slider = $('#content-slider').bxSlider({
                 infiniteLoop: false,
-                hideControlOnEnd: true,
+                hideControlOnEnd: true
         });
 
         $('.go-why').click(function(){

@@ -37,10 +37,13 @@
         <li><a href="#" id="follow-text">Share</a>
           <ul>
             <li>       
-              <div class="fb-like" data-href="http://www.paintforfuture.org" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false" data-font="trebuchet ms"></div>
+              <div class="fb-like" data-href="http://www.paintforfuture.org/posts" data-send="true" data-layout="button_count" data-width="150" data-show-faces="false" data-font="trebuchet ms"></div>
             </li>
             <li>
-              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.paintforfuture.org/posts/ + #{ @post.id }" data-hashtags="paintforfuture">Tweet</a>
+              <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://www.paintforfuture.org/posts" data-hashtags="paintforfuture">Tweet</a>
+            </li>
+            <li>
+              <div class="g-plus" data-action="share"></div>
             </li>       
            </ul>
         </li>
@@ -48,15 +51,7 @@
     </ul>
   <% end %>
   <div id="fb-root"></div>
-      <script>(function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=282725478406647";
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
       
-          <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 
   <ul class="pagination">
     <li>
@@ -69,3 +64,24 @@
   <%= link_to image_tag("icons/facebook.png", :size => "34x34"), "http://www.facebook.com/Paintforfuture", :title => "follow on Facebook", :id => "share-buttons" %>
   <%= link_to image_tag("icons/twitter.png", :size => "34x34"), "http://twitter.com/paintforfuture", :title => "follow on Twitter", :id => "share-buttons" %>
 </div> 
+<script type="text/javascript">
+                window.___gcfg = {parsetags: 'onload'};
+
+                (function() {
+                  var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                  po.src = 'https://apis.google.com/js/plusone.js';
+                  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                })();
+</script>
+
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=282725478406647";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
+</script>
+      
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+</script>
