@@ -126,6 +126,9 @@ ul.posts{
 
 ul.gallery{
 	width:$gallery_width;
+	#img-container{
+		margin: 0 auto;
+	}
 	li{
 		padding:20px;
 		img{
