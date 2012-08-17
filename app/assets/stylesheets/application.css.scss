@@ -24,10 +24,10 @@ $border-color : #435465;
 $header_color: black;
 $main_title_color: black;
 
-/************** Resetes **************/3
+/************** Resetes **************/
 
 *{
-  	font-family: "Trebuchet MS", Helvetica, sans-serif;
+	font-family: 'EB Garamond', serif;
 	color:black;
 }
 body{
@@ -577,25 +577,4 @@ footer.main-footer{
 	height: 31px;
 	text-indent: -999999px;
 	background: url(icons/icon_arrow_right.png) no-repeat 0 -31px;
-}
-
-/* Font size jquery css */
-
-.jfontsize-button {
-    font: bold 12px arial;
-    padding: 3px;
-    border: solid 1px #ccc;
-}
- 
-.jfontsize-button:hover {
-    text-decoration: none;
-    background: #333;
-    color: #fff;
-    border: solid 1px #333;
-}
- 
-.jfontsize-disabled, .jfontsize-disabled:hover {
-    color: #aaa;
-    border: solid 1px #eee;
-    background: #eee;
 }
