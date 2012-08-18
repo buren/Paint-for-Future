@@ -4,6 +4,7 @@ class GoalsController < ApplicationController
   # GET /goals.json
   def index
     @goals = Goal.all
+    @partners = Video.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

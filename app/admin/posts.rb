@@ -13,20 +13,14 @@ ActiveAdmin.register Post do
   end
   
   index do
-    column "Name" do |post|
-      link_to post.name, admin_post_path(post)
+    column "Image" do |post|
+      image_tag post.image_url(:thumb).to_s if post.image?
     end
     column "Title" do |post|
       link_to post.title, admin_post_path(post)
     end
-    column "Date" do |post|
-      link_to post.published_at, admin_post_path(post)
-    end
     column "Content" do |post|
       link_to post.content.html_safe, admin_post_path(post)
-    end
-    column "Image" do |post|
-      image_tag post.image_url(:thumb).to_s if post.image?
     end
     default_actions
   end

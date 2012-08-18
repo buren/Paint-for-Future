@@ -17,7 +17,7 @@ ActiveAdmin.register Video do
    link_to video.title, admin_video_path(video) 
   end
   column "logo" do |video|
-    video.logo.html_safe
+    image_tag video.logo.html_safe if video.logo?
   end
   column "description" do |video|
     video.description.html_safe
