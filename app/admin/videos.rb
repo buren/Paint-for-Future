@@ -4,8 +4,10 @@ ActiveAdmin.register Video do
   form do |f|
     f.inputs "Partners" do
       f.input :title
-      f.input :logo
-      f.input :description
+      f.input :logo, :as => :url, :hint => "Provide the url to the company logo"
+      f.input :homepage, :as => :url, :hint => "The partners homepage (http://www.example.com)"
+      f.input :homepage_slogan, :hint => "Slogan for the homepage"
+      f.input :description, :hint => "A few words about the partner"
     end
     f.buttons
   end

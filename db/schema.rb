@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120818140135) do
+ActiveRecord::Schema.define(:version => 20120818145018) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -97,6 +97,8 @@ ActiveRecord::Schema.define(:version => 20120818140135) do
     t.datetime "updated_at"
     t.text     "vimeo"
     t.string   "logo"
+    t.string   "homepage"
+    t.string   "homepage_slogan"
   end
 
 end
