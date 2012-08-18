@@ -13,9 +13,6 @@ ActiveAdmin.register Gallery do
     column "Image" do |gallery|
       image_tag gallery.image_url(:thumb).to_s if gallery.image?
     end
-    column "Description" do |gallery|
-      link_to gallery.description, admin_gallery_path(gallery)
-    end
     column "Video" do |gallery|
       gallery.video.html_safe
     end
