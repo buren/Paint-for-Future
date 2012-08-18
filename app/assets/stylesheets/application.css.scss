@@ -53,6 +53,7 @@ h1.main-heading{
 	padding-top:10px;
 	padding-left:20px;
 	margin-bottom:10px;
+	font-family: "Trebuchet MS", Helvetica, sans-serif!important;
 }
 
 header{
@@ -157,6 +158,9 @@ ul.videos{
 			line-height:24px;
 			font-size:16px;
 			@include text-shadow(0px, 1px, 0px, white);
+		}
+		a{
+			color: $light_blue;
 		}
 	}	
 }
@@ -587,15 +591,17 @@ footer.main-footer{
 #partners-footer{
 	padding: 20px 0px;
 	margin-top: 20px;
+	margin-bottom: 20px;
 	width:$page_width;
-	@include box-shadow(0px, 1px, 0px, white);
 	ul#partners{
 		margin:0 auto;
 		text-align: center;
 		display: inline-block;
 		li{
-			max-width: 250px;
-			float: left;
+				max-width: 250px;
+		    margin-right: 30px;
+		    margin-left: 30px;
+				display:inline;
 			img{
 				max-width: 250px;
 			}

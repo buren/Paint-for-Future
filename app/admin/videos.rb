@@ -16,6 +16,9 @@ ActiveAdmin.register Video do
   column "Title" do |video|
    link_to video.title, admin_video_path(video) 
   end
+  column "logo" do |video|
+    video.logo.html_safe
+  end
   column "description" do |video|
     video.description.html_safe
   end

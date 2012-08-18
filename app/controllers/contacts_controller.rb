@@ -3,6 +3,7 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.order("created_at asc")
+    @partners = Video.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

@@ -95,7 +95,20 @@
           </div>
         <% end %>
     </div>
-  
-     <br>
+    <div id="partners-footer">
+      <h1 style="font-size:24px;margin-left:20px;">Our partners</h1>    
+      <hr>
+      <ul id="partners">
+        <% @partners.each do |partner| %>
+          <li>
+            <%= image_tag partner.logo %>
+          </li>
+        <% end %>   
+      </ul>
+    </div>
+   
+   <br>
+
   </div>
+
 </div>
