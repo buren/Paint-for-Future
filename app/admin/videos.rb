@@ -4,6 +4,7 @@ ActiveAdmin.register Video do
   form do |f|
     f.inputs "Partners" do
       f.input :title
+      f.input :logo
       f.input :description
     end
     f.buttons

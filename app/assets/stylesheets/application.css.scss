@@ -14,7 +14,7 @@ $gallery_width : 780px;
 $project-show-width : 700px;
 $video_width : 600px;
 $contact_width : 600px;
-$menu_width : 680px;
+$menu_width : 800px;
 
 /************** Colors **************/
 
@@ -79,6 +79,7 @@ header{
 		ul#menu{
 			margin:0 auto;
 			width:$menu_width;
+			text-align: center;
 			li{
 				display:inline;
 				list-style:none;
