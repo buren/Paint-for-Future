@@ -10,7 +10,7 @@
 $page_width : 800px;
 $post_width : 780px;
 $goal_width : 700px;
-$gallery_width : 780px;
+$gallery_width : 800px;
 $project-show-width : 700px;
 $video_width : 600px;
 $contact_width : 600px;
@@ -139,6 +139,7 @@ ul.gallery{
 		img{
 			display: inline;
 			@include image-styling();
+			max-width:230px;	
 		}
 	}
 }
