@@ -5,6 +5,7 @@ ActiveAdmin.register Contact do
       f.input :name, :hint => "Name Surname"
       f.input :email, :hint => "your_name@paintforfuture.org"
       f.input :phone_number, :hint => "+(46) 7XX XX XX XX"
+      f.input :website, :hint => "Be aware this link will show instead of the phone number on the Contacts listview"
       f.input :description, :hint => "Desrcribe yourself in a few words"
       f.input :job_title, :hint => "Your job title"
       f.input :image, :as => :file, :hint => "Select any jpg, giff or png image with height=250 and width=150"

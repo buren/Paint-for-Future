@@ -11,6 +11,7 @@
           <p><i><%= @contact.job_title %></i>
           <p><%= mail_to @contact.email %></p>
           <p><%= @contact.phone_number %></p>
+          <p><%= link_to @contact.website, "onclick" => "window.open('#{contact.website}'); return false;" if @contact.website? %></p>
           
        </div>
       <%  if @contact.image? %>
