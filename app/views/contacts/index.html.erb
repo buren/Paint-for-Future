@@ -15,7 +15,7 @@
           <p><%= contact.job_title %></p>
           <p><%= contact.email.html_safe %></p>
           <% if contact.website? %> 
-            <p><%= link_to contact.website, "onclick" => "window.open('#{contact.website}'); return false;" %></p>
+            <p><%= link_to contact.website, contact.website, :class => "external-links"%></p>
           <% else %> 
             <p><%= contact.phone_number %></p> 
           <% end %>
