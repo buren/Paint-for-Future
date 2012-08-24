@@ -25,9 +25,9 @@
         <hr>
         <div class="meta-text">
             <% if post.name == "Susanne Holmsater" %>
-              <p><%= post.published_at.html_safe %> by - Susanne Holmsäter</p>
+              <p><%= post.published_at.html_safe if post.published_at? %> by - Susanne Holmsäter</p>
             <% else %>
-              <p><%= post.published_at.html_safe %> by - <%= post.name %> </p>
+              <p><%= post.published_at.html_safe if post.published_at? %> by - <%= post.name %> </p>
             <% end %>
          </div>
       </li>
