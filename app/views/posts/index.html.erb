@@ -24,10 +24,10 @@
         </body>
         <hr>
         <div class="meta-text">
-            <% if post.name == "Susanne Holmsater" %>
-              <p><%= post.published_at.html_safe if post.published_at? %> by - Susanne Holmsäter</p>
+            <% if post.name == "SUSANNE HOLMSATER" %>
+              <p><%= post.published_at.html_safe if post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
             <% else %>
-              <p><%= post.published_at.html_safe if post.published_at? %> by - <%= post.name %> </p>
+              <p><%= post.published_at.html_safe if post.published_at? %> &nbsp; by &nbsp; <%= post.name %> </p>
             <% end %>
          </div>
       </li>

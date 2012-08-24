@@ -3,7 +3,7 @@ ActiveAdmin.register Post do
 
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Post", :multipart => true do
-      f.input :name, :as => :select, :collection => ["Fredrik Beck", "Susanne Holmsater", "Lucas Lennig", "Daniel Leksell"], :hint => "Your name"
+      f.input :name, :as => :select, :collection => ["FREDRIK BECK", "SUSANNE HOLMSATER", "LUCAS LENNIG", "DANIEL LEKSELL"]
       f.input :title
       f.input :published_at
       f.input :content, :hint => "You can use HTML, use <br> tag for new line, <h3> for header and <b> for bold"
