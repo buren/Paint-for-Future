@@ -4,6 +4,7 @@
 !binary "ZnV0dXJlX2xvZ28ucG5n": future_logo-c89c4c36410c5377a7059c43f1a54665.png
 !binary "ZnV0dXJlX2xvZ28udGlmZg==": future_logo-73f958a26bcace4e2a462a82172c61fe.tiff
 !binary "ZnV0dXJlX2xvZ29fbWluaS5qcGc=": future_logo_mini-2865b450521692d04f3d7aeb6873f9d4.jpg
+!binary "Z2x5cGhpY29ucy1oYWxmbGluZ3MucG5n": glyphicons-halflings-27119220ffcf770cb7e11b0a4687892c.png
 !binary "aWNvbnMvZmFjZWJvb2sucG5n": icons/facebook-e9fcf8cf73b96b11e958487cc2cec179.png
 !binary "aWNvbnMvaWNvbl9hcnJvd19sZWZ0LnBuZw==": icons/icon_arrow_left-0dfcc1f04abeccfcdb736953c674dd53.png
 !binary "aWNvbnMvaWNvbl9hcnJvd19yaWdodC5wbmc=": icons/icon_arrow_right-fb97d5b948279dbc541145d707fc43b8.png
@@ -72,8 +73,8 @@
 !binary "YWN0aXZlX2FkbWluL25lc3RlZF9tZW51X2Fycm93LmdpZg==": active_admin/nested_menu_arrow-7093fa8e6f12c2a688313e17f6182da9.gif
 !binary "YWN0aXZlX2FkbWluL25lc3RlZF9tZW51X2Fycm93X2RhcmsuZ2lm": active_admin/nested_menu_arrow_dark-37327cd654d1a4d1bbef43afbeed01da.gif
 !binary "YWN0aXZlX2FkbWluL29yZGVyYWJsZS5wbmc=": active_admin/orderable-312cf8ad195f38825b0fb3d7447aef58.png
-!binary "YXBwbGljYXRpb24uanM=": application-791d65c7fad12a5db2ab83049aaa036c.js
-!binary "YXBwbGljYXRpb24uY3Nz": application-16a350761cb860030d9ed0da3272958f.css
+!binary "YXBwbGljYXRpb24uanM=": application-7b64c2b07b1d631a6e3bb5addf8d4575.js
+!binary "YXBwbGljYXRpb24uY3Nz": application-3adcdf84b5d6fb1b4452bbf4191d2e95.css
 !binary "YWN0aXZlX2FkbWluLmpz": active_admin-daa8f68aa3f75597dc2cf1bc79b59c89.js
 !binary "YWN0aXZlX2FkbWluLmNzcw==": active_admin-e089bca454e5acbc7f23b42bf0f2c993.css
 !binary "ZmFuY3lib3guanM=": fancybox-b4719613924bc24a51671c643a9ab810.js
