@@ -33,8 +33,7 @@ end
 
 # Asset template engines
 
-gem 'jquery-rails'
-gem 'therubyracer'
+gem 'jquery-rails', '~> 2.0'
 
 # Gem for fancybox pictures
 gem 'fancybox-rails'
