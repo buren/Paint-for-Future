@@ -9,7 +9,9 @@
         
         <header>
           <h1>
-            <%= link_to post.title, post %>
+              <% if post.title? %>
+                <%= link_to post.title.upcase, post %>
+              <%= end %>
           </h1>   
         </header>
 
@@ -25,9 +27,9 @@
         <hr>
         <div class="meta-text">
             <% if post.name == "SUSANNE HOLMSATER" %>
-              <p><%= post.published_at.html_safe if post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
+              <p><%= post.published_at.upcase if post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
             <% else %>
-              <p><%= post.published_at.html_safe if post.published_at? %> &nbsp; by &nbsp; <%= post.name %> </p>
+              <p><%= post.published_at.upcase if post.published_at? %> &nbsp; by &nbsp; <%= post.name.upcase if post.name? %> </p>
             <% end %>
          </div>
       </li>
