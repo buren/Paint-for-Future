@@ -15,7 +15,7 @@ Future::Application.routes.draw do
 
   resources :goals, :path => "/center"
 
-  resources :posts
+  resources :posts, :path => "/news"
 
   get "home/index"
 
