@@ -1,6 +1,6 @@
 <ul style="margin-bottom:20px;">
   <% @messages.each do |message| %>
-  	<% if message.message_type == "Donate Message" %>
+  	<% if message.message_type == "About us" %>
 	    <li>
 	      <h1 class="main-heading"><%= message.title.html_safe if message.title? %></h1>
 	      <div class="donate-info">
@@ -12,3 +12,4 @@
   <% end %> 
 </ul>  
 
+	

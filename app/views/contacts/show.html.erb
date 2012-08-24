@@ -8,7 +8,7 @@
         <div class="text">
           <p><%= @contact.description %></p> 
           <br>
-          <p><i><%= @contact.job_title %></i>
+          <p><i><%= @contact.job_title.html_safe if @contact.job_title? %></i>
           <p><%= mail_to @contact.email %></p>
           <p><%= @contact.phone_number %></p>
           <p><%= link_to @contact.website, @contact.website, :class => "external-links" %></p>

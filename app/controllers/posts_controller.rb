@@ -4,6 +4,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.order("created_at desc").page(params[:page]).per(10)
+    @messages = Message.order("created_at desc")
 
     respond_to do |format|
       format.html # index.html.erb

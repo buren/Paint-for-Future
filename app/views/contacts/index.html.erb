@@ -1,6 +1,11 @@
 <title> Paint for Future - Contact</title>
 
 <div id="wrapper">
+  
+  <%= render :partial => "home/announcement" %>
+  
+  <%= render :partial => "home/about_us" %>
+
   <h1 class="main-heading">Project coordinators</h1>
  
   <ul class="cards">
@@ -12,7 +17,7 @@
         <div class="info">
           <h1><%= link_to contact.name, contact %></h1>
           <hr>
-          <p><%= contact.job_title %></p>
+          <p><%= contact.job_title.html_safe if contact.job_title? %></p>
           <p><%= contact.email.html_safe %></p>
           <% if contact.website? %> 
             <p><%= link_to contact.website, contact.website, :class => "external-links"%></p>
@@ -26,7 +31,7 @@
   <%= render :partial => "home/donate" %> 
 
   <br>
-  <div style="margin-left:20px;">
+  <div>
     <b>Follow us on:</b> 
     <br>
     <%= link_to image_tag("icons/facebook.png", :size => "34x34"), "http://www.facebook.com/Paintforfuture", :title => "follow on Facebook", :id => "share-buttons" %>

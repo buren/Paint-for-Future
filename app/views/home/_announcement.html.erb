@@ -1,0 +1,12 @@
+  <% @messages.each do |message| %>
+  	<% if message.message_type == "Announcement" %>
+        <div class="alert alert-block">
+				  <button type="button" class="close" data-dismiss="alert">×</button>
+				  <strong><%= message.title.html_safe if message.title? %></strong> <%= message.content.html_safe if message.content? %>
+				</div> 
+	    </li>
+  	<% end %> 
+  <% end %> 
+</ul>  
+
+	

@@ -1,4 +1,6 @@
 Future::Application.routes.draw do
+  get "message/index"
+
   resources :galleries
 
   resources :videos, :path =>  "/partners"
