@@ -22,8 +22,9 @@
              <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
           <% end %>
         </body>
+        <hr>
         <div class="meta-text">
-           <p><%= link_to post.published_at.html_safe, post %> by - <%= post.name %> </p>
+           <p><%= post.published_at.html_safe %> by - <%= post.name %> </p>
          </div>
       </li>
 
