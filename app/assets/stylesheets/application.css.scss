@@ -34,8 +34,9 @@ $main_title_color: black;
 }
 
 
+
 body{
-	background: url(background_image.gif);
+    background: url('http://subtlepatterns.subtlepatterns.netdna-cdn.com/patterns/retro_intro.png');
 }
 
 ul{
@@ -46,6 +47,21 @@ ul{
 }
 
 /************** Actual styling **************/
+
+#site-container{
+	margin-top:15px;
+	margin-bottom:15px
+}
+
+#site-container-box{
+	background-color: white;
+	width: $page_width+160;
+	margin: 0 auto;
+	@include border-radius(15px);
+	@include box-shadow(1px, 1px, 1px, #A3A2A7);
+	border:1px solid #aaa;
+}
+
 
 #wrapper{
 	width:$page_width;
@@ -84,7 +100,7 @@ header{
 		ul#menu{
 			margin:0 auto;
 			width:$menu_width;
-			text-align: center;
+			text-align: left;
 			li{
 				display:inline;
 				list-style:none;

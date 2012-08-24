@@ -25,15 +25,18 @@
   <![endif]-->
 </head>
 <body>
-  <%= render :partial => "home/header" %>
-      
-     <% flash.each do |name, msg| %>
-        <%= content_tag :div, raw(msg), :id => "flash_#{name}" %>
-      <% end %>
-  <%= yield %>
+  <div id="site-container">
+    <div id="site-container-box">
+      <%= render :partial => "home/header" %>
+          
+         <% flash.each do |name, msg| %>
+            <%= content_tag :div, raw(msg), :id => "flash_#{name}" %>
+          <% end %>
+      <%= yield %>
 
-  <%= render :partial => "home/footer" %>
-
+      <%= render :partial => "home/footer" %>
+    </div>  
+  </div>
 </body>
 
 
