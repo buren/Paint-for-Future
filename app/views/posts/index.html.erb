@@ -6,19 +6,12 @@
       
     <ul class="posts"> 
       <li>
-        <% if post.title? %>
-          <header>
-            <h1>
-              <%= link_to post.title, post %>
-            </h1>   
-          </header>
-        <% else %>
-          <header>
-            <h1>
-              <%= link_to post.published_at.html_safe, post %>
-            </h1>
-          </header>
-        <% end %>
+        
+        <header>
+          <h1>
+            <%= link_to post.title, post %>
+          </h1>   
+        </header>
 
         <body>
           <div class="text">
@@ -29,10 +22,12 @@
              <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
           <% end %>
         </body>
+        <div class="meta-text">
+           <p><%= link_to post.published_at.html_safe, post %> by - <%= post.name %> </p>
+         </div>
       </li>
+
       <div id="fb-root"></div>
-        
-      
       <ul id="dropdown">
         <li><a href="#" id="follow-text">Share</a>
           <ul>
@@ -48,6 +43,7 @@
            </ul>
         </li>
       </ul>
+
     </ul>
   <% end %>
   <div id="fb-root"></div>

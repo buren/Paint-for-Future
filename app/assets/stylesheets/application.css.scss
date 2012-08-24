@@ -29,7 +29,7 @@ $main_title_color: black;
 
 
 *{
-  font-family: 'Cantana one', sefif;
+	font-family: 'Oswald', sans-serif;
 	color:black;
 }
 
@@ -104,8 +104,7 @@ ul.posts{
 	li{
 		padding:20px;
 		header{
-			margin:0 0 20px 0;
-			border-bottom:1px solid $light_blue;
+			margin:0 0 10px 0;
 			h1{
 				color:$light_blue;
 				font-size:24px;
@@ -121,6 +120,7 @@ ul.posts{
 			font-size:15px;
 			p{
 				@include text-shadow(0px, 1px, 0px, white);
+				border-bottom:1px solid $light_blue;
 			}
 		}
 		img{
