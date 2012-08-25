@@ -489,9 +489,10 @@ footer.main-footer{
 
 
 #dropdown {
-	 margin: 0 0 50px 0;
+	 margin: -33px 0 50px 0;
 	 padding: 0;
 	 color: $light_blue;
+	 float:right;
 	li {
 		display: block;
 		list-style: none;
