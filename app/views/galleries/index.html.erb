@@ -5,12 +5,15 @@
 				<li>
 					<% @galleries.each do |gallery| %>
 						<% if gallery.image? %>
-		            		<%= link_to (image_tag gallery.image_url(:thumb).to_s), gallery, :class => "fancybox", :href => gallery.image_url().to_s, :rel =>"gallery-images", :title => (gallery.description if gallery.description?) %>
-		            	<% elsif gallery.video? %>
-		            		<%= gallery.video.html_safe %>
-		            	<% end %>
-            		<% end %>
+	        		<%= link_to (image_tag gallery.image_url(:thumb).to_s), gallery, :class => "fancybox", :href => gallery.image_url().to_s, :rel =>"gallery-images", :title => (gallery.description if gallery.description?) %>
+		        	<% elsif gallery.video? %>
+		        		<%= gallery.video.html_safe %>
+            	<% end %>
+        		<% end %>		
 				</li>
 			</div>
 		</ul>
+
+    <%= render :partial => "home/circle_links" %>
+
 </div>
