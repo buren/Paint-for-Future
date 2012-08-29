@@ -12,20 +12,23 @@ ActiveAdmin.register Video do
     f.buttons
   end
  
- index do 
-  column "Title" do |video|
-   link_to video.title, admin_video_path(video) 
+  index do 
+    column "Title" do |video|
+     link_to video.title, admin_video_path(video) 
+    end
+    column "logo" do |video|
+      image_tag video.logo.html_safe if video.logo?
+    end
+    column "description" do |video|
+      video.description.html_safe
+    end
+    default_actions
   end
-  column "logo" do |video|
-    image_tag video.logo.html_safe if video.logo?
-  end
-  column "description" do |video|
-    video.description.html_safe
-  end
-  default_actions
- end
 
   action_item :only => :show do
+    link_to('View on site', videos_path)
+  end
+    action_item :only => :index do
     link_to('View on site', videos_path)
   end
 

@@ -30,4 +30,8 @@ ActiveAdmin.register Post do
     link_to('View on site', posts_path)
   end
 
+  action_item :only => :index do
+    link_to('View on site', posts_path)
+  end
+
 end

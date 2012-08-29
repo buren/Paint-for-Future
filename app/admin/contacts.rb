@@ -28,5 +28,8 @@ ActiveAdmin.register Contact do
     link_to('View on site', contacts_path)
   end
 
+  action_item :only => :index do
+    link_to('View on site', contacts_path)
+  end
 
 end

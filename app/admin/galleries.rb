@@ -24,4 +24,8 @@ ActiveAdmin.register Gallery do
     link_to('View on site', galleries_path)
   end
 
+  action_item :only => :index do
+    link_to('View on site', galleries_path)
+  end
+
 end

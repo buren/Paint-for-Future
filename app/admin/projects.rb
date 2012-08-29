@@ -13,4 +13,8 @@ ActiveAdmin.register Project do
     link_to('View on site', projects_path)
   end
 
+  action_item :only => :index do
+    link_to('View on site', projects_path)
+  end
+
 end
