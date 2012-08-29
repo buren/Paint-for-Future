@@ -25,4 +25,9 @@ ActiveAdmin.register Post do
     end
     default_actions
   end
+
+  action_item :only => :show do
+    link_to('View on site', posts_path)
+  end
+
 end

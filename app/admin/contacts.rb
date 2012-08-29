@@ -21,14 +21,12 @@ ActiveAdmin.register Contact do
         end
       end
       a truncate(contact.name), :href => admin_contact_path(contact)
-    # column "Name" do |contact|
-   #   link_to contact.name, admin_contact_path(contact)
-   # end
-  #  column "Title" do |contact|
-  #    link_to contact.email, admin_contact_path(contact)
-  #  end
-  #  column "Phone number", :phone_number
-  #  default_actions
   end
   
+
+  action_item :only => :show do
+    link_to('View on site', contacts_path)
+  end
+
+
 end

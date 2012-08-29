@@ -19,4 +19,9 @@ ActiveAdmin.register Gallery do
     default_actions
   end
   
+
+  action_item :only => :show do
+    link_to('View on site', galleries_path)
+  end
+
 end

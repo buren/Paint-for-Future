@@ -11,5 +11,10 @@ ActiveAdmin.register Goal do
     end
     default_actions
   end
+
+
+  action_item :only => :show do
+    link_to('View on site', goals_path)
+  end
   
 end

@@ -24,4 +24,9 @@ ActiveAdmin.register Video do
   end
   default_actions
  end
+
+  action_item :only => :show do
+    link_to('View on site', videos_path)
+  end
+
 end
