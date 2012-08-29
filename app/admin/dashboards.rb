@@ -6,7 +6,7 @@ ActiveAdmin::Dashboards.build do
          link_to post.title, admin_post_path(post)
       end
       column "Content" do |post| 
-        truncate(post.content, :length => 60, :omission => '...').html_safe
+        truncate(post.content, :length => 250, :omission => '...').html_safe
       end
     end
     strong { link_to "All posts", admin_posts_path }
@@ -27,7 +27,6 @@ section "Site visists", :priority => 2 do
     div do
       br
       text_node %{<iframe src="https://heroku.newrelic.com/public/charts/gPa1O89PJgk" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
-      text_node %{<iframe src="https://heroku.newrelic.com/public/charts/jLMVtfVA3w9" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
     end
   end
 end

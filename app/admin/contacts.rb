@@ -1,5 +1,6 @@
 ActiveAdmin.register Contact do
-  
+  menu :priority => 3
+
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Contacts", :multipart => true do
       f.input :name, :hint => "Name Surname"

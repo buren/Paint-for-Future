@@ -1,5 +1,7 @@
 ActiveAdmin.register Post do
   menu :label => "News"
+  menu :priority => 1
+
 
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Post", :multipart => true do

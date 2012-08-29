@@ -1,4 +1,6 @@
 ActiveAdmin.register Project do
+    menu :parent => "Informational"
+
   	index do
    		column "Title" do |project|
       		link_to project.title, admin_project_path(project)

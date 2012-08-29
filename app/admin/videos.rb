@@ -1,5 +1,5 @@
-ActiveAdmin.register Video do
-  menu :label => "Partners"
+ActiveAdmin.register Video, :as => "Partners" do
+  menu :parent => "Informational"
 
   form do |f|
     f.inputs "Partners" do
@@ -13,14 +13,14 @@ ActiveAdmin.register Video do
   end
  
   index do 
-    column "Title" do |video|
-     link_to video.title, admin_video_path(video) 
+    column "Title" do |partner|
+     link_to partner.title, admin_partner_path(partner) 
     end
-    column "logo" do |video|
-      image_tag video.logo.html_safe if video.logo?
+    column "logo" do |partner|
+      image_tag partner.logo.html_safe if partner.logo?
     end
-    column "description" do |video|
-      video.description.html_safe
+    column "description" do |partner|
+      partner.description.html_safe
     end
     default_actions
   end

@@ -1,4 +1,7 @@
 ActiveAdmin.register AdminUser do
+  menu :parent => "Admin"
+  
+
  index do 
   column "Email" do |admin_user|
     link_to admin_user.email, admin_admin_user_path(admin_user)

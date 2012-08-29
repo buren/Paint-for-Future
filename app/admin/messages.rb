@@ -1,4 +1,5 @@
-ActiveAdmin.register Message do
+ActiveAdmin.register Message, :as => "Static Texts" do
+  menu :parent => "Informational"
 	
 	 form do |f|
     f.inputs "Message" do
@@ -10,14 +11,14 @@ ActiveAdmin.register Message do
   end
 
   index do
-    column "Message Type" do |message|
-      link_to message.message_type, admin_message_path(message)
+    column "Message Type" do |static_text|
+      link_to static_text.message_type, admin_static_text_path(static_text)
     end
-    column "Title" do |message|
-      link_to message.title, admin_message_path(message)
+    column "Title" do |static_text|
+      link_to static_text.title, admin_static_text_path(static_text)
     end
-    column "Content" do |message|
-      link_to message.content, admin_message_path(message)
+    column "Content" do |static_text|
+      link_to static_text.content, admin_static_text_path(static_text)
     end
     default_actions
   end

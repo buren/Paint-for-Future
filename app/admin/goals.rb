@@ -1,13 +1,13 @@
-ActiveAdmin.register Goal do
-  menu :label => "The Center"
+ActiveAdmin.register Goal, :as => "Center" do
+  menu :parent => "Informational"
 
   index do
-    column "Title" do |goal|
-      link_to goal.title, admin_goal_path(goal)
+    column "Title" do |center|
+      link_to center.title, admin_center_path(center)
     end
     column "Release Date", :created_at
-    column "Content" do |goal|
-    	goal.content.html_safe
+    column "Content" do |center|
+    	center.content.html_safe
     end
     default_actions
   end

@@ -1,4 +1,7 @@
 ActiveAdmin.register Gallery do
+  menu :label => "Gallery"
+  menu :priority => 2
+
 
 	form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Gallery", :multipart => true do
