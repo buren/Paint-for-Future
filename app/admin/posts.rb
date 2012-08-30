@@ -28,12 +28,27 @@ ActiveAdmin.register Post do
     default_actions
   end
 
-  action_item :only => :show do
+  show do |post|
+    attributes_table do
+      row :image do
+        image_tag post.image_url(:thumb).to_s if post.image?
+      end
+      row :title do
+        post.title
+      end
+      row :published_at do
+        post.published_at
+      end
+      row :content do
+        post.content
+      end
+    end
+    active_admin_comments
+  end
+
+  action_item do
     link_to('View on site', posts_path)
   end
 
-  action_item :only => :index do
-    link_to('View on site', posts_path)
-  end
 
 end

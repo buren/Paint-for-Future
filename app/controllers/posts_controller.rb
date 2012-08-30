@@ -22,4 +22,5 @@ class PostsController < ApplicationController
       format.json { render json: @post }
     end
   end
+
 end
