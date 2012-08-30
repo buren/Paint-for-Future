@@ -12,7 +12,10 @@
   <title>Paint for Future - Aid through art</title>
   <link href='http://fonts.googleapis.com/css?family=Oswald:300' rel='stylesheet' type='text/css'>
   <%= stylesheet_link_tag    "application" %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
 
+  <%= javascript_include_tag "application" %>
+  <%= javascript_include_tag "fancybox" %>
 	
 
   <%= csrf_meta_tags %>
@@ -25,14 +28,17 @@
     <div id="site-container-box">
       <%= render :partial => "home/header" %>
           
-         <% flash.each do |name, msg| %>
-            <%= content_tag :div, raw(msg), :id => "flash_#{name}" %>
-          <% end %>
+     <% flash.each do |name, msg| %>
+        <%= content_tag :div, raw(msg), :id => "flash_#{name}" %>
+      <% end %>
+
       <%= yield %>
 
       <%= render :partial => "home/footer" %>
     </div>  
   </div>
+
+
 <!-- SOCIAL SNIPPETS -->
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
@@ -57,11 +63,6 @@
 <!-- END SOCIAL SNIPPETS -->
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>  
-
-  <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag "fancybox" %>
-  <%= javascript_include_tag "http://bxslider.com/sites/default/files/jquery.bxSlider.min.js" %>
   <script>
     var _gaq=[['_setAccount','UA-29793591-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];

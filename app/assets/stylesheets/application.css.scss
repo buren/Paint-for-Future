@@ -84,7 +84,6 @@ header{
 	a{
 		color:$light_blue;
 		padding:20px;
-		font-size: 16px;
 		font-weight: bold;
 		text-decoration:none;
 		@include text-shadow(0px, 1px, 0px, white);
@@ -661,6 +660,8 @@ ul#bootsrap-menu-items{
   	margin-top:11px;
   	a{
 	    font-weight:normal;
+	    padding-top:10px;
+			padding-bottom:12px;
   	}
 	}
 }

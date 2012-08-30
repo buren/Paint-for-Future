@@ -12,22 +12,22 @@
       <div class="container">
         <div class="navbar">
           <div class="navbar-inner">
-            <a class="brand" href="#" id="bootstrap-menu-title">Paint for Future</a>
+            <%= link_to "Paint for Future", home_index_path, :class => "brand", :id => "bootstrap-menu-title" %>
             <ul class="nav" id="bootsrap-menu-items">
               <li class=<%= is_current_page(projects_path) %>> 
                 <%= link_to "THE PROJECT", projects_path %>
               </li>
               <li class=<%= is_current_page(goals_path) %>>
-                 <%= link_to "THE CENTER", goals_path%>
+                 <%= link_to "THE CENTER", goals_path %>
               </li>
               <li class=<%= is_current_page(videos_path) %>>
-                <%= link_to "PARTNERS", videos_path%>
+                <%= link_to "PARTNERS", videos_path %>
               </li>
               <li class=<%= is_current_page(posts_path) %>>
                 <%= link_to "NEWS", posts_path %>
               </li>
               <li class=<%= is_current_page(galleries_path) %>>
-                <%= link_to "GALLERY", galleries_path%>
+                <%= link_to "GALLERY", galleries_path %>
               </li>
               <li class=<%= is_current_page(contacts_path) %>>
                  <%= link_to "ABOUT US", contacts_path %>
