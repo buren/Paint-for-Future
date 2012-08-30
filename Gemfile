@@ -34,6 +34,7 @@ end
 # Asset template engines
 
 gem 'jquery-rails', '~> 2.0'
+gem 'twitter'
 
 # Gem for fancybox pictures
 gem 'fancybox-rails'
