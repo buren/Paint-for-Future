@@ -490,7 +490,7 @@ footer.main-footer{
 
 
 #dropdown {
-	 margin: -33px 0 50px 0;
+	 margin: 10px 0 10px 0;
 	 padding: 0;
 	 color: $light_blue;
 	 float:right;
@@ -505,9 +505,9 @@ footer.main-footer{
  	a#follow-text{
 		text-decoration:none;
 		color: $light_blue;
-		border:1px 90% $light_blue;
+		border:1px 90% $border-color;
 		@include box-shadow($border-color, 0px, 1px, 3px);
-		padding: 3px;
+		padding:5px 12px 5px 12px;
 		@include border-radius(5px);
 	}
 	a#share-buttons{}
