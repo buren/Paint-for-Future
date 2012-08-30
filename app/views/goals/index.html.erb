@@ -1,6 +1,7 @@
 <title> Paint for Future - The Center</title>
 
 <div id="wrapper">
+
   <div class="goals">
     <% @goals.each do |goal| %>
 
@@ -8,18 +9,17 @@
       <div class="text">
         <p><%= goal.content.html_safe if goal.content? %></p>
       </div>
-
-      <h1>Some of The Needy Today's artists</h1>
-      -
-      <div id="img-container">
-          <%= link_to (image_tag "orphanage/11.jpg"), image_path("orphanage/11.jpg"), :class => "fancybox", :href => image_path("orphanage/11.jpg"), :rel => "goals-images"%>
-          <%= link_to (image_tag "orphanage/12.png"), image_path("orphanage/12.png"), :class => "fancybox", :href => image_path("orphanage/12.png"), :rel => "goals-images"%>
-          <%= link_to (image_tag "orphanage/13.jpg"), image_path("orphanage/13.jpg"), :class => "fancybox", :href => image_path("orphanage/13.jpg"), :rel => "goals-images"%>
-          <%= link_to (image_tag "orphanage/goals4.png", :size => "142x213"), image_path("orphanage/goals4.png"), :class => "fancybox", :href => image_path("orphanage/goals4.png"), :rel => "goals-images"%>
-        </div>
-      </div>
     <% end %>
-    <%= render :partial => "home/partners" %>
+    <h1>Some of The Needy Today's artists</h1>
+    <div id="img-container">
+      <%= link_to (image_tag "orphanage/11.jpg"), image_path("orphanage/11.jpg"), :class => "fancybox", :href => image_path("orphanage/11.jpg"), :rel => "goals-images"%>
+      <%= link_to (image_tag "orphanage/12.png"), image_path("orphanage/12.png"), :class => "fancybox", :href => image_path("orphanage/12.png"), :rel => "goals-images"%>
+      <%= link_to (image_tag "orphanage/13.jpg"), image_path("orphanage/13.jpg"), :class => "fancybox", :href => image_path("orphanage/13.jpg"), :rel => "goals-images"%>
+      <%= link_to (image_tag "orphanage/goals4.png", :size => "142x213"), image_path("orphanage/goals4.png"), :class => "fancybox", :href => image_path("orphanage/goals4.png"), :rel => "goals-images"%>
+    </div>
+  </div>
+  <div style="margin-bottom:30px;">
+    <%= render :partial => "home/paypal_donate" %>
   </div>
 </div>
 

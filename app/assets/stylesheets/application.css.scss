@@ -603,7 +603,7 @@ footer.main-footer{
 
 #partners-footer{
 	padding: 20px 0px;
-	margin-top: 20px;
+	margin-top: 0px;
 	margin-bottom: 20px;
 	width:$page_width;
 	ul#partners{
@@ -628,7 +628,8 @@ footer.main-footer{
 #partners-header-donate{
 	width: 150px;
 	margin: 0 auto;
-  margin-bottom:-5px;
+  margin-top:30px;
+  margin-bottom:-15px;
 }	
 
 .donate-info{
