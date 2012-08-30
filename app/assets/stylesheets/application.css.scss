@@ -8,6 +8,7 @@
 @import "mixins";
 @import "circle-common";
 @import "circle-style";
+@import "bootstrap";
 
 
 $page_width : 800px;
@@ -93,10 +94,9 @@ header{
 	}
 	
 	#menu-wrapper{
-		border-top:1px solid #aaa;
 		border-bottom:1px solid #aaa;
-		padding: 20px 0px;
-		margin-top: 20px;
+		padding: 0px 0px;
+		margin-top: 30px;
 		width:$page_width;
 		@include box-shadow(0px, 1px, 0px, white);
 		ul#menu{
@@ -646,4 +646,21 @@ footer.main-footer{
 	    font-weight:bold;
 		}
 	} 
+}
+
+
+/* STYLING FOR TWITTER MENU */
+
+a#bootstrap-menu-title{
+	margin-top:-3px;
+	font-weight:bold;
+}
+
+ul#bootsrap-menu-items{
+	li{
+  	margin-top:11px;
+  	a{
+	    font-weight:normal;
+  	}
+	}
 }
