@@ -13,6 +13,9 @@ Future::Application.routes.draw do
 
   resources :projects
 
+  match "/posts" => redirect("/news")
+  match "/blog" => redirect("/news")
+  
   resources :goals, :path => "/center"
 
   resources :posts, :path => "/news"
