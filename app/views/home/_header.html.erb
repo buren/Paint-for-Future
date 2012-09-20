@@ -26,14 +26,11 @@
               <li class=<%= is_current_page(galleries_path) %>>
                 <%= link_to "GALLERY", galleries_path %>
               </li>
-              <li class=<%= is_current_page(contacts_path) %>>
-                 <%= link_to "ABOUT US", contacts_path %>
-              </li>
               <li class=<%= is_current_page(videos_path) %>>
                 <%= link_to "PARTNERS", videos_path %>
               </li>
-              <li>
-                 <%= link_to "CALL FOR SUPPORT", "/upprop.pdf" %>
+              <li class=<%= is_current_page(contacts_path) %>>
+                 <%= link_to "ABOUT US", contacts_path %>
               </li>
             </ul>
           </div>

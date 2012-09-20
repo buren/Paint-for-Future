@@ -1,0 +1,16 @@
+<ul class="documents">
+  <h1 id="documents-heading" class="main-heading">Documents</h1>
+  <hr id="document-divider">
+  <% @messages.reverse.each do |message| %> 
+    <% if message.message_type == "PDF-links" %>
+      <li class="document-link">  
+        <h1>
+          <%= message.title.html_safe if message.title? %> 
+          <span>
+            <%= message.content.html_safe if message.content? %>
+          </span>
+        </h1>
+      </li>
+    <% end %>
+  <% end %> 
+</ul>
