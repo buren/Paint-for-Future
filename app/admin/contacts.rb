@@ -9,7 +9,7 @@ ActiveAdmin.register Contact do
       f.input :website, :hint => "Be aware this link will show instead of the phone number on the Contacts listview"
       f.input :description, :hint => "Desrcribe yourself in a few words"
       f.input :job_title, :hint => "Your job title"
-      f.input :image, :as => :file, :hint => "Select any jpg, giff or png image with height=250 and width=150"
+      f.input :image, :as => :file, :hint => "Select any jpg, giff or png image with height=400px, width=320px OR height=200px, width=160px"
     end
     f.buttons
   end
