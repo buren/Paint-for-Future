@@ -6,7 +6,6 @@
       
     <ul class="posts"> 
       <li>
-        
         <header>
           <h1>
               <% if post.title? %>
@@ -17,7 +16,16 @@
 
         <body>
           <div class="text">
-            <p><%= post.content.html_safe if post.content? %></p>
+            <% if post.sub_title? %>
+              <p>
+                <b><%= post.sub_title.html_safe %></b>
+                <br>
+                <br>
+                <%= post.content.html_safe if post.content? %>
+              </p>
+            <% else %>
+              <p><%= post.content.html_safe if post.content? %></p>
+            <% end %>
           </div>
 
           <% if post.image? %>

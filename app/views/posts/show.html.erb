@@ -1,19 +1,30 @@
 <div id="wrapper">
   <ul class="posts">
     <li>
-    <% if @post.title? %>
-      <header>
-        <h1><%= @post.title.html_safe %></h1>   
-      </header>
-    <% else %>
-    <header>
-        <h1><%= link_to @post.published_at.html_safe if @post.published_at? %></h1>
-      </header>
-    <% end %>
+      <% if @post.title? %>
+        <header>
+          <h1 style="margin-left:20px;"><%= @post.title.html_safe %></h1>   
+        </header>
+      <% else %>
+        <header>
+          <h1 style="margin-left:20px;">
+            <%= link_to @post.published_at.html_safe if @post.published_at? %>
+          </h1>
+        </header>
+      <% end %>
 
       <body>
         <div class="text">
-          <p><%= @post.content.html_safe if @post.content? %></p>
+          <% if @post.sub_title? %>
+            <p>
+              <b><%= @post.sub_title.html_safe %></b>
+              <br>
+              <br>
+              <%= @post.content.html_safe if @post.content? %>
+            </p>
+          <% else %>
+            <p><%= @post.content.html_safe if @post.content? %></p>
+          <% end %>        
         </div>
         <% if @post.image? %>
            <%= link_to (image_tag @post.image_url(:thumb).to_s), @post, :class => "fancybox", :href => @post.image_url().to_s  %>
