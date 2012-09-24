@@ -2,7 +2,7 @@ ActiveAdmin.register Contact do
   menu :priority => 3
 
   form :html => { :enctype => "multipart/form-data" } do |f|
-    f.inputs "Contacts", :multipart => true do
+    f.inputs "Contact", :multipart => true do
       f.input :name, :hint => "Joe Bloggs"
       f.input :email, :hint => "joe.bloggs@paintforfuture.org"
       f.input :phone_number, :hint => "+(46) 7XX XX XX XX"

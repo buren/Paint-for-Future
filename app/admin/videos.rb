@@ -2,7 +2,7 @@ ActiveAdmin.register Video, :as => "Partners" do
   menu :parent => "Informational"
 
   form do |f|
-    f.inputs "Partners" do
+    f.inputs "Partner" do
       f.input :title
       f.input :logo, :as => :url, :hint => "Provide the url to the company logo"
       f.input :homepage, :as => :url, :hint => "The partners homepage (http://www.example.com)"

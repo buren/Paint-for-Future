@@ -4,7 +4,7 @@ ActiveAdmin.register Gallery do
 
 
 	form :html => { :enctype => "multipart/form-data" } do |f|
-    f.inputs "Gallery", :multipart => true do
+    f.inputs "Image", :multipart => true do
       f.input :image, :as => :file, :hint => "Select any jpg, giff or png image"
       f.input :description, :hint => "Description for image"
       f.input :video, :hint => "<a id=''fancybox'' and rel=''gallery-images'' href=''link'' title=''any title''></a>"
@@ -22,7 +22,6 @@ ActiveAdmin.register Gallery do
     default_actions
   end
   
-
   action_item :only => :show do
     link_to('View on site', galleries_path)
   end
