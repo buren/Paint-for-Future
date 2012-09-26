@@ -35,9 +35,9 @@
         <hr>
         <div class="meta-text">
             <% if post.name == "SUSANNE HOLMSATER" %>
-              <p><%= post.published_at.upcase if post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
+              <p><%= "#{post.published_at.upcase},  #{post.created_at.year}" if post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
             <% else %>
-              <p><%= post.published_at.upcase if post.published_at? %> &nbsp; by &nbsp; <%= post.name.upcase if post.name? %> </p>
+              <p><%= "#{post.published_at.upcase},  #{post.created_at.year}" if post.published_at? %> &nbsp; by &nbsp; <%= post.name.upcase if post.name? %> </p>
             <% end %>
          </div>
       </li>
