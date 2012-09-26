@@ -1,37 +1,44 @@
 <div id="wrapper">
-  <ul class="posts">
-    <li>
-      <% if @post.title? %>
+ <ul class="posts"> 
+      <li>
         <header>
-          <h1 style="margin-left:20px;"><%= @post.title.html_safe %></h1>   
+          <h1>
+              <% if @post.title? %>
+                <%= link_to @post.title.upcase, @post %>
+              <% end %>
+          </h1>   
         </header>
-      <% else %>
-        <header>
-          <h1 style="margin-left:20px;">
-            <%= link_to @post.published_at.html_safe if @post.published_at? %>
-          </h1>
-        </header>
-      <% end %>
 
-      <body>
-        <div class="text">
-          <% if @post.sub_title? %>
-            <p>
-              <b><%= @post.sub_title.html_safe %></b>
-              <br>
-              <br>
-              <%= @post.content.html_safe if @post.content? %>
-            </p>
-          <% else %>
-            <p><%= @post.content.html_safe if @post.content? %></p>
-          <% end %>        
+        <body>
+          <div class="text">
+            <% if @post.sub_title? %>
+              <p>
+                <b><%= @post.sub_title.html_safe %></b>
+                <br>
+                <br>
+                <%= @post.content.html_safe if @post.content? %>
+              </p>
+            <% else %>
+              <p><%= @post.content.html_safe if @post.content? %></p>
+            <% end %>
+          </div>
+
+          <% if @post.image? %>
+             <%= link_to (image_tag @post.image_url(:thumb).to_s), @post, :class => "fancybox", :href => @post.image_url().to_s %>
+          <% end %>
+        </body>
+        <hr>
+        <div class="meta-text">
+            <% if @post.name == "SUSANNE HOLMSATER" %>
+              <p><%= "#{@post.published_at.upcase},  #{@post.created_at.year}" if @post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
+            <% else %>
+              <p><%= "#{@post.published_at.upcase},  #{@post.created_at.year}" if @post.published_at? %> &nbsp; by &nbsp; <%= @post.name.upcase if @post.name? %> </p>
+            <% end %>
         </div>
-        <% if @post.image? %>
-           <%= link_to (image_tag @post.image_url(:thumb).to_s), @post, :class => "fancybox", :href => @post.image_url().to_s  %>
-        <% end %>
-      </body>
-      <h3 id="back-link"><%= link_to 'View all news', posts_path %></h3>
-    </li>
-  </ul> 
+      </li>
+    </ul>
+
+
+
 </div>  
   
