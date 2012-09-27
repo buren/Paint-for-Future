@@ -35,8 +35,7 @@
 	color: inherit;
 	padding: 2px;
 	vertical-align: top;
-	width: 100px;
-	height: 75px;
+	width: 170px;
 }
 
 .hoverbox li
@@ -56,6 +55,5 @@
 .hoverbox .preview
 {
 	border-color: #000;
-	width: 200px;
-	height: 150px;
+	width: 500px;
 }

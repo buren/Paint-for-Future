@@ -1,6 +1,6 @@
 <title> Paint for Future - Gallery</title>
 <div id="wrapper">
-	<ul class="gallery">
+	<ul class="gallery hoverbox">
 		<div id="img-container">
 			<% @galleries.each do |gallery| %>
 				<% if gallery.image? %>
@@ -9,7 +9,10 @@
 					</li>
 	        	<% elsif gallery.video? %>
 	        		<li>
-	        			<%= gallery.video.html_safe %>
+	        			<%= link_to do %>
+	        				<%= image_tag gallery.video.html_safe %>
+	        				<%= image_tag gallery.video.html_safe, :class => "preview" %>
+	        			<% end %>
 	        		</li>
       		<% end %>
   			<% end %>		
