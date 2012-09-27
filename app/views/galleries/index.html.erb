@@ -1,21 +1,23 @@
 <title> Paint for Future - Gallery</title>
 <div id="wrapper">
-		<ul class="gallery">
-			<div id="img-container">
-				<li>
-					<% @galleries.each do |gallery| %>
-						<% if gallery.image? %>
-	        		<%= link_to (image_tag gallery.image_url(:thumb).to_s), gallery, :class => "fancybox", :href => gallery.image_url().to_s, :rel =>"gallery-images", :title => (gallery.description if gallery.description?) %>
-		        	<% elsif gallery.video? %>
-		        		<%= gallery.video.html_safe %>
-            	<% end %>
-        		<% end %>		
-				</li>
-			</div>
-		</ul>
+	<ul class="gallery">
+		<div id="img-container">
+			<% @galleries.each do |gallery| %>
+				<% if gallery.image? %>
+					<li>
+						<%= link_to (image_tag gallery.image_url(:thumb).to_s), gallery, :class => "fancybox", :href => gallery.image_url().to_s, :rel =>"gallery-images", :title => (gallery.description if gallery.description?) %>
+					</li>
+	        	<% elsif gallery.video? %>
+	        		<li>
+	        			<%= gallery.video.html_safe %>
+	        		</li>
+      		<% end %>
+  			<% end %>		
+		</div>
+	</ul>
 
-  <%= render :partial => "home/circle_links" %>
+  <%= render "home/circle_links" %>
   <div style="margin-bottom:30px;">
-    <%= render :partial => "home/paypal_donate" %>
+    <%= render "home/paypal_donate" %>
   </div>
 </div>
