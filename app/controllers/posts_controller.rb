@@ -5,6 +5,8 @@ class PostsController < ApplicationController
   def index
     @posts = Post.order("created_at desc").page(params[:page]).per(10)
     @messages = Message.order("created_at desc")
+    #nil if not logged in as admin
+    @is_admin = current_admin_user
 
     respond_to do |format|
       format.html # index.html.erb
