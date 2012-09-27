@@ -24,10 +24,10 @@ ActiveAdmin.register Gallery do
   end
   
   action_item :only => :show do
-    link_to('View on site', galleries_path)
+    link_to('New photo', new_admin_gallery)
   end
 
-  action_item :only => :index do
+  action_item do
     link_to('View on site', galleries_path)
   end
 
