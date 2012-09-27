@@ -8,15 +8,16 @@
 //= require_tree .
 
 $(document).ready(function() {
-        $("a.fancybox").fancybox({
-	        openEffect	: 'elastic',
-    	        closeEffect	: 'elastic',
-                helpers: {
-                        title : {
-                                type : 'float'
-                        }
-                }
+    $("a.fancybox").fancybox({
+      openEffect	: 'elastic',
+	        closeEffect	: 'elastic',
+            helpers: {
+                    title : {
+                            type : 'float'
+                    }
+            }
 	 });
+   
    $("a.external-links").click(function() {
     link_host = this.href.split("/")[2];
     document_host = document.location.href.split("/")[2];

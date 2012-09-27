@@ -5,22 +5,31 @@
 			<% @galleries.each do |gallery| %>
 				<% if gallery.image? %>
 					<li>
-						<%= link_to (image_tag gallery.image_url(:thumb).to_s), gallery, :class => "fancybox", :href => gallery.image_url().to_s, :rel =>"gallery-images", :title => (gallery.description if gallery.description?) %>
+						<%= link_to(gallery, :class => "fancybox", :href => gallery.image_url().to_s, :rel => "gallery-images", :title => (gallery.description if gallery.description?)) do %>
+	        				<%= image_tag gallery.image_url(:thumb).to_s %>
+	        				<%= image_tag gallery.image_url(:thumb).to_s, :class => "preview" %>
+	        			<% end %>
 					</li>
-	        	<% elsif gallery.video? %>
+	        	<% elsif false %>
 	        		<li>
-	        			<%= link_to do %>
-	        				<%= image_tag gallery.video.html_safe %>
-	        				<%= image_tag gallery.video.html_safe, :class => "preview" %>
+	        			<%= link_to(gallery, :class => "fancy-video fancybox.iframe", :href => gallery.url_for_video) do %>
+	        				<%= gallery.video.html_safe %>
+	        			<% end %>
+	        		</li>
+   			<% elsif gallery.video? %>
+					<li>
+						<%= link_to(gallery, :class => "fancybox", :href => gallery.video, :rel => "gallery-images", :title => (gallery.description if gallery.description?)) do %>
+	        				<%= image_tag gallery.video %>
+	        				<%= image_tag gallery.video, :class => "preview" %>
 	        			<% end %>
 	        		</li>
       		<% end %>
   			<% end %>		
 		</div>
 	</ul>
-
-  <%= render "home/circle_links" %>
-  <div style="margin-bottom:30px;">
-    <%= render "home/paypal_donate" %>
-  </div>
+	<hr>
+ 	<%= render "home/circle_links" %>
+   <div style="margin-bottom:30px;">
+ 		<%= render "home/paypal_donate" %>
+	</div>
 </div>

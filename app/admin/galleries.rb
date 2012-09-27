@@ -7,7 +7,8 @@ ActiveAdmin.register Gallery do
     f.inputs "Image", :multipart => true do
       f.input :image, :as => :file, :hint => "Select any jpg, giff or png image"
       f.input :description, :hint => "Description for image"
-      f.input :video, :hint => "<a id=''fancybox'' and rel=''gallery-images'' href=''link'' title=''any title''></a>"
+      f.input :video, :hint => "Iframe for the video"
+      f.input :url_for_video, :hint => "Look in the Iframe after src= and copy the link to this field"
     end
     f.buttons
   end
