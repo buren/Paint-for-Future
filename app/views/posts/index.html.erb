@@ -33,6 +33,11 @@
              <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
           <% end %>
         </body>
+
+        <% if @is_admin != nil %>
+          <h1><%= link_to "Edit post", admin_post_path(post) %></h1>
+        <% end %>
+
         <hr>
         <div class="meta-text">
             <% if post.name == "SUSANNE HOLMSATER" %>
