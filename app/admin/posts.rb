@@ -20,8 +20,8 @@ ActiveAdmin.register Post do
     column "Image" do |post|
       image_tag post.image_url(:thumb).to_s if post.image?
     end
-    column "Title" do |post|
-      link_to post.title, admin_post_path(post)
+    column "Sub-title" do |post|
+      link_to post.sub_title, admin_post_path(post) if post.sub_title?
     end
     column "Content" do |post|
       link_to post.content.html_safe, admin_post_path(post)
