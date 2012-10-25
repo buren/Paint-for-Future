@@ -385,6 +385,11 @@ jQuery(window).bind('mercury:loaded', function() {
   //Mercury.PageEditor.prototype.iframeSrc = function(url) { return '/testing'; }
 });
 
+$(window).bind('mercury:ready', function() {
+  var link = $('#mercury_iframe').contents().find('#edit_post_link');
+  link.hide();
+});
+
 
 $(window).bind('mercury:saved', function() {
   window.location = window.location.href.replace(/\/editor\//i, '/');
