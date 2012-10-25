@@ -1,4 +1,6 @@
 Future::Application.routes.draw do
+  Mercury::Engine.routes
+
   get "message/index"
 
   resources :galleries
@@ -16,8 +18,11 @@ Future::Application.routes.draw do
   
   resources :goals, :path => "/center"
 
-  resources :posts, :path => "/news"
+  resources :posts, :path => "/news" do
+    member { post :show }
+  end
   
+
   match "/posts" => redirect("/news")
   match "/blog" => redirect("/news")
 

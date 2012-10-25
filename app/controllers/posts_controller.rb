@@ -3,10 +3,15 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.order("created_at desc").page(params[:page]).per(10)
+    @is_admin = current_admin_user
+    if @is_admin != nil
+      @posts = Post.order("created_at desc").page(params[:page]).per(10)
+    else
+      @posts = Post.published_posts.order("created_at desc").page(params[:page]).per(10)
+    end
+
     @messages = Message.order("created_at desc")
     #nil if not logged in as admin
-    @is_admin = current_admin_user
 
     respond_to do |format|
       format.html # index.html.erb
@@ -20,9 +25,22 @@ class PostsController < ApplicationController
   def show
     @post = Post.find(params[:id])
 
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @post }
+    @is_admin = current_admin_user
+
+    if params[:content] != nil && @is_admin != nil
+      mercury_post = @post
+      mercury_post.title = params[:content][:post_title][:value]
+      mercury_post.content = params[:content][:post_content][:value]
+      if params[:content][:post_sub_title] != nil
+        mercury_post.sub_title = params[:content][:post_sub_title][:value]
+      end
+      mercury_post.save!
+      render text: ""
+    else
+      respond_to do |format|
+        format.html # show.html.erb
+        format.json { render json: @post }
+      end
     end
   end
 

@@ -2,6 +2,9 @@ ActiveAdmin.register Post do
   menu :label => "News"
   menu :priority => 1
 
+  scope :all, :default => true
+  scope :published_posts
+  scope :unpublished_posts
 
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Post", :multipart => true do
@@ -9,9 +12,10 @@ ActiveAdmin.register Post do
       f.input :title
       f.input :sub_title, :hint => "A smaller, bold, title, to be displayed directly under the title"
       f.input :published_at
-      f.input :content, :hint => "You can use HTML, use <br> tag for new line, <h3> for header and <b> for bold"
+      f.input :content, :hint => "Just fill in the text you want and edit later"
       f.input :remote_image_url, :as => :url, :hint => "Provide URL to jpg, giff or png image"
       f.input :image, :as => :file, :hint => "Select any jpg, giff or png image"
+      f.input :publish, :hint => "If selected the post will be published"
     end
     f.buttons
   end

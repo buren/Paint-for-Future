@@ -1,5 +1,3 @@
-<title> Paint for Future - Log</title>
-
 <div id="wrapper">
 
   <% @posts.each do |post| %>
@@ -8,42 +6,43 @@
       <li>
         <header>
           <h1>
-            
-              <% if post.title? %>
-                <%= link_to post.title.upcase, post %>
-              <% end %>
+            <% if post.title? %>
+              <%= link_to post.title.upcase, post %>
+            <% end %>
+            <% unless post.publish %>
+              <span style="color:red;">(UNPUBLISHED)</span>
+            <% end %>
           </h1>   
         </header>
 
         <body>
           <div class="text">
-            <% if post.sub_title? %>
-              <p>
+            <p>
+              <% if post.sub_title? %>
                 <b><%= post.sub_title.html_safe %></b>
                 <br>
                 <br>
-                <%= post.content.html_safe if post.content? %>
-              </p>
-            <% else %>
-              <p><%= post.content.html_safe if post.content? %></p>
-            <% end %>
+              <% end %>
+              <%= raw post.content %>
+            </p>
           </div>
+
+          <% if @is_admin != nil %>
+            <h1><%= link_to "Edit post", "/editor" +  posts_path + "/" + post.id.to_s, :class => "edit_post" %></h1>
+          <% end %>
 
           <% if post.image? %>
              <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
           <% end %>
         </body>
 
-        <% if @is_admin != nil %>
-          <h1><%= link_to "Edit post", admin_post_path(post) %></h1>
-        <% end %>
 
         <hr>
         <div class="meta-text">
             <% if post.name == "SUSANNE HOLMSATER" %>
-              <p><%= "#{post.published_at.upcase},  #{post.created_at.year}" if post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
+              <p><%= "#{post.published_at.upcase},  #{post.created_at.year}" if post.published_at? %> by <b>SUSANNE HOLMSÄTER</b></p>
             <% else %>
-              <p><%= "#{post.published_at.upcase},  #{post.created_at.year}" if post.published_at? %> &nbsp; by &nbsp; <%= post.name.upcase if post.name? %> </p>
+              <p><%= "#{post.published_at.upcase},  #{post.created_at.year}" if post.published_at? %> by <b><%= post.name.upcase %></b></p>
             <% end %>
          </div>
       </li>
@@ -59,9 +58,9 @@
 
   <b>Follow us on:</b> 
   <br>
-  <%= link_to image_tag("icons/facebook.png", :size => "34x34"), "http://www.facebook.com/Paintforfuture", :title => "follow on Facebook", :id => "share-buttons" %>
-  <%= link_to image_tag("icons/twitter.png", :size => "34x34"), "http://twitter.com/paintforfuture", :title => "follow on Twitter", :id => "share-buttons" %>
-  <%= link_to image_tag("icons/rss.png", :size => "34x34"), "http://feeds.feedburner.com/PaintForFuture-News", :title => "Subscribe to rss", :id => "share-buttons" %>
+  <%= link_to image_tag("icons/facebook.png", :size => "34x34"), "http://www.facebook.com/Paintforfuture", :title => "follow on Facebook", :id => "share-buttons", :class => "external-links" %>
+  <%= link_to image_tag("icons/twitter.png", :size => "34x34"), "http://twitter.com/paintforfuture", :title => "follow on Twitter", :id => "share-buttons", :class => "external-links" %>
+  <%= link_to image_tag("icons/rss.png", :size => "34x34"), "http://feeds.feedburner.com/PaintForFuture-News", :title => "Subscribe to rss", :id => "share-buttons", :class => "external-links" %>
 
 
 </div> 

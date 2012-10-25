@@ -2,43 +2,44 @@
  <ul class="posts"> 
       <li>
         <header>
-          <h1>
-              <% if @post.title? %>
-                <%= link_to @post.title.upcase, @post %>
-              <% end %>
-          </h1>   
+          <% if @post.title? %>
+            <h1 id="post_title" style="margin-left:20px;" class="mercury-region" data-type="editable">
+              <%= @post.title.upcase %>
+            </h1>   
+          <% end %>
         </header>
 
         <body>
           <div class="text">
-            <% if @post.sub_title? %>
               <p>
-                <b><%= @post.sub_title.html_safe %></b>
-                <br>
-                <br>
-                <%= @post.content.html_safe if @post.content? %>
+                <% if @post.sub_title? %>
+                  <b id="post_sub_title" class="mercury-region" data-type="editable"><%= @post.sub_title.html_safe %></b>
+                  <br>
+                  <br>
+                <% end %>
+                <div id="post_content" class="mercury-region" data-type="editable">
+                  <%= raw @post.content %>
+                </div>
               </p>
-            <% else %>
-              <p><%= @post.content.html_safe if @post.content? %></p>
-            <% end %>
           </div>
 
+          <% if @is_admin != nil %>
+            <%= link_to "Edit post", "/editor" + request.path, id: "edit_post_link" %>
+          <% end %>
           <% if @post.image? %>
              <%= link_to (image_tag @post.image_url(:thumb).to_s), @post, :class => "fancybox", :href => @post.image_url().to_s %>
           <% end %>
         </body>
         <hr>
-        <div class="meta-text">
+        <div class="meta-text" style="margin-bottom:50px;">
             <% if @post.name == "SUSANNE HOLMSATER" %>
-              <p><%= "#{@post.published_at.upcase},  #{@post.created_at.year}" if @post.published_at? %> &nbsp; by &nbsp; SUSANNE HOLMSÄTER</p>
+              <p><%= "#{@post.published_at.upcase},  #{@post.created_at.year}" if @post.published_at? %> by <b>SUSANNE HOLMSÄTER</b></p>
             <% else %>
-              <p><%= "#{@post.published_at.upcase},  #{@post.created_at.year}" if @post.published_at? %> &nbsp; by &nbsp; <%= @post.name.upcase if @post.name? %> </p>
+              <p><%= "#{@post.published_at.upcase},  #{@post.created_at.year}" if @post.published_at? %> by <b><%= @post.name.upcase if @post.name? %> </b></p>
             <% end %>
         </div>
       </li>
     </ul>
-
-
-
+    
 </div>  
   

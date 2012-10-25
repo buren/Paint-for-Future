@@ -5,7 +5,13 @@
 // the compiled file.
 //
 //= require jquery
-//= require_tree .
+//= require bxslider.js
+//= require homes.js
+//= require modernizr.custom.js
+//= require posts.js
+//= require projects.js
+//= require active_admin.js
+
 
 $(document).ready(function() {
     $("a.fancybox").fancybox({
@@ -18,7 +24,7 @@ $(document).ready(function() {
             }
 	 });
    
-   $("a.external-links").click(function() {
+  $("a.external-links").click(function() {
     link_host = this.href.split("/")[2];
     document_host = document.location.href.split("/")[2];
 
@@ -27,5 +33,8 @@ $(document).ready(function() {
       return false;
     }
   });
+
+  $(parent).trigger('initialize:frame');
+
 
 });
