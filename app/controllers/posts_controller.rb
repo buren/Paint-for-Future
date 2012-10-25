@@ -3,6 +3,7 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
+    #nil if not logged in as admin
     @is_admin = current_admin_user
     if @is_admin != nil
       @posts = Post.order("created_at desc").page(params[:page]).per(10)
@@ -11,7 +12,6 @@ class PostsController < ApplicationController
     end
 
     @messages = Message.order("created_at desc")
-    #nil if not logged in as admin
 
     respond_to do |format|
       format.html # index.html.erb

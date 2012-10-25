@@ -8,7 +8,6 @@
 //= require bxslider.js
 //= require homes.js
 //= require modernizr.custom.js
-//= require posts.js
 //= require projects.js
 //= require active_admin.js
 
