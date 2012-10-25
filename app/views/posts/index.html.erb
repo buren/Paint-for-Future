@@ -25,11 +25,11 @@
               <% end %>
               <%= raw post.content %>
             </p>
+            <% if @is_admin != nil %>
+              <h1><%= link_to "Edit post", "/editor" +  posts_path + "/" + post.id.to_s, :class => "edit_post" %></h1>
+            <% end %>
           </div>
 
-          <% if @is_admin != nil %>
-            <h1><%= link_to "Edit post", "/editor" +  posts_path + "/" + post.id.to_s, :class => "edit_post" %></h1>
-          <% end %>
 
           <% if post.image? %>
              <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>

@@ -35,5 +35,4 @@ $(document).ready(function() {
 
   $(parent).trigger('initialize:frame');
 
-
 });
