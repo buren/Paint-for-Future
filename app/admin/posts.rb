@@ -55,8 +55,8 @@ ActiveAdmin.register Post do
     link_to('View on site', posts_path)
   end
   
-  action_item :only => show do
-    link_to('View on site', new_admin_post)
+  action_item :only => :show do
+    link_to('New post', "/admin/posts/new")
   end
 
 end
