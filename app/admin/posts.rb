@@ -45,7 +45,7 @@ ActiveAdmin.register Post do
         post.published_at
       end
       row :content do
-        post.content
+        raw post.content
       end
     end
     active_admin_comments
