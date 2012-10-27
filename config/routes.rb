@@ -23,8 +23,8 @@ Future::Application.routes.draw do
   end
   
 
-  match "/posts" => redirect("/news")
-  match "/blog" => redirect("/news")
+  match "/posts/:id" => 'posts#show' 
+  match "/blog" => 'posts#index'
 
   get "home/index"
 

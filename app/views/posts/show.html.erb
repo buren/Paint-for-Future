@@ -20,9 +20,18 @@
                 <div id="post_content" class="mercury-region" data-type="editable">
                   <%= raw @post.content %>
                 </div>
+                
+
               </p>
               <% if @is_admin != nil %>
                 <%= link_to "Edit post", "/editor" + request.path, id: "edit_post_link" %>
+                <div id="post_publish" class="mercury-region" data-type="editable">
+                  <% if @post.publish %>
+                    <input type="checkbox" value="true" checked>Publish<br>
+                  <% else %>
+                    <input type="checkbox" value="true">Publish<br>
+                  <% end %>
+                </div>
               <% end %>
           </div>
           <% if @post.image? %>

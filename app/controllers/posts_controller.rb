@@ -34,6 +34,10 @@ class PostsController < ApplicationController
       if params[:content][:post_sub_title] != nil
         mercury_post.sub_title = params[:content][:post_sub_title][:value]
       end
+      #if params[:content][:post_publish] != nil
+      #  puts params[:content][:post_publish]
+        #mercury_post.publish = params[:content][:post_publish][:value]
+      #end
       mercury_post.save!
       render text: ""
     else
