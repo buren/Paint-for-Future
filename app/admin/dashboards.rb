@@ -20,13 +20,4 @@ section "Site visists", :priority => 2 do
     end
   end
 
-
-
-
-  section "Site performance", :priority => 3 do
-    div do
-      br
-      text_node %{<iframe src="https://heroku.newrelic.com/public/charts/gPa1O89PJgk" width="500" height="300" scrolling="no" frameborder="no"></iframe>}.html_safe
-    end
-  end
 end
