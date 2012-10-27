@@ -31,9 +31,7 @@ class PostsController < ApplicationController
       mercury_post = @post
       mercury_post.title = params[:content][:post_title][:value]
       mercury_post.content = params[:content][:post_content][:value]
-      if params[:content][:post_sub_title] != nil
-        mercury_post.sub_title = params[:content][:post_sub_title][:value]
-      end
+      mercury_post.sub_title = params[:content][:post_sub_title][:value] if params[:content][:post_sub_title] != nil
       #if params[:content][:post_publish] != nil
       #  puts params[:content][:post_publish]
         #mercury_post.publish = params[:content][:post_publish][:value]

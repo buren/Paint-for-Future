@@ -13,11 +13,12 @@ ActiveAdmin::Dashboards.build do
   end
 
 
-section "Site visists", :priority => 2 do
+  section "Site visists", :priority => 2 do
     div do
       br
       text_node %{<iframe marginwidth="0"  marginheight="0" width="600" height="350" src="http://www.embeddedanalytics.com/reports/displayreport?reportcode=1cbtqldrNU&chckcode=gan73E4bHsdhb76t3lDk2Q" type="text/html" frameborder="0" scrolling="no" title="EmbeddedAnalytics - Embed Realtime Google Analytics Charts into your Website!"></iframe>}.html_safe
     end
   end
+
 
 end

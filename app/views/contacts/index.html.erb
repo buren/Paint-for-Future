@@ -24,6 +24,9 @@
           <% else %> 
             <p><%= contact.phone_number %></p> 
           <% end %>
+          <% if @admin != nil %>
+            <%= link_to "Edit contact", "/editor" +  contacts_path + "/" + contact.id.to_s, :class => "edit_contact" %>
+          <% end %>
       </li>
     <% end %>
   </ul>  
