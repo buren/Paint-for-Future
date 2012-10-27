@@ -26,6 +26,8 @@ Future::Application.routes.draw do
   match "/posts/:id" => 'posts#show' 
   match "/blog" => 'posts#index'
 
+  match "/videos" => 'videos#index'
+
   get "home/index"
 
   # The priority is based upon order of creation:
