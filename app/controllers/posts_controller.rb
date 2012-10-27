@@ -32,10 +32,15 @@ class PostsController < ApplicationController
       mercury_post.title = params[:content][:post_title][:value]
       mercury_post.content = params[:content][:post_content][:value]
       mercury_post.sub_title = params[:content][:post_sub_title][:value] if params[:content][:post_sub_title] != nil
-      #if params[:content][:post_publish] != nil
-      #  puts params[:content][:post_publish]
-        #mercury_post.publish = params[:content][:post_publish][:value]
-      #end
+      
+      if params[:content][:post_publish][:value] != nil
+        publish = params[:content][:post_publish][:value].chomp
+        if publish.downcase == "true" 
+          mercury_post.publish = true
+        else
+          mercury_post.publish = false
+        end
+      end 
       mercury_post.save!
       render text: ""
     else
