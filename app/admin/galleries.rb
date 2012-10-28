@@ -23,10 +23,6 @@ ActiveAdmin.register Gallery do
     default_actions
   end
   
-  action_item :only => :show do
-    link_to('New photo', new_admin_gallery)
-  end
-
   action_item do
     link_to('View on site', galleries_path)
   end
