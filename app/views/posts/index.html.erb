@@ -1,7 +1,5 @@
 <div id="wrapper">
-
   <% @posts.each do |post| %>
-      
     <ul class="posts"> 
       <li>
         <header>
@@ -34,7 +32,6 @@
              <%= link_to (image_tag post.image_url(:thumb).to_s), post, :class => "fancybox", :href => post.image_url().to_s, :rel =>"posts-images" %>
           <% end %>
         </body>
-
 
         <hr>
         <div class="meta-text">

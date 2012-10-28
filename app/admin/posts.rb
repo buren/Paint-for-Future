@@ -8,7 +8,7 @@ ActiveAdmin.register Post do
 
   form :html => { :enctype => "multipart/form-data" } do |f|
     f.inputs "Post", :multipart => true do
-      f.input :name, :as => :select, :collection => ["FREDRIK BECK", "SUSANNE HOLMSATER", "LUCAS LENNIG", "DANIEL LEKSELL"]
+      f.input :name, :as => :select, :collection => ["FREDRIK BECK", "SUSANNE HOLMSATER", "LUCAS LENNIG", "DANIEL LEKSELL", "MARTIN GREWIN"]
       f.input :title
       f.input :sub_title, :hint => "A smaller, bold, title, to be displayed directly under the title"
       f.input :published_at
