@@ -11,7 +11,7 @@ $(document).ready(function() {
 	        closeEffect	: 'elastic',
             helpers: {
                     title : {
-                            type : 'float'
+                            type : 'inside'
                     }
             }
 	 });
