@@ -7,6 +7,26 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xmlns:imag
     xml.changefreq "weekly"
   end
 
+  xml.url do 
+    xml.loc "http://www.paintforfuture.org/certificateofregistration.pdf"
+    xml.changefreq "never"
+  end
+
+  xml.url do 
+    xml.loc "http://www.paintforfuture.org/stadgar.pdf"
+    xml.changefreq "yearly"
+  end
+
+  xml.url do 
+    xml.loc "http://www.paintforfuture.org/stiftelseforordnande.pdf"
+    xml.changefreq "yearly"
+  end
+
+  xml.url do 
+    xml.loc "http://www.paintforfuture.org/upprop.pdf"
+    xml.changefreq "yearly"
+  end
+
   xml.url do
     xml.loc projects_url
     xml.changefreq "weekly"
