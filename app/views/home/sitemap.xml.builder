@@ -30,7 +30,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
 
   @posts.each do |post|
     xml.url do
-      xml.loc posts_url(post)
+      xml.loc post_url(post)
       xml.lastmod post.updated_at.to_date
       xml.changefreq "monthly"
     end
@@ -43,7 +43,7 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
 
   @contacts.each do |contact|
     xml.url do
-      xml.loc contacts_url(contact)
+      xml.loc contact_url(contact)
       xml.lastmod contact.updated_at.to_date
       xml.changefreq "monthly"
     end
