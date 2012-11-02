@@ -7,6 +7,7 @@ class HomeController < ApplicationController
   def sitemap
   	@posts = Post.all
   	@contacts = Contact.all
+  	@galleries = Gallery.all
   end
 
 end

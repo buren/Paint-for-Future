@@ -1,5 +1,6 @@
 xml.instruct!
-xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
+xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9", "xmlns:image" => "http://www.google.com/schemas/sitemap-image/1.1" do
+
 
   xml.url do
     xml.loc "http://www.paintforfuture.org" 
@@ -21,7 +22,10 @@ xml.urlset "xmlns" => "http://www.sitemaps.org/schemas/sitemap/0.9" do
     xml.changefreq "weekly"
   end
 
-  # Add image ref to sitemap for gallery images
+    xml.url do
+      xml.loc galleries_url
+      xml.changefreq "weekly"
+    end
 
   xml.url do 
     xml.loc posts_url
