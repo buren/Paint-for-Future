@@ -4,4 +4,9 @@ class HomeController < ApplicationController
     @messages = Message.order("created_at desc")
   end
 
+  def sitemap
+  	@posts = Post.all
+  	@contacts = Contact.all
+  end
+
 end
