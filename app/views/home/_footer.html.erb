@@ -1,8 +1,12 @@
 <div id="wrapper">
 	<%= render :partial => "home/share_links" %>
+  <div itemscope itemtype="http://schema.org/Organization">
+  <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
   <footer class="main-footer">
     <p>
-      <a href="/upprop.pdf" style="color:#435465;" target="_blank">Call for suppport (pdf)</a> &copy; 2012 &nbsp; info@paintforfuture.org, Östermalmsgatan 58, 5 Tr. 114 50 Stockholm, Sweden 
+      <a href="/upprop.pdf" style="color:#435465;" target="_blank">Call for suppport (pdf)</a>  &copy; 2012 &nbsp; <span itemprop="email">info@paintforfuture.org</span>, <span itemprop="streetAddress">  Östermalmsgatan 58, 5 Tr.  </span><span itemprop="postalCode"> 114 50 </span> <span itemprop="addresLocality"> Stockholm, Sweden </span>
     </p>
   </footer>
+    </div>
+  </div>
 </div>
