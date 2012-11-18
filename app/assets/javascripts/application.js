@@ -28,4 +28,12 @@ $(document).ready(function() {
 
   $(parent).trigger('initialize:frame');
 
+  $('#post_publish_checkbox').click(function(){
+      if ($('#post_publish').text() == "true")
+          $('#post_publish').text('false');
+      else
+        $('#post_publish').text('true');
+      
+  });
+
 });

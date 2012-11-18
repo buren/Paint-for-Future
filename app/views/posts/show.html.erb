@@ -25,14 +25,18 @@
               <% if admin_logged_in %>
                 <%= link_to "Edit post", "/editor" + request.path, id: "edit_post_link" %>
                 <p style="color:red;">
-                  <div id="post_publish" class="mercury-region" data-type="editable">
+                  <% if @post.publish %>
+                    <input id="post_publish_checkbox" type="checkbox" value="true"> Publish?
+                  <% else %>
+                    <input id="post_publish_checkbox" type="checkbox" value="false"> Publish?
+                  <% end %>
+                  <div id="post_publish" class="mercury-region" data-type="editable" style="display:none;">
                     <% if @post.publish %>
-                      true
+                      <p>true</p>
                     <% else %>
-                      false
+                      <p>false</p>
                     <% end %>
                   </div>
-                  <span style="color:black;">set to "true" and the post will be published</span>
                 </p>
               <% end %>
           </div>
