@@ -23,11 +23,6 @@
   <![endif]-->
 </head>
 <body>
-<% if admin_logged_in != nil %>
-	<h3 style="float:right;">
-	<%= link_to "Go to admin page", /admin %>	
-	</h3>
-<% end %>
   <div id="site-container">
     <div id="site-container-box">
       <%= render :partial => "home/header" %>
