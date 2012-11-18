@@ -23,6 +23,11 @@
   <![endif]-->
 </head>
 <body>
+  <% if admin_logged_in %>
+    <h2 style="float:right;margin-right:15px;">
+      <%= link_to "Go to admin page".upcase, "/admin" %>
+    </h2>
+  <% end %>
   <div id="site-container">
     <div id="site-container-box">
       <%= render :partial => "home/header" %>

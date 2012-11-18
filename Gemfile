@@ -22,7 +22,6 @@ end
 
 gem 'thin'
 
-
 gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: 'a2b16bcdc9'	
 
 

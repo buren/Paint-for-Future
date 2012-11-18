@@ -4,6 +4,10 @@ class ApplicationController < ActionController::Base
   helper_method :admin_logged_in 
 
 	def admin_logged_in
-		current_admin_user
+		if current_admin_user != nil 
+			return true
+		else
+			return false
+		end
 	end
 end

@@ -25,7 +25,7 @@
               <% end %>
               <%= raw post.content %>
             </p>
-            <% if @is_admin != nil %>
+            <% if admin_logged_in %>
               <h1><%= link_to "Edit post", "/editor" +  posts_path + "/" + post.id.to_s, :class => "edit_post" %></h1>
             <% end %>
           </div>
