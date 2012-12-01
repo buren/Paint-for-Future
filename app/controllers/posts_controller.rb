@@ -43,7 +43,7 @@ class PostsController < ApplicationController
       end 
       mercury_post.save!
       render text: ""
-    else
+      else
       respond_to do |format|
         format.html # show.html.erb
         format.json { render json: @post }
