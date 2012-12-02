@@ -21,7 +21,7 @@ Future::Application.configure do
   config.assets.digest = true
 
   # Precompiles Active Admin assets to be able to precompile assets
-  config.assets.precompile += ['active_admin.js', 'active_admin.css', 'fancybox.js', 'fancybox.css', 'jquery.fancybox.js', 'jquery.fancybox.css']
+  config.assets.precompile += ['active_admin.js', 'active_admin.css', 'fancybox.js', 'fancybox.css', 'jquery.fancybox.js', 'jquery.fancybox.css', Ckeditor.assets]
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH

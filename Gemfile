@@ -12,6 +12,10 @@ gem 'redcarpet'
 gem "meta_search"
 gem 'fog'
 
+# Pretty WYSIWYG editor
+gem "ckeditor", "3.7.3"
+
+# Image upload
 gem "carrierwave"
 gem "rmagick"
 

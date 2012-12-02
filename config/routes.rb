@@ -39,4 +39,6 @@ Future::Application.routes.draw do
      :action => "sitemap",
      :conditions => { :method => :get }
 
+ 
+ mount Ckeditor::Engine => "/ckeditor"
 end

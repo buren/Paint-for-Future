@@ -5,7 +5,7 @@ ActiveAdmin.register Message, :as => "Static Texts" do
     f.inputs "Message" do
       f.input :message_type, :as => :select, :collection => ["Announcement", "Donate Message", "Project intro text", "About us", "PDF-links"], :hint => "If Announcement is selected the message will show up on the top of each page"
       f.input :title, :hint => "Required for Announcement/Donate Message/About us, NOT required for Project intro text and PDF-links"
-      f.input :content, :hint => "Plain text or any html"
+      f.input :content, :hint => "Plain text or any html", :input_html => {:class => "ckeditor"}
     end
     f.buttons
   end

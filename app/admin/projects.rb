@@ -11,6 +11,15 @@ ActiveAdmin.register Project do
   	end
 
 
+  form do |f|
+    f.inputs "Project" do
+      f.input :title
+      f.input :content, :input_html => {:class => "ckeditor"}
+    end
+    f.buttons
+  end
+
+
   action_item :only => :show do
     link_to('View on site', projects_path)
   end

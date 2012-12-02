@@ -7,7 +7,7 @@ ActiveAdmin.register Video, :as => "Partners" do
       f.input :logo, :as => :url, :hint => "Provide the url to the company logo"
       f.input :homepage, :as => :url, :hint => "The partners homepage (http://www.example.com)"
       f.input :homepage_slogan, :hint => "Slogan for the homepage"
-      f.input :description, :hint => "A few words about the partner"
+      f.input :description, :hint => "A few words about the partner", :input_html => {:class => "ckeditor"}
     end
     f.buttons
   end

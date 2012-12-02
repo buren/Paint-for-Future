@@ -2,7 +2,6 @@
 //= require jquery
 //= require active_admin
 
-
 $(document).ready(function() {
 
     

@@ -7,6 +7,7 @@ ActiveAdmin.setup do |config|
   #
   config.site_title = "Paint for Future"
 
+  config.register_javascript "ckeditor/init"
 
   # == Default Namespace
   #
