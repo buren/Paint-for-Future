@@ -3,7 +3,7 @@ class ContactsController < ApplicationController
   # GET /contacts.json
   def index
     @contacts = Contact.order("position asc")
-    @partners = Video.order("created_at desc")
+    @partners = Video.order("position asc")
     @messages = Message.order("created_at desc")
 
     @admin = current_admin_user

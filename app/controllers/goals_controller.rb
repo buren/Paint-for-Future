@@ -4,7 +4,7 @@ class GoalsController < ApplicationController
   # GET /goals.json
   def index
     @goals = Goal.all
-    @partners = Video.order("created_at desc")
+    @partners = Video.order("position asc")
     @messages = Message.order("created_at desc")
 
     respond_to do |format|

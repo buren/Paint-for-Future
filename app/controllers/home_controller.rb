@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-  	@partners = Video.order("created_at desc")
+  	@partners = Video.order("position asc")
     messages = Message.order("created_at desc")
     @homepage_message = nil
     messages.each do |message|

@@ -1,6 +1,4 @@
 ActiveAdmin.register AdminUser do
-  menu :parent => "Admin"
-  
 
  index do 
   column "Email" do |admin_user|

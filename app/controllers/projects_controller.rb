@@ -9,7 +9,7 @@ class ProjectsController < ApplicationController
     @how = Project.where(:id => 5)
     @what = Project.where(:id => 6)
     
-    @partners = Video.order("created_at desc")
+    @partners = Video.order("position asc")
     @messages = Message.order("created_at desc")
 
     respond_to do |format|

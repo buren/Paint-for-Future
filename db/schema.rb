@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121102103225) do
+ActiveRecord::Schema.define(:version => 20130106180815) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.integer  "resource_id",   :null => false
@@ -122,6 +122,7 @@ ActiveRecord::Schema.define(:version => 20121102103225) do
     t.string   "logo"
     t.string   "homepage"
     t.string   "homepage_slogan"
+    t.integer  "position"
   end
 
 end
