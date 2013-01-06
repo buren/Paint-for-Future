@@ -1,5 +1,5 @@
 class Video < ActiveRecord::Base
-  attr_accessible :title, :description, :logo, :homepage, :homepage_slogan
+  attr_accessible :title, :description, :logo, :homepage, :homepage_slogan, :position
   validates :homepage, :presence => true
   validates :homepage_slogan, :presence => true
   validates :position, :presence => true
