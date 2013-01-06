@@ -12,7 +12,6 @@
 @import "hoverbox";
 
 
-
 $page_width : 800px;
 $post_width : 780px;
 $goal_width : 700px;
@@ -118,7 +117,21 @@ header{
 	}
 }
 
-    
+#homepage-message{
+  width:710px;
+  margin: 0 auto;
+  h3{
+  	font-size:24px;
+  	margin-bottom:10px;
+  }
+  p{
+  	line-height: 20px;
+  }
+  a{
+  	text-decoration:none;
+  	color: #607890;	
+  }
+}
     
 ul.posts{
 	width:$post_width;

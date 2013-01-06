@@ -10,6 +10,12 @@
 			</div><!-- end of slideshow -->
 		</div>
 	</div><!-- end of slideshow -->
+	<% if @homepage_message %>
+		<div id="homepage-message">
+			<h3><%= @homepage_message.title %></h3>
+			<%= raw @homepage_message.content %>
+		</div>
+	<% end %>
 	<%= render "home/circle_links" %>
 	<%= render "home/paypal_donate" %>		
 	<%= render "home/partners" %>
