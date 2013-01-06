@@ -445,11 +445,14 @@ div#main-title{
 }
 
 h3#slogan{
-	margin-top: -20px;
-	text-align:center;
+	text-align:right;
+	/* Monkey patch center align */
+  margin-right:250px;
+	margin-top:0px;
+  padding-bottom:0px;
 	font-weight:bold;
 	font-size:14px;
-	padding-bottom:30px;
+	padding-bottom:0px;
 }
 
 footer.main-footer{
@@ -507,8 +510,8 @@ footer.main-footer{
 
 
 #dropdown {
-	 margin: 10px 0 10px 0;
-	 padding: 0;
+	 margin: 20px 0 10px 0;
+	 padding: 0px 20px 0 0;
 	 color: $light_blue;
 	 float:right;
 	li {
