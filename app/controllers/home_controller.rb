@@ -4,7 +4,7 @@ class HomeController < ApplicationController
     messages = Message.order("created_at desc")
     @homepage_message = nil
     messages.each do |message|
-    	@homepage_message = message if message.message_type = "Homepage Message"
+    	@homepage_message = message if message.message_type == "Homepage Message"
     end
   end
 
