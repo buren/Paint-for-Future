@@ -10,7 +10,7 @@
 			</div><!-- end of slideshow -->
 		</div>
 	</div><!-- end of slideshow -->
-	<% if @homepage_message %>
+	<% unless @homepage_message == nil %>
 		<div id="homepage-message">
 			<h3><%= @homepage_message.title %></h3>
 			<%= raw @homepage_message.content %>
