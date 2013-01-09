@@ -1,10 +1,10 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.0'
+gem 'rails', '3.1.10'
 gem "rake", "0.8.7"
 gem 'therubyracer'
 gem 'sass-rails', "~> 3.1.0"
-gem 'activeadmin'
+gem 'activeadmin', "~> 0.3.2"
 gem 'formtastic', '1.2.4' # an activeadmin dependency
 gem 'rack'
 gem 'kaminari'
@@ -28,7 +28,6 @@ gem 'thin'
 
 gem 'mercury-rails', git: 'https://github.com/jejacks0n/mercury.git', ref: 'a2b16bcdc9'	
 
-
 group :production do
   gem 'pg'
 end
@@ -43,8 +42,6 @@ gem 'jquery-rails', '~> 2.0'
 
 # Gem for fancybox pictures
 gem 'fancybox-rails'
-
-
 
 group :test do
   # Pretty printed test output
