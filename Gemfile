@@ -2,7 +2,6 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.1.10'
 gem "rake", "0.8.7"
-gem 'therubyracer'
 gem 'sass-rails', "~> 3.1.0"
 gem 'activeadmin', "~> 0.3.2"
 gem 'formtastic', '1.2.4' # an activeadmin dependency
@@ -34,6 +33,7 @@ end
 
 group :development, :test do
     gem 'sqlite3'
+    gem 'therubyracer'
 end
 
 # Asset template engines
